@@ -88,11 +88,11 @@
     "google-free": 28
   },
   "meta-llama/llama-3.1-405b-instruct": {
-    "github-models": 200
+    "github-models": 40
   },
   "meta-llama/llama-3.1-8b-instruct": {
     "groq-free": 560,
-    "cerebras-free": 2200,
+    "cerebras-free": 2000,
     "github-models": 200
   },
   "meta-llama/llama-3.2-90b-vision-instruct": {
@@ -209,7 +209,7 @@
     "github-copilot": 140
   },
   "qwen/qwen3-235b-a22b-2507": {
-    "cerebras-free": 1400
+    "cerebras-free": 1000
   },
   "qwen/qwen3-32b": {
     "groq-free": 400
