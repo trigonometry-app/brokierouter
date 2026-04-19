@@ -269,6 +269,8 @@ const MODEL_EFFORTS: Record<
   "deepseek/deepseek-r1-distill-qwen-32b": ["medium"],
   "deepseek/deepseek-v3.2-speciale": ["medium"],
   "qwen/qwen3-32b": ["none", "medium"],
+  "google/gemma-4-26b-a4b-it": ["none", "medium"],
+  "google/gemma-4-31b-it": ["none", "medium"],
 };
 
 // ─── per-provider reasoning effort restrictions ───────────────────────────
