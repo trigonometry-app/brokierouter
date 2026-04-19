@@ -1425,7 +1425,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6.928203230275509,
+        "tps": 6.708203932499369,
         "reasoning_efforts": [
           "none"
         ],
@@ -1447,7 +1447,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 5.477225575051661,
+        "tps": 5.656854249492381,
         "reasoning_efforts": [
           "none"
         ],
@@ -2979,7 +2979,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6.082762530298219,
+        "tps": 6,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -3000,7 +3000,7 @@
         ],
         "tps": 28,
         "reasoning_efforts": [
-          "none",
+          "minimal",
           "medium"
         ]
       }
@@ -3767,7 +3767,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 10.954451150103322,
+        "tps": 10.04987562112089,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -3791,7 +3791,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 36.138621999185304,
+        "tps": 28.91366458960192,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -5425,7 +5425,7 @@
         ],
         "tps": 39,
         "reasoning_efforts": [
-          "none",
+          "minimal",
           "medium"
         ]
       }
@@ -6818,7 +6818,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9.055385138137417,
+        "tps": 9.327379053088816,
         "reasoning_efforts": [
           "none"
         ],
@@ -25447,7 +25447,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 10.63014581273465,
+        "tps": 10.295630140987,
         "reasoning_efforts": [
           "none"
         ],
@@ -25752,13 +25752,13 @@
     "elo_thinking": null
   },
   {
-    "id": "groq/compound",
-    "name": "groq/compound",
+    "id": "humain-ai/allam-2-7b",
+    "name": "humain ai/allam 2 7b",
     "providers": [
       {
         "id": "groq-free",
-        "model_id": "groq/compound",
-        "context_length": 70000,
+        "model_id": "allam-2-7b",
+        "context_length": 4096,
         "input_modalities": [
           "text"
         ],
@@ -25798,13 +25798,13 @@
     "elo_thinking": null
   },
   {
-    "id": "humain-ai/allam-2-7b",
-    "name": "humain ai/allam 2 7b",
+    "id": "groq/compound",
+    "name": "groq/compound",
     "providers": [
       {
         "id": "groq-free",
-        "model_id": "allam-2-7b",
-        "context_length": 4096,
+        "model_id": "groq/compound",
+        "context_length": 70000,
         "input_modalities": [
           "text"
         ],

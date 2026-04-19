@@ -288,6 +288,12 @@ export const REASONING_EFFORT_OVERRIDES: Record<
   "qwen/qwen3-32b": {
     "groq-free": ["none", "default"],
   },
+  "google/gemma-4-26b-a4b-it": {
+    "google-free": ["minimal", "medium"],
+  },
+  "google/gemma-4-31b-it": {
+    "google-free": ["minimal", "medium"],
+  },
 };
 
 // Providers whose APIs reject the reasoning_effort parameter entirely for
