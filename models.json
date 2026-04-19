@@ -1425,7 +1425,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6.782329983125268,
+        "tps": 6.708203932499369,
         "reasoning_efforts": [
           "none"
         ],
@@ -1447,7 +1447,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 8.06225774829855,
+        "tps": 8,
         "reasoning_efforts": [
           "none"
         ],
@@ -2979,7 +2979,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6,
+        "tps": 6.164414002968976,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -3767,7 +3767,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 10.198039027185569,
+        "tps": 10.295630140987,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -5125,7 +5125,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6,
+        "tps": 6.244997998398398,
         "reasoning_efforts": [
           "none"
         ],
@@ -18750,7 +18750,7 @@
     "name": "Lyria 3 Pro",
     "providers": [
       {
-        "id": "openrouter-free/google-ai-studio",
+        "id": "openrouter/google-ai-studio",
         "model_id": "google/lyria-3-pro-preview",
         "context_length": 1048576,
         "pricing": {
@@ -18780,7 +18780,7 @@
     "name": "Lyria 3 Clip",
     "providers": [
       {
-        "id": "openrouter-free/google-ai-studio",
+        "id": "openrouter/google-ai-studio",
         "model_id": "google/lyria-3-clip-preview",
         "context_length": 1048576,
         "pricing": {
@@ -25751,29 +25751,6 @@
     "elo_thinking": null
   },
   {
-    "id": "humain-ai/allam-2-7b",
-    "name": "humain ai/allam 2 7b",
-    "providers": [
-      {
-        "id": "groq-free",
-        "model_id": "allam-2-7b",
-        "context_length": 4096,
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": null,
-        "reasoning_efforts": [
-          null
-        ]
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
     "id": "groq/compound-mini",
     "name": "groq/compound mini",
     "providers": [
@@ -25804,6 +25781,29 @@
         "id": "groq-free",
         "model_id": "groq/compound",
         "context_length": 70000,
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": null,
+        "reasoning_efforts": [
+          null
+        ]
+      }
+    ],
+    "elo_direct": null,
+    "elo_thinking": null
+  },
+  {
+    "id": "humain-ai/allam-2-7b",
+    "name": "humain ai/allam 2 7b",
+    "providers": [
+      {
+        "id": "groq-free",
+        "model_id": "allam-2-7b",
+        "context_length": 4096,
         "input_modalities": [
           "text"
         ],

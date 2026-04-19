@@ -176,7 +176,9 @@ const providers = {
           const entry = out.get(id);
           if (!entry) continue;
           const epFree =
-            ep.pricing.prompt === "0" && ep.pricing.completion === "0";
+            ep.pricing.prompt === "0" &&
+            ep.pricing.completion === "0" &&
+            !m.architecture.output_modalities.includes("audio");
           entry.providers.push(
             endpointToProvider(
               m,
