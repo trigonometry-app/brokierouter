@@ -4,9 +4,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "fetch:endpoints": "node --env-file=.env src/fetch-endpoints.ts",
-    "build": "node --env-file=.env src/build.ts",
-    "benchmark": "node --env-file=.env src/benchmark.ts",
+    "fetch:endpoints": "node --env-file-if-exists=.env src/fetch-endpoints.ts",
+    "benchmark": "node --env-file-if-exists=.env src/benchmark.ts",
+    "build": "node --env-file-if-exists=.env src/build.ts",
     "check": "tsc --noEmit"
   },
   "devDependencies": {
