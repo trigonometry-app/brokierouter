@@ -1425,7 +1425,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6.708203932499369,
+        "tps": 6.782329983125268,
         "reasoning_efforts": [
           "none"
         ],
@@ -1447,7 +1447,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 5.656854249492381,
+        "tps": 8.06225774829855,
         "reasoning_efforts": [
           "none"
         ],
@@ -3001,7 +3001,7 @@
         "tps": 28,
         "reasoning_efforts": [
           "minimal",
-          "medium"
+          "high"
         ]
       }
     ],
@@ -3767,7 +3767,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 10.04987562112089,
+        "tps": 10.198039027185569,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -3791,7 +3791,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 28.91366458960192,
+        "tps": 13.820274961085254,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -3951,7 +3951,6 @@
         ],
         "tps": 80,
         "reasoning_efforts": [
-          "none",
           "low",
           "medium",
           "high"
@@ -3978,7 +3977,6 @@
         ],
         "tps": 114,
         "reasoning_efforts": [
-          "none",
           "low",
           "medium",
           "high"
@@ -4005,7 +4003,6 @@
         ],
         "tps": 76,
         "reasoning_efforts": [
-          "none",
           "low",
           "medium",
           "high"
@@ -4032,7 +4029,6 @@
         ],
         "tps": 80,
         "reasoning_efforts": [
-          "none",
           "low",
           "medium",
           "high"
@@ -4059,7 +4055,6 @@
         ],
         "tps": 114,
         "reasoning_efforts": [
-          "none",
           "low",
           "medium",
           "high"
@@ -4086,7 +4081,6 @@
         ],
         "tps": 76,
         "reasoning_efforts": [
-          "none",
           "low",
           "medium",
           "high"
@@ -4113,7 +4107,6 @@
         ],
         "tps": 80,
         "reasoning_efforts": [
-          "none",
           "low",
           "medium",
           "high"
@@ -4140,7 +4133,6 @@
         ],
         "tps": 114,
         "reasoning_efforts": [
-          "none",
           "low",
           "medium",
           "high"
@@ -4167,7 +4159,6 @@
         ],
         "tps": 76,
         "reasoning_efforts": [
-          "none",
           "low",
           "medium",
           "high"
@@ -4180,7 +4171,6 @@
         "context_length": 128000,
         "tps": 80,
         "reasoning_efforts": [
-          "none",
           "low",
           "medium",
           "high"
@@ -5135,7 +5125,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 5.830951894845301,
+        "tps": 6,
         "reasoning_efforts": [
           "none"
         ],
@@ -5426,7 +5416,7 @@
         "tps": 39,
         "reasoning_efforts": [
           "minimal",
-          "medium"
+          "high"
         ]
       }
     ],
@@ -6818,7 +6808,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9.327379053088816,
+        "tps": 9,
         "reasoning_efforts": [
           "none"
         ],
@@ -8783,7 +8773,7 @@
         ],
         "tps": 84,
         "reasoning_efforts": [
-          "none",
+          "minimal",
           "low",
           "medium",
           "high"
@@ -8810,7 +8800,7 @@
         ],
         "tps": 9,
         "reasoning_efforts": [
-          "none",
+          "minimal",
           "low",
           "medium",
           "high"
@@ -8837,7 +8827,7 @@
         ],
         "tps": 23,
         "reasoning_efforts": [
-          "none",
+          "minimal",
           "low",
           "medium",
           "high"
@@ -8864,7 +8854,7 @@
         ],
         "tps": 84,
         "reasoning_efforts": [
-          "none",
+          "minimal",
           "low",
           "medium",
           "high"
@@ -8891,7 +8881,7 @@
         ],
         "tps": 9,
         "reasoning_efforts": [
-          "none",
+          "minimal",
           "low",
           "medium",
           "high"
@@ -8918,7 +8908,7 @@
         ],
         "tps": 23,
         "reasoning_efforts": [
-          "none",
+          "minimal",
           "low",
           "medium",
           "high"
@@ -8937,7 +8927,7 @@
         ],
         "tps": 130,
         "reasoning_efforts": [
-          "none",
+          "minimal",
           "low",
           "medium",
           "high"
@@ -12380,7 +12370,10 @@
         ],
         "tps": 145,
         "reasoning_efforts": [
-          "none"
+          "minimal",
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {}
       },
@@ -12404,7 +12397,10 @@
         ],
         "tps": 145,
         "reasoning_efforts": [
-          "none"
+          "minimal",
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {}
       }
@@ -12544,9 +12540,10 @@
         ],
         "tps": 172,
         "reasoning_efforts": [
-          "none",
+          "minimal",
           "low",
-          "medium"
+          "medium",
+          "high"
         ],
         "extra": {}
       },
@@ -12570,9 +12567,10 @@
         ],
         "tps": 45,
         "reasoning_efforts": [
-          "none",
+          "minimal",
           "low",
-          "medium"
+          "medium",
+          "high"
         ],
         "extra": {}
       },
@@ -12588,9 +12586,10 @@
         ],
         "tps": 264,
         "reasoning_efforts": [
-          "none",
+          "minimal",
           "low",
-          "medium"
+          "medium",
+          "high"
         ]
       }
     ],
@@ -13643,7 +13642,7 @@
         ],
         "tps": 70,
         "reasoning_efforts": [
-          "none"
+          "minimal"
         ],
         "extra": {}
       },
@@ -13667,7 +13666,7 @@
         ],
         "tps": 62,
         "reasoning_efforts": [
-          "none"
+          "minimal"
         ],
         "extra": {}
       }
@@ -20776,7 +20775,7 @@
         ],
         "tps": 77,
         "reasoning_efforts": [
-          "none",
+          "minimal",
           "low",
           "medium",
           "high"
@@ -20801,7 +20800,7 @@
         ],
         "tps": 40,
         "reasoning_efforts": [
-          "none",
+          "minimal",
           "low",
           "medium",
           "high"
@@ -21559,7 +21558,7 @@
         ],
         "tps": 141,
         "reasoning_efforts": [
-          "none"
+          "minimal"
         ],
         "extra": {}
       },
@@ -21581,7 +21580,7 @@
         ],
         "tps": 163,
         "reasoning_efforts": [
-          "none"
+          "minimal"
         ],
         "extra": {}
       },
@@ -21603,7 +21602,7 @@
         ],
         "tps": 141,
         "reasoning_efforts": [
-          "none"
+          "minimal"
         ],
         "extra": {}
       },
@@ -21625,7 +21624,7 @@
         ],
         "tps": 163,
         "reasoning_efforts": [
-          "none"
+          "minimal"
         ],
         "extra": {}
       }
@@ -23770,7 +23769,7 @@
         ],
         "tps": 42,
         "reasoning_efforts": [
-          "none"
+          "minimal"
         ],
         "extra": {}
       },
@@ -23794,7 +23793,7 @@
         ],
         "tps": 83,
         "reasoning_efforts": [
-          "none"
+          "minimal"
         ],
         "extra": {}
       }
@@ -24601,12 +24600,12 @@
     "elo_thinking": null
   },
   {
-    "id": "inflection/inflection-3-pi",
-    "name": "Inflection 3 Pi",
+    "id": "inflection/inflection-3-productivity",
+    "name": "Inflection 3 Productivity",
     "providers": [
       {
         "id": "openrouter/inflection",
-        "model_id": "inflection/inflection-3-pi",
+        "model_id": "inflection/inflection-3-productivity",
         "context_length": 8000,
         "pricing": {
           "prompt": "0.0000025",
@@ -24629,12 +24628,12 @@
     "elo_thinking": null
   },
   {
-    "id": "inflection/inflection-3-productivity",
-    "name": "Inflection 3 Productivity",
+    "id": "inflection/inflection-3-pi",
+    "name": "Inflection 3 Pi",
     "providers": [
       {
         "id": "openrouter/inflection",
-        "model_id": "inflection/inflection-3-productivity",
+        "model_id": "inflection/inflection-3-pi",
         "context_length": 8000,
         "pricing": {
           "prompt": "0.0000025",
@@ -25105,34 +25104,6 @@
     "elo_thinking": null
   },
   {
-    "id": "openai/gpt-3.5-turbo-0613",
-    "name": "GPT 3.5 Turbo (older v0613)",
-    "providers": [
-      {
-        "id": "openrouter/azure",
-        "model_id": "openai/gpt-3.5-turbo-0613",
-        "context_length": 4095,
-        "pricing": {
-          "prompt": "0.000001",
-          "completion": "0.000002"
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 84.5,
-        "reasoning_efforts": [
-          "none"
-        ],
-        "extra": {}
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
     "id": "openai/gpt-4-turbo-preview",
     "name": "GPT 4 Turbo",
     "providers": [
@@ -25151,6 +25122,34 @@
           "text"
         ],
         "tps": null,
+        "reasoning_efforts": [
+          "none"
+        ],
+        "extra": {}
+      }
+    ],
+    "elo_direct": null,
+    "elo_thinking": null
+  },
+  {
+    "id": "openai/gpt-3.5-turbo-0613",
+    "name": "GPT 3.5 Turbo (older v0613)",
+    "providers": [
+      {
+        "id": "openrouter/azure",
+        "model_id": "openai/gpt-3.5-turbo-0613",
+        "context_length": 4095,
+        "pricing": {
+          "prompt": "0.000001",
+          "completion": "0.000002"
+        },
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 84.5,
         "reasoning_efforts": [
           "none"
         ],

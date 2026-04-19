@@ -155,12 +155,9 @@ export const MODEL_SKIP = new Set([
 
 // ─── reasoning efforts ─────────────────────────────────────────────────────
 
-export type Efforts = (string | null)[];
+type Effort = "none" | "minimal" | "low" | "medium" | "high" | "xhigh" | "max";
 
-const MODEL_EFFORTS: Record<
-  string,
-  ("none" | "minimal" | "low" | "medium" | "high" | "xhigh" | "max")[]
-> = {
+const MODEL_EFFORTS: Record<string, (Effort | null)[]> = {
   // ANTHROPIC ─────────────────────────────────────────────
   // Effort API added progressively. Supported on: Opus 4.5, Sonnet 4.6, Opus 4.6, Opus 4.7
   // Older models use budget_tokens (on/off toggle) → "none" | "medium" standin
@@ -243,15 +240,20 @@ const MODEL_EFFORTS: Record<
   "openai/gpt-5.4-pro": ["low", "medium", "high", "xhigh"],
 
   // GOOGLE ─────────────────────────────────────────────────
-  "google/gemini-2.0-flash-001": ["none"],
-  "google/gemini-2.0-flash-lite-001": ["none"],
-  "google/gemini-2.5-pro": ["none", "low", "medium", "high"],
-  "google/gemini-2.5-flash": ["none", "low", "medium", "high"],
-  "google/gemini-2.5-flash-lite": ["none", "low", "medium"],
-  "google/gemini-2.5-flash-image": ["none"],
-  "google/gemini-2.5-flash-lite-preview-09-2025": ["none"],
+  "google/gemini-2.0-flash-001": ["minimal"],
+  "google/gemini-2.0-flash-lite-001": ["minimal"],
+  "google/gemini-2.5-pro": ["low", "medium", "high"],
+  "google/gemini-2.5-flash": ["minimal", "low", "medium", "high"],
+  "google/gemini-2.5-flash-lite": ["minimal", "low", "medium", "high"],
+  "google/gemini-2.5-flash-lite-preview-09-2025": [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+  ],
+  "google/gemini-2.5-flash-image": ["minimal"],
   "google/gemini-3-flash-preview": ["minimal", "low", "medium", "high"],
-  "google/gemini-3-pro-image-preview": ["none", "low", "medium", "high"],
+  "google/gemini-3-pro-image-preview": ["minimal", "low", "medium", "high"],
   "google/gemini-3.1-pro-preview": ["low", "medium", "high"],
   "google/gemini-3.1-pro-preview-customtools": ["low", "medium", "high"],
   "google/gemini-3.1-flash-lite-preview": ["minimal", "low", "medium", "high"],
@@ -279,7 +281,7 @@ const MODEL_EFFORTS: Record<
 
 export const REASONING_EFFORT_OVERRIDES: Record<
   string,
-  Record<string, Efforts>
+  Record<string, (Effort | "default")[]>
 > = {
   "z-ai/glm-4.7": {
     "openrouter/google-vertex": ["medium"],
@@ -289,10 +291,10 @@ export const REASONING_EFFORT_OVERRIDES: Record<
     "groq-free": ["none", "default"],
   },
   "google/gemma-4-26b-a4b-it": {
-    "google-free": ["minimal", "medium"],
+    "google-free": ["minimal", "high"],
   },
   "google/gemma-4-31b-it": {
-    "google-free": ["minimal", "medium"],
+    "google-free": ["minimal", "high"],
   },
 };
 
@@ -312,15 +314,15 @@ export const getReasoningEfforts = (
   modelId: string,
   providerId?: string,
   supportsReasoningParam?: boolean,
-): Efforts => {
+) => {
   if (MODEL_EFFORTS[modelId]) return [...MODEL_EFFORTS[modelId]];
   for (const prefix of Object.keys(MODEL_EFFORTS)) {
     if (modelId.startsWith(prefix)) console.warn("No effort for", modelId);
   }
-  if (supportsReasoningParam) return ["none", "medium"];
+  if (supportsReasoningParam) return ["none" as const, "medium" as const];
   const lower = modelId.toLowerCase();
   if (THINKING_KEYWORDS.some((k) => lower.includes(k)))
-    return ["none", "medium"];
+    return ["none" as const, "medium" as const];
   if (providerId && PICKY_PROVIDERS.has(providerId)) return [null];
-  return ["none"];
+  return ["none" as const];
 };
