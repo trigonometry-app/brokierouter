@@ -46,6 +46,7 @@ import {
   GOOGLE_NAME_TO_OR,
   getReasoningEfforts,
   REASONING_EFFORT_OVERRIDES,
+  MODEL_SKIP,
 } from "./lib/constants.ts";
 
 // ─── helpers ─────────────────────────────────────────────────────────────
@@ -627,6 +628,9 @@ const merge = (
       if (allowed) provider.reasoning_efforts = [...allowed];
     }
   }
+
+  // Remove redundant dated checkpoints
+  for (const id of MODEL_SKIP) models.delete(id);
 
   if (dropped.length) {
     console.warn(`\nDROPPED (${dropped.length}) — no OR-style ID:`);

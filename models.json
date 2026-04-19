@@ -1425,7 +1425,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 7.3484692283495345,
+        "tps": 6.48074069840786,
         "reasoning_efforts": [
           "none"
         ],
@@ -1447,7 +1447,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 4.47213595499958,
+        "tps": 7.14142842854285,
         "reasoning_efforts": [
           "none"
         ],
@@ -2569,7 +2569,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6.928203230275509,
+        "tps": 6.782329983125268,
         "reasoning_efforts": [
           "none"
         ],
@@ -3766,7 +3766,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 11,
+        "tps": 11.832159566199232,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -3790,7 +3790,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 13.30413469565007,
+        "tps": 14.628738838327793,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -5134,7 +5134,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 5.744562646538029,
+        "tps": 5.5677643628300215,
         "reasoning_efforts": [
           "none"
         ],
@@ -6816,7 +6816,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 8.94427190999916,
+        "tps": 9.1104335791443,
         "reasoning_efforts": [
           "none"
         ],
@@ -8596,9 +8596,110 @@
     "elo_thinking": null
   },
   {
-    "id": "x-ai/grok-3-beta",
-    "name": "Grok 3 Beta",
-    "providers": [],
+    "id": "x-ai/grok-3",
+    "name": "Grok 3",
+    "providers": [
+      {
+        "id": "openrouter/xai",
+        "model_id": "x-ai/grok-3",
+        "context_length": 131072,
+        "pricing": {
+          "prompt": "0.000003",
+          "completion": "0.000015"
+        },
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 47,
+        "reasoning_efforts": [
+          "none",
+          "medium"
+        ],
+        "extra": {}
+      },
+      {
+        "id": "openrouter/xai/fast",
+        "model_id": "x-ai/grok-3",
+        "context_length": 131072,
+        "pricing": {
+          "prompt": "0.000005",
+          "completion": "0.000025"
+        },
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": null,
+        "reasoning_efforts": [
+          "none",
+          "medium"
+        ],
+        "extra": {}
+      },
+      {
+        "id": "openrouter/xai",
+        "model_id": "x-ai/grok-3",
+        "context_length": 131072,
+        "pricing": {
+          "prompt": "0.000003",
+          "completion": "0.000015"
+        },
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 47,
+        "reasoning_efforts": [
+          "none",
+          "medium"
+        ],
+        "extra": {}
+      },
+      {
+        "id": "openrouter/xai/fast",
+        "model_id": "x-ai/grok-3",
+        "context_length": 131072,
+        "pricing": {
+          "prompt": "0.000005",
+          "completion": "0.000025"
+        },
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": null,
+        "reasoning_efforts": [
+          "none",
+          "medium"
+        ],
+        "extra": {}
+      },
+      {
+        "id": "github-models",
+        "model_id": "xai/grok-3",
+        "context_length": 4000,
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 38,
+        "reasoning_efforts": [
+          "none",
+          "medium"
+        ]
+      }
+    ],
     "elo_direct": 1411.8873377640766,
     "elo_thinking": null
   },
@@ -13079,7 +13180,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 7.810249675906654,
+        "tps": 8.602325267042627,
         "reasoning_efforts": [
           "none"
         ],
@@ -15467,12 +15568,12 @@
     "elo_thinking": 1336.0881703818113
   },
   {
-    "id": "openai/gpt-4o-2024-08-06",
-    "name": "GPT 4o (2024 08 06)",
+    "id": "openai/gpt-4o",
+    "name": "GPT 4o",
     "providers": [
       {
         "id": "openrouter/azure",
-        "model_id": "openai/gpt-4o-2024-08-06",
+        "model_id": "openai/gpt-4o",
         "context_length": 128000,
         "pricing": {
           "prompt": "0.0000025",
@@ -15486,7 +15587,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 34,
+        "tps": 57,
         "reasoning_efforts": [
           "none"
         ],
@@ -15494,7 +15595,7 @@
       },
       {
         "id": "openrouter/openai",
-        "model_id": "openai/gpt-4o-2024-08-06",
+        "model_id": "openai/gpt-4o",
         "context_length": 128000,
         "pricing": {
           "prompt": "0.0000025",
@@ -15508,11 +15609,48 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 28,
+        "tps": 39,
         "reasoning_efforts": [
           "none"
         ],
         "extra": {}
+      },
+      {
+        "id": "github-models",
+        "model_id": "openai/gpt-4o",
+        "context_length": 8000,
+        "input_modalities": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 163,
+        "reasoning_efforts": [
+          "none"
+        ]
+      },
+      {
+        "id": "github-copilot",
+        "model_id": "gpt-4o",
+        "context_length": 128000,
+        "tps": 80,
+        "reasoning_efforts": [
+          "none"
+        ],
+        "cost_multiplier": 0,
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "extra": {
+          "model_picker_enabled": true
+        }
       }
     ],
     "elo_direct": 1334.645643386314,
@@ -16813,12 +16951,12 @@
     "elo_thinking": 1317.5613152549286
   },
   {
-    "id": "openai/gpt-4o-mini-2024-07-18",
-    "name": "GPT 4o mini (2024 07 18)",
+    "id": "openai/gpt-4o-mini",
+    "name": "GPT 4o mini",
     "providers": [
       {
-        "id": "openrouter/openai",
-        "model_id": "openai/gpt-4o-mini-2024-07-18",
+        "id": "openrouter/azure",
+        "model_id": "openai/gpt-4o-mini",
         "context_length": 128000,
         "pricing": {
           "prompt": "0.00000015",
@@ -16832,11 +16970,50 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 41,
+        "tps": 42,
         "reasoning_efforts": [
           "none"
         ],
         "extra": {}
+      },
+      {
+        "id": "openrouter/openai",
+        "model_id": "openai/gpt-4o-mini",
+        "context_length": 128000,
+        "pricing": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006"
+        },
+        "input_modalities": [
+          "text",
+          "image",
+          "file"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 31,
+        "reasoning_efforts": [
+          "none"
+        ],
+        "extra": {}
+      },
+      {
+        "id": "github-models",
+        "model_id": "openai/gpt-4o-mini",
+        "context_length": 8000,
+        "input_modalities": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 99,
+        "reasoning_efforts": [
+          "none"
+        ]
       }
     ],
     "elo_direct": 1317.5168215322715,
@@ -22966,114 +23143,6 @@
     "elo_thinking": null
   },
   {
-    "id": "x-ai/grok-3",
-    "name": "Grok 3",
-    "providers": [
-      {
-        "id": "openrouter/xai",
-        "model_id": "x-ai/grok-3",
-        "context_length": 131072,
-        "pricing": {
-          "prompt": "0.000003",
-          "completion": "0.000015"
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 47,
-        "reasoning_efforts": [
-          "none",
-          "medium"
-        ],
-        "extra": {}
-      },
-      {
-        "id": "openrouter/xai/fast",
-        "model_id": "x-ai/grok-3",
-        "context_length": 131072,
-        "pricing": {
-          "prompt": "0.000005",
-          "completion": "0.000025"
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": null,
-        "reasoning_efforts": [
-          "none",
-          "medium"
-        ],
-        "extra": {}
-      },
-      {
-        "id": "openrouter/xai",
-        "model_id": "x-ai/grok-3",
-        "context_length": 131072,
-        "pricing": {
-          "prompt": "0.000003",
-          "completion": "0.000015"
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 47,
-        "reasoning_efforts": [
-          "none",
-          "medium"
-        ],
-        "extra": {}
-      },
-      {
-        "id": "openrouter/xai/fast",
-        "model_id": "x-ai/grok-3",
-        "context_length": 131072,
-        "pricing": {
-          "prompt": "0.000005",
-          "completion": "0.000025"
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": null,
-        "reasoning_efforts": [
-          "none",
-          "medium"
-        ],
-        "extra": {}
-      },
-      {
-        "id": "github-models",
-        "model_id": "xai/grok-3",
-        "context_length": 4000,
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 38,
-        "reasoning_efforts": [
-          "none",
-          "medium"
-        ]
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
     "id": "google/gemini-2.5-pro-preview",
     "name": "Gemini 2.5 Pro 06 05",
     "providers": [],
@@ -23411,6 +23480,13 @@
   {
     "id": "x-ai/grok-3-mini-beta",
     "name": "Grok 3 mini Beta",
+    "providers": [],
+    "elo_direct": null,
+    "elo_thinking": null
+  },
+  {
+    "id": "x-ai/grok-3-beta",
+    "name": "Grok 3 Beta",
     "providers": [],
     "elo_direct": null,
     "elo_thinking": null
@@ -24921,75 +24997,6 @@
     "elo_thinking": null
   },
   {
-    "id": "openai/gpt-4o-mini",
-    "name": "GPT 4o mini",
-    "providers": [
-      {
-        "id": "openrouter/azure",
-        "model_id": "openai/gpt-4o-mini",
-        "context_length": 128000,
-        "pricing": {
-          "prompt": "0.00000015",
-          "completion": "0.0000006"
-        },
-        "input_modalities": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 42,
-        "reasoning_efforts": [
-          "none"
-        ],
-        "extra": {}
-      },
-      {
-        "id": "openrouter/openai",
-        "model_id": "openai/gpt-4o-mini",
-        "context_length": 128000,
-        "pricing": {
-          "prompt": "0.00000015",
-          "completion": "0.0000006"
-        },
-        "input_modalities": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 31,
-        "reasoning_efforts": [
-          "none"
-        ],
-        "extra": {}
-      },
-      {
-        "id": "github-models",
-        "model_id": "openai/gpt-4o-mini",
-        "context_length": 8000,
-        "input_modalities": [
-          "text",
-          "image",
-          "audio"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 99,
-        "reasoning_efforts": [
-          "none"
-        ]
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
     "id": "sao10k/l3-euryale-70b",
     "name": "Llama 3 Euryale 70b v2.1",
     "providers": [
@@ -25043,95 +25050,6 @@
         ],
         "extra": {
           "quantization": "fp16"
-        }
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
-    "id": "openai/gpt-4o",
-    "name": "GPT 4o",
-    "providers": [
-      {
-        "id": "openrouter/azure",
-        "model_id": "openai/gpt-4o",
-        "context_length": 128000,
-        "pricing": {
-          "prompt": "0.0000025",
-          "completion": "0.00001"
-        },
-        "input_modalities": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 57,
-        "reasoning_efforts": [
-          "none"
-        ],
-        "extra": {}
-      },
-      {
-        "id": "openrouter/openai",
-        "model_id": "openai/gpt-4o",
-        "context_length": 128000,
-        "pricing": {
-          "prompt": "0.0000025",
-          "completion": "0.00001"
-        },
-        "input_modalities": [
-          "text",
-          "image",
-          "file"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 39,
-        "reasoning_efforts": [
-          "none"
-        ],
-        "extra": {}
-      },
-      {
-        "id": "github-models",
-        "model_id": "openai/gpt-4o",
-        "context_length": 8000,
-        "input_modalities": [
-          "text",
-          "image",
-          "audio"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 163,
-        "reasoning_efforts": [
-          "none"
-        ]
-      },
-      {
-        "id": "github-copilot",
-        "model_id": "gpt-4o",
-        "context_length": 128000,
-        "tps": 80,
-        "reasoning_efforts": [
-          "none"
-        ],
-        "cost_multiplier": 0,
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "extra": {
-          "model_picker_enabled": true
         }
       }
     ],

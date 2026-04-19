@@ -145,6 +145,14 @@ export const GHC_ID_TO_OR: Record<string, string> = {
   "gpt-4o": "openai/gpt-4o",
 };
 
+// ─── model skip lists ─────────────────────────────────────────────────────
+
+// Dated checkpoints that are redundant with a canonical entry
+export const MODEL_SKIP = new Set([
+  "openai/gpt-4o-2024-08-06",
+  "openai/gpt-4o-mini-2024-07-18",
+]);
+
 // ─── reasoning efforts ─────────────────────────────────────────────────────
 
 export type Efforts = string[];

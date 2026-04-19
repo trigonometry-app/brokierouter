@@ -102,8 +102,8 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "gpt-4.1-mini-2025-04-14": ("openai/gpt-4.1-mini", False),
     "gpt-4.1-nano-2025-04-14": ("openai/gpt-4.1-nano", False),
     "gpt-4o-2024-05-13": ("openai/gpt-4o-2024-05-13", False),
-    "gpt-4o-2024-08-06": ("openai/gpt-4o-2024-08-06", False),
-    "gpt-4o-mini-2024-07-18": ("openai/gpt-4o-mini-2024-07-18", False),
+    "gpt-4o-2024-08-06": ("openai/gpt-4o", False),
+    "gpt-4o-mini-2024-07-18": ("openai/gpt-4o-mini", False),
     "gpt-5-chat": ("openai/gpt-5-chat", False),
     "gpt-5-high": ("openai/gpt-5", True),
     "gpt-5-mini-high": ("openai/gpt-5-mini", True),
@@ -128,7 +128,7 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "o3-mini-high": ("openai/o3-mini-high", True),
     "o4-mini-2025-04-16": ("openai/o4-mini", True),
     # xAI Grok
-    "grok-3-preview-02-24": ("x-ai/grok-3-beta", False),
+    "grok-3-preview-02-24": ("x-ai/grok-3", False),
     "grok-3-mini-high": ("x-ai/grok-3-mini", True),
     "grok-4-0709": ("x-ai/grok-4", True),  # always reasoning
     "grok-4-fast-chat": ("x-ai/grok-4-fast", False),
