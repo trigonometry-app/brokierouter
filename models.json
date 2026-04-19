@@ -1425,7 +1425,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6.48074069840786,
+        "tps": 6.6332495807108,
         "reasoning_efforts": [
           "none"
         ],
@@ -3766,7 +3766,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 11.832159566199232,
+        "tps": 12.041594578792296,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -3790,7 +3790,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 14.628738838327793,
+        "tps": 14.142135623730951,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -6816,7 +6816,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9.1104335791443,
+        "tps": 8.94427190999916,
         "reasoning_efforts": [
           "none"
         ],
@@ -10080,7 +10080,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9.327379053088816,
+        "tps": 9.486832980505138,
         "reasoning_efforts": [
           "none"
         ],
@@ -13180,7 +13180,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 8.602325267042627,
+        "tps": 8.48528137423857,
         "reasoning_efforts": [
           "none"
         ],
@@ -15133,7 +15133,8 @@
         ],
         "tps": 400,
         "reasoning_efforts": [
-          "none"
+          "none",
+          "medium"
         ]
       }
     ],
@@ -16658,8 +16659,9 @@
         ],
         "tps": 28,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {
           "quantization": "int8"
@@ -16681,8 +16683,9 @@
         ],
         "tps": 58,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {
           "quantization": "bf16"
@@ -16704,8 +16707,9 @@
         ],
         "tps": 83,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {
           "quantization": "fp4"
@@ -16727,8 +16731,9 @@
         ],
         "tps": 22,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {
           "quantization": "fp8"
@@ -16750,8 +16755,9 @@
         ],
         "tps": 98,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {
           "quantization": "fp4"
@@ -16773,8 +16779,9 @@
         ],
         "tps": 118,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {
           "quantization": "fp4"
@@ -16796,8 +16803,9 @@
         ],
         "tps": 113,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {}
       },
@@ -16817,8 +16825,9 @@
         ],
         "tps": 288,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {
           "quantization": "fp4"
@@ -16840,8 +16849,9 @@
         ],
         "tps": 222,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {}
       },
@@ -16861,8 +16871,9 @@
         ],
         "tps": 238.5,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {}
       },
@@ -16882,8 +16893,9 @@
         ],
         "tps": 71,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {}
       },
@@ -16903,8 +16915,9 @@
         ],
         "tps": 742,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {}
       },
@@ -16924,8 +16937,9 @@
         ],
         "tps": 77,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {
           "quantization": "fp8"
@@ -16943,7 +16957,9 @@
         ],
         "tps": 1000,
         "reasoning_efforts": [
-          "none"
+          "low",
+          "medium",
+          "high"
         ]
       }
     ],
@@ -24583,12 +24599,12 @@
     "elo_thinking": null
   },
   {
-    "id": "inflection/inflection-3-pi",
-    "name": "Inflection 3 Pi",
+    "id": "inflection/inflection-3-productivity",
+    "name": "Inflection 3 Productivity",
     "providers": [
       {
         "id": "openrouter/inflection",
-        "model_id": "inflection/inflection-3-pi",
+        "model_id": "inflection/inflection-3-productivity",
         "context_length": 8000,
         "pricing": {
           "prompt": "0.0000025",
@@ -24611,12 +24627,12 @@
     "elo_thinking": null
   },
   {
-    "id": "inflection/inflection-3-productivity",
-    "name": "Inflection 3 Productivity",
+    "id": "inflection/inflection-3-pi",
+    "name": "Inflection 3 Pi",
     "providers": [
       {
         "id": "openrouter/inflection",
-        "model_id": "inflection/inflection-3-productivity",
+        "model_id": "inflection/inflection-3-pi",
         "context_length": 8000,
         "pricing": {
           "prompt": "0.0000025",
@@ -25087,34 +25103,6 @@
     "elo_thinking": null
   },
   {
-    "id": "openai/gpt-3.5-turbo-0613",
-    "name": "GPT 3.5 Turbo (older v0613)",
-    "providers": [
-      {
-        "id": "openrouter/azure",
-        "model_id": "openai/gpt-3.5-turbo-0613",
-        "context_length": 4095,
-        "pricing": {
-          "prompt": "0.000001",
-          "completion": "0.000002"
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 84.5,
-        "reasoning_efforts": [
-          "none"
-        ],
-        "extra": {}
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
     "id": "openai/gpt-4-turbo-preview",
     "name": "GPT 4 Turbo",
     "providers": [
@@ -25133,6 +25121,34 @@
           "text"
         ],
         "tps": null,
+        "reasoning_efforts": [
+          "none"
+        ],
+        "extra": {}
+      }
+    ],
+    "elo_direct": null,
+    "elo_thinking": null
+  },
+  {
+    "id": "openai/gpt-3.5-turbo-0613",
+    "name": "GPT 3.5 Turbo (older v0613)",
+    "providers": [
+      {
+        "id": "openrouter/azure",
+        "model_id": "openai/gpt-3.5-turbo-0613",
+        "context_length": 4095,
+        "pricing": {
+          "prompt": "0.000001",
+          "completion": "0.000002"
+        },
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 84.5,
         "reasoning_efforts": [
           "none"
         ],

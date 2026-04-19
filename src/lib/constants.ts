@@ -211,6 +211,7 @@ const MODEL_EFFORTS: Record<
   "openai/o3-deep-research": ["medium"], // always-on deep research
   "openai/o4-mini": ["low", "medium", "high"],
   "openai/o4-mini-deep-research": ["medium"], // always-on
+  "openai/gpt-oss-20b": ["low", "medium", "high"],
   "openai/gpt-oss-120b": ["low", "medium", "high"],
   // GPT-5 (original): minimal/low/medium/high — no "none", no xhigh
   "openai/gpt-5": ["minimal", "low", "medium", "high"],
@@ -261,12 +262,13 @@ const MODEL_EFFORTS: Record<
   "x-ai/grok-4.1-fast": ["none", "medium", "high"],
   "x-ai/grok-code-fast-1": ["none", "medium"],
 
-  // OTHERS that always reason ───────────────────────────────
+  // OTHERS
   "deepseek/deepseek-r1": ["medium"],
   "deepseek/deepseek-r1-0528": ["medium"],
   "deepseek/deepseek-r1-distill-llama-70b": ["medium"],
   "deepseek/deepseek-r1-distill-qwen-32b": ["medium"],
   "deepseek/deepseek-v3.2-speciale": ["medium"],
+  "qwen/qwen3-32b": ["none", "medium"],
 };
 
 // ─── per-provider reasoning effort restrictions ───────────────────────────
