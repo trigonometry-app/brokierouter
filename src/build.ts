@@ -213,7 +213,9 @@ const providers = {
           // Copy OR's providers with hack-club prefix
           const hcProvs = orEntry.providers
             .filter(
-              (p) => p.id.startsWith("openrouter/"), // not openrouter-free/
+              (p) =>
+                p.id.startsWith("openrouter/") && // not openrouter-free/
+                !p.id.includes("/cerebras"), // HC has banned Cerebras
             )
             .map(
               (p): Provider => ({

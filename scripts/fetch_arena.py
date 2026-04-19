@@ -221,7 +221,7 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "mimo-v2-pro": ("xiaomi/mimo-v2-pro", True),
     "phi-4": ("microsoft/phi-4", False),
     "step-3.5-flash": ("stepfun/step-3.5-flash", True),
-    "trinity-large-preview": ("arcee-ai/trinity-large-preview:free", False),
+    "trinity-large-preview": ("arcee-ai/trinity-large-preview", False),
 }
 
 os.makedirs("data", exist_ok=True)

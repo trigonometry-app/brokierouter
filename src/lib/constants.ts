@@ -270,6 +270,7 @@ const MODEL_EFFORTS: Record<string, (Effort | null)[]> = {
   "deepseek/deepseek-r1-distill-llama-70b": ["medium"],
   "deepseek/deepseek-r1-distill-qwen-32b": ["medium"],
   "deepseek/deepseek-v3.2-speciale": ["medium"],
+  "tngtech/deepseek-r1t2-chimera": ["medium"],
   "qwen/qwen3-32b": ["none", "medium"],
   "google/gemma-4-26b-a4b-it": ["none", "medium"],
   "google/gemma-4-31b-it": ["none", "medium"],
@@ -319,6 +320,7 @@ export const getReasoningEfforts = (
   for (const prefix of Object.keys(MODEL_EFFORTS)) {
     if (modelId.startsWith(prefix)) console.warn("No effort for", modelId);
   }
+  if (modelId.includes("-thinking")) return ["medium" as const];
   if (supportsReasoningParam) return ["none" as const, "medium" as const];
   const lower = modelId.toLowerCase();
   if (THINKING_KEYWORDS.some((k) => lower.includes(k)))

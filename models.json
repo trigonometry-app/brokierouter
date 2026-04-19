@@ -1425,7 +1425,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6.708203932499369,
+        "tps": 6.855654600401044,
         "reasoning_efforts": [
           "none"
         ],
@@ -1447,7 +1447,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 8,
+        "tps": 6.6332495807108,
         "reasoning_efforts": [
           "none"
         ],
@@ -3767,7 +3767,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 10.295630140987,
+        "tps": 11.045361017187261,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -3791,7 +3791,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 13.820274961085254,
+        "tps": 13.45362404707371,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -4598,7 +4598,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 7.810249675906654,
+        "tps": 8,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -5089,29 +5089,6 @@
         "extra": {}
       },
       {
-        "id": "hack-club/cerebras/fp16",
-        "model_id": "z-ai/glm-4.7",
-        "context_length": 131072,
-        "pricing": {
-          "prompt": "0.00000225",
-          "completion": "0.00000275"
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 336.5,
-        "reasoning_efforts": [
-          "none",
-          "medium"
-        ],
-        "extra": {
-          "quantization": "fp16"
-        }
-      },
-      {
         "id": "crofai",
         "model_id": "glm-4.7",
         "context_length": 202752,
@@ -5125,7 +5102,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6.244997998398398,
+        "tps": 5.744562646538029,
         "reasoning_efforts": [
           "none"
         ],
@@ -5706,7 +5683,6 @@
         ],
         "tps": 27,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -5729,7 +5705,6 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {}
@@ -5750,7 +5725,6 @@
         ],
         "tps": 32,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -5773,7 +5747,6 @@
         ],
         "tps": 27,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -5796,7 +5769,6 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {}
@@ -5817,7 +5789,6 @@
         ],
         "tps": 32,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -6808,7 +6779,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9,
+        "tps": 8.246211251235321,
         "reasoning_efforts": [
           "none"
         ],
@@ -10072,7 +10043,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9.486832980505138,
+        "tps": 9.539392014169456,
         "reasoning_efforts": [
           "none"
         ],
@@ -10500,7 +10471,6 @@
         ],
         "tps": 23,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -10523,7 +10493,6 @@
         ],
         "tps": 44,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {}
@@ -10544,7 +10513,6 @@
         ],
         "tps": 21,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -10567,7 +10535,6 @@
         ],
         "tps": 38,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -10590,7 +10557,6 @@
         ],
         "tps": 21,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -10841,7 +10807,6 @@
         ],
         "tps": 48,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {}
@@ -10863,7 +10828,6 @@
         ],
         "tps": 19,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -10887,7 +10851,6 @@
         ],
         "tps": 45,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -12517,6 +12480,34 @@
     "elo_thinking": 1377.5095383218722
   },
   {
+    "id": "arcee-ai/trinity-large-preview",
+    "name": "Trinity Large",
+    "providers": [
+      {
+        "id": "openrouter-free/arcee-ai/prime",
+        "model_id": "arcee-ai/trinity-large-preview:free",
+        "context_length": 131000,
+        "pricing": {
+          "prompt": "0",
+          "completion": "0"
+        },
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 14,
+        "reasoning_efforts": [
+          "none"
+        ],
+        "extra": {}
+      }
+    ],
+    "elo_direct": 1375.5025327586363,
+    "elo_thinking": null
+  },
+  {
     "id": "google/gemini-2.5-flash-lite",
     "name": "Gemini 2.5 Flash Lite",
     "providers": [
@@ -12842,7 +12833,6 @@
         ],
         "tps": 135,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {}
@@ -12863,7 +12853,6 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -12886,7 +12875,6 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {}
@@ -12907,7 +12895,6 @@
         ],
         "tps": 158,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -12930,7 +12917,6 @@
         ],
         "tps": 164,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -14600,30 +14586,6 @@
           "text"
         ],
         "tps": 30.5,
-        "reasoning_efforts": [
-          "low",
-          "medium",
-          "high"
-        ],
-        "extra": {
-          "quantization": "fp16"
-        }
-      },
-      {
-        "id": "hack-club/cerebras/fp16",
-        "model_id": "openai/gpt-oss-120b",
-        "context_length": 131072,
-        "pricing": {
-          "prompt": "0.00000035",
-          "completion": "0.00000075"
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 723,
         "reasoning_efforts": [
           "low",
           "medium",
@@ -18659,7 +18621,6 @@
         ],
         "tps": 68.5,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -18682,7 +18643,6 @@
         ],
         "tps": 108,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {}
@@ -18703,7 +18663,6 @@
         ],
         "tps": 95,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -19153,7 +19112,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 12.24744871391589,
+        "tps": 12.165525060596439,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -19177,7 +19136,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 12.041594578792296,
+        "tps": 12.922847983320086,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -19628,7 +19587,6 @@
         ],
         "tps": 30,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {}
@@ -19761,34 +19719,6 @@
     "elo_thinking": null
   },
   {
-    "id": "arcee-ai/trinity-large-preview",
-    "name": "Trinity Large",
-    "providers": [
-      {
-        "id": "openrouter-free/arcee-ai/prime",
-        "model_id": "arcee-ai/trinity-large-preview:free",
-        "context_length": 131000,
-        "pricing": {
-          "prompt": "0",
-          "completion": "0"
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 14,
-        "reasoning_efforts": [
-          "none"
-        ],
-        "extra": {}
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
     "id": "upstage/solar-pro-3",
     "name": "Solar Pro 3",
     "providers": [
@@ -19913,7 +19843,6 @@
         ],
         "tps": 315,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {}
@@ -21307,7 +21236,6 @@
         ],
         "tps": 135,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {}
@@ -21525,7 +21453,6 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -21653,7 +21580,6 @@
         ],
         "tps": 114,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {}
@@ -21675,7 +21601,6 @@
         ],
         "tps": 87,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -21699,7 +21624,6 @@
         ],
         "tps": 36,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -22183,7 +22107,6 @@
         ],
         "tps": 90,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -22206,7 +22129,6 @@
         ],
         "tps": 26,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -22229,7 +22151,6 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {}
@@ -22838,7 +22759,6 @@
         ],
         "tps": 24,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {
@@ -25751,29 +25671,6 @@
     "elo_thinking": null
   },
   {
-    "id": "groq/compound-mini",
-    "name": "groq/compound mini",
-    "providers": [
-      {
-        "id": "groq-free",
-        "model_id": "groq/compound-mini",
-        "context_length": 70000,
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": null,
-        "reasoning_efforts": [
-          null
-        ]
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
     "id": "groq/compound",
     "name": "groq/compound",
     "providers": [
@@ -25804,6 +25701,29 @@
         "id": "groq-free",
         "model_id": "allam-2-7b",
         "context_length": 4096,
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": null,
+        "reasoning_efforts": [
+          null
+        ]
+      }
+    ],
+    "elo_direct": null,
+    "elo_thinking": null
+  },
+  {
+    "id": "groq/compound-mini",
+    "name": "groq/compound mini",
+    "providers": [
+      {
+        "id": "groq-free",
+        "model_id": "groq/compound-mini",
+        "context_length": 70000,
         "input_modalities": [
           "text"
         ],
