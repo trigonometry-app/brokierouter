@@ -1425,7 +1425,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6.855654600401044,
+        "tps": 6.928203230275509,
         "reasoning_efforts": [
           "medium"
         ],
@@ -1447,7 +1447,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 7.483314773547883,
+        "tps": 7.745966692414834,
         "reasoning_efforts": [
           "medium"
         ],
@@ -1677,7 +1677,7 @@
         "id": "github-copilot",
         "model_id": "gpt-5.4-mini",
         "context_length": 400000,
-        "tps": null,
+        "tps": 200,
         "reasoning_efforts": [
           "none",
           "low",
@@ -3766,7 +3766,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 11.224972160321824,
+        "tps": 11.313708498984761,
         "reasoning_efforts": [
           "medium"
         ],
@@ -3789,7 +3789,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 15.652475842498529,
+        "tps": 14.45683229480096,
         "reasoning_efforts": [
           "medium"
         ],
@@ -4595,7 +4595,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 8,
+        "tps": 8.18535277187245,
         "reasoning_efforts": [
           "medium"
         ],
@@ -5098,7 +5098,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6.164414002968976,
+        "tps": 6.244997998398398,
         "reasoning_efforts": [
           "medium"
         ],
@@ -6775,7 +6775,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9.219544457292887,
+        "tps": 8.717797887081348,
         "reasoning_efforts": [
           "medium"
         ],
@@ -10039,7 +10039,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 10.246950765959598,
+        "tps": 10.099504938362077,
         "reasoning_efforts": [
           "medium"
         ],
@@ -13163,7 +13163,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 8.774964387392123,
+        "tps": 9.219544457292887,
         "reasoning_efforts": [
           "medium"
         ],
@@ -19108,7 +19108,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 12.36931687685298,
+        "tps": 12.24744871391589,
         "reasoning_efforts": [
           "medium"
         ],
@@ -19131,7 +19131,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9.9498743710662,
+        "tps": 10.44030650891055,
         "reasoning_efforts": [
           "none"
         ],
@@ -25360,7 +25360,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 10.392304845413264,
+        "tps": 10.723805294763608,
         "reasoning_efforts": [
           "medium"
         ],
@@ -25665,29 +25665,6 @@
     "elo_thinking": null
   },
   {
-    "id": "humain-ai/allam-2-7b",
-    "name": "humain ai/allam 2 7b",
-    "providers": [
-      {
-        "id": "groq-free",
-        "model_id": "allam-2-7b",
-        "context_length": 4096,
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": null,
-        "reasoning_efforts": [
-          null
-        ]
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
     "id": "groq/compound",
     "name": "groq/compound",
     "providers": [
@@ -25718,6 +25695,29 @@
         "id": "groq-free",
         "model_id": "groq/compound-mini",
         "context_length": 70000,
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": null,
+        "reasoning_efforts": [
+          null
+        ]
+      }
+    ],
+    "elo_direct": null,
+    "elo_thinking": null
+  },
+  {
+    "id": "humain-ai/allam-2-7b",
+    "name": "humain ai/allam 2 7b",
+    "providers": [
+      {
+        "id": "groq-free",
+        "model_id": "allam-2-7b",
+        "context_length": 4096,
         "input_modalities": [
           "text"
         ],
