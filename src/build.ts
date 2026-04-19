@@ -293,11 +293,7 @@ const providers = {
             : ["text"],
           output_modalities: ["text"],
           tps: null,
-          reasoning_efforts: getReasoningEfforts(
-            orId,
-            undefined,
-            m.reasoning_effort || m.custom_reasoning,
-          ),
+          reasoning_efforts: getReasoningEfforts(orId, "crofai", undefined, m.id),
           extra: { quantization: m.quantization || undefined },
         };
         const arr = providers.get(orId);

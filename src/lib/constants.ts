@@ -315,7 +315,14 @@ export const getReasoningEfforts = (
   modelId: string,
   providerId?: string,
   supportsReasoningParam?: boolean,
+  crofId?: string,
 ) => {
+  // Crof: all models have always-on reasoning, except -chat variants
+  if (providerId === "crofai" && crofId) {
+    return crofId.includes("-chat")
+      ? ["none" as const]
+      : ["medium" as const];
+  }
   if (MODEL_EFFORTS[modelId]) return [...MODEL_EFFORTS[modelId]];
   for (const prefix of Object.keys(MODEL_EFFORTS)) {
     if (modelId.startsWith(prefix)) console.warn("No effort for", modelId);
