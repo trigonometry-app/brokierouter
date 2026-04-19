@@ -283,6 +283,9 @@ export const REASONING_EFFORT_OVERRIDES: Record<
     "openrouter/google-vertex": ["medium"],
     "hack-club/google-vertex": ["medium"],
   },
+  "qwen/qwen3-32b": {
+    "groq-free": ["none", "default"],
+  },
 };
 
 const THINKING_KEYWORDS = ["r1", "reasoning", "think", "deepthink"];

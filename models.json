@@ -1425,7 +1425,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6.6332495807108,
+        "tps": 6.855654600401044,
         "reasoning_efforts": [
           "none"
         ],
@@ -1447,7 +1447,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 7.14142842854285,
+        "tps": 4.69041575982343,
         "reasoning_efforts": [
           "none"
         ],
@@ -2979,7 +2979,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6,
+        "tps": 6.082762530298219,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -3766,7 +3766,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 12.041594578792296,
+        "tps": 12,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -3790,7 +3790,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 14.142135623730951,
+        "tps": 17.578395831246947,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -6816,7 +6816,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 8.94427190999916,
+        "tps": 8.602325267042627,
         "reasoning_efforts": [
           "none"
         ],
@@ -13180,7 +13180,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 8.48528137423857,
+        "tps": 9,
         "reasoning_efforts": [
           "none"
         ],
@@ -15134,7 +15134,7 @@
         "tps": 400,
         "reasoning_efforts": [
           "none",
-          "medium"
+          "default"
         ]
       }
     ],
@@ -19152,7 +19152,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 12.206555615733702,
+        "tps": 12.165525060596439,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -19176,7 +19176,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 13.379088160259652,
+        "tps": 13.038404810405298,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -24599,12 +24599,12 @@
     "elo_thinking": null
   },
   {
-    "id": "inflection/inflection-3-productivity",
-    "name": "Inflection 3 Productivity",
+    "id": "inflection/inflection-3-pi",
+    "name": "Inflection 3 Pi",
     "providers": [
       {
         "id": "openrouter/inflection",
-        "model_id": "inflection/inflection-3-productivity",
+        "model_id": "inflection/inflection-3-pi",
         "context_length": 8000,
         "pricing": {
           "prompt": "0.0000025",
@@ -24627,12 +24627,12 @@
     "elo_thinking": null
   },
   {
-    "id": "inflection/inflection-3-pi",
-    "name": "Inflection 3 Pi",
+    "id": "inflection/inflection-3-productivity",
+    "name": "Inflection 3 Productivity",
     "providers": [
       {
         "id": "openrouter/inflection",
-        "model_id": "inflection/inflection-3-pi",
+        "model_id": "inflection/inflection-3-productivity",
         "context_length": 8000,
         "pricing": {
           "prompt": "0.0000025",
@@ -25103,34 +25103,6 @@
     "elo_thinking": null
   },
   {
-    "id": "openai/gpt-4-turbo-preview",
-    "name": "GPT 4 Turbo",
-    "providers": [
-      {
-        "id": "openrouter/openai",
-        "model_id": "openai/gpt-4-turbo-preview",
-        "context_length": 128000,
-        "pricing": {
-          "prompt": "0.00001",
-          "completion": "0.00003"
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": null,
-        "reasoning_efforts": [
-          "none"
-        ],
-        "extra": {}
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
     "id": "openai/gpt-3.5-turbo-0613",
     "name": "GPT 3.5 Turbo (older v0613)",
     "providers": [
@@ -25149,6 +25121,34 @@
           "text"
         ],
         "tps": 84.5,
+        "reasoning_efforts": [
+          "none"
+        ],
+        "extra": {}
+      }
+    ],
+    "elo_direct": null,
+    "elo_thinking": null
+  },
+  {
+    "id": "openai/gpt-4-turbo-preview",
+    "name": "GPT 4 Turbo",
+    "providers": [
+      {
+        "id": "openrouter/openai",
+        "model_id": "openai/gpt-4-turbo-preview",
+        "context_length": 128000,
+        "pricing": {
+          "prompt": "0.00001",
+          "completion": "0.00003"
+        },
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": null,
         "reasoning_efforts": [
           "none"
         ],
@@ -25750,13 +25750,13 @@
     "elo_thinking": null
   },
   {
-    "id": "humain-ai/allam-2-7b",
-    "name": "humain ai/allam 2 7b",
+    "id": "groq/compound",
+    "name": "groq/compound",
     "providers": [
       {
         "id": "groq-free",
-        "model_id": "allam-2-7b",
-        "context_length": 4096,
+        "model_id": "groq/compound",
+        "context_length": 70000,
         "input_modalities": [
           "text"
         ],
@@ -25796,13 +25796,13 @@
     "elo_thinking": null
   },
   {
-    "id": "groq/compound",
-    "name": "groq/compound",
+    "id": "humain-ai/allam-2-7b",
+    "name": "humain ai/allam 2 7b",
     "providers": [
       {
         "id": "groq-free",
-        "model_id": "groq/compound",
-        "context_length": 70000,
+        "model_id": "allam-2-7b",
+        "context_length": 4096,
         "input_modalities": [
           "text"
         ],
