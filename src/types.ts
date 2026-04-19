@@ -29,7 +29,7 @@ export type Provider = {
   output_modalities: string[];
   tps: number | null;
   cost_multiplier?: number;
-  reasoning_efforts: string[];
+  reasoning_efforts: (string | null)[];
   extra?: Record<string, unknown>;
 };
 

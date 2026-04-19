@@ -1425,7 +1425,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6.855654600401044,
+        "tps": 6.928203230275509,
         "reasoning_efforts": [
           "none"
         ],
@@ -1447,7 +1447,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 4.69041575982343,
+        "tps": 7.0710678118654755,
         "reasoning_efforts": [
           "none"
         ],
@@ -3000,7 +3000,7 @@
         ],
         "tps": 28,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -3766,7 +3766,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 12,
+        "tps": 11.180339887498949,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -3790,7 +3790,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 17.578395831246947,
+        "tps": 37.986839826445156,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -5134,7 +5134,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 5.5677643628300215,
+        "tps": 5.477225575051661,
         "reasoning_efforts": [
           "none"
         ],
@@ -5424,7 +5424,7 @@
         ],
         "tps": 39,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -6816,7 +6816,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 8.602325267042627,
+        "tps": 8.774964387392123,
         "reasoning_efforts": [
           "none"
         ],
@@ -7226,7 +7226,7 @@
         ],
         "tps": 1400,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -13342,7 +13342,7 @@
         ],
         "tps": 9,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -15453,7 +15453,7 @@
         ],
         "tps": 28,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -16141,7 +16141,7 @@
         ],
         "tps": 750,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -16569,7 +16569,7 @@
         ],
         "tps": 280,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -16632,7 +16632,7 @@
         ],
         "tps": 12,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -17285,7 +17285,7 @@
         ],
         "tps": 15,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -18355,7 +18355,7 @@
         ],
         "tps": 560,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       },
       {
@@ -18370,7 +18370,7 @@
         ],
         "tps": 2200,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -22779,7 +22779,7 @@
         ],
         "tps": 25,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -24599,12 +24599,12 @@
     "elo_thinking": null
   },
   {
-    "id": "inflection/inflection-3-pi",
-    "name": "Inflection 3 Pi",
+    "id": "inflection/inflection-3-productivity",
+    "name": "Inflection 3 Productivity",
     "providers": [
       {
         "id": "openrouter/inflection",
-        "model_id": "inflection/inflection-3-pi",
+        "model_id": "inflection/inflection-3-productivity",
         "context_length": 8000,
         "pricing": {
           "prompt": "0.0000025",
@@ -24627,12 +24627,12 @@
     "elo_thinking": null
   },
   {
-    "id": "inflection/inflection-3-productivity",
-    "name": "Inflection 3 Productivity",
+    "id": "inflection/inflection-3-pi",
+    "name": "Inflection 3 Pi",
     "providers": [
       {
         "id": "openrouter/inflection",
-        "model_id": "inflection/inflection-3-productivity",
+        "model_id": "inflection/inflection-3-pi",
         "context_length": 8000,
         "pricing": {
           "prompt": "0.0000025",
@@ -25103,34 +25103,6 @@
     "elo_thinking": null
   },
   {
-    "id": "openai/gpt-3.5-turbo-0613",
-    "name": "GPT 3.5 Turbo (older v0613)",
-    "providers": [
-      {
-        "id": "openrouter/azure",
-        "model_id": "openai/gpt-3.5-turbo-0613",
-        "context_length": 4095,
-        "pricing": {
-          "prompt": "0.000001",
-          "completion": "0.000002"
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 84.5,
-        "reasoning_efforts": [
-          "none"
-        ],
-        "extra": {}
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
     "id": "openai/gpt-4-turbo-preview",
     "name": "GPT 4 Turbo",
     "providers": [
@@ -25149,6 +25121,34 @@
           "text"
         ],
         "tps": null,
+        "reasoning_efforts": [
+          "none"
+        ],
+        "extra": {}
+      }
+    ],
+    "elo_direct": null,
+    "elo_thinking": null
+  },
+  {
+    "id": "openai/gpt-3.5-turbo-0613",
+    "name": "GPT 3.5 Turbo (older v0613)",
+    "providers": [
+      {
+        "id": "openrouter/azure",
+        "model_id": "openai/gpt-3.5-turbo-0613",
+        "context_length": 4095,
+        "pricing": {
+          "prompt": "0.000001",
+          "completion": "0.000002"
+        },
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 84.5,
         "reasoning_efforts": [
           "none"
         ],
@@ -25765,30 +25765,7 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none"
-        ]
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
-    "id": "groq/compound-mini",
-    "name": "groq/compound mini",
-    "providers": [
-      {
-        "id": "groq-free",
-        "model_id": "groq/compound-mini",
-        "context_length": 70000,
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": null,
-        "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -25811,7 +25788,30 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none"
+          null
+        ]
+      }
+    ],
+    "elo_direct": null,
+    "elo_thinking": null
+  },
+  {
+    "id": "groq/compound-mini",
+    "name": "groq/compound mini",
+    "providers": [
+      {
+        "id": "groq-free",
+        "model_id": "groq/compound-mini",
+        "context_length": 70000,
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": null,
+        "reasoning_efforts": [
+          null
         ]
       }
     ],
@@ -25834,7 +25834,7 @@
         ],
         "tps": 27,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],

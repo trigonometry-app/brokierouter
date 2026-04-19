@@ -119,6 +119,7 @@ const endpointToProvider = (
     tps,
     reasoning_efforts: getReasoningEfforts(
       m.id.replace(":free", ""),
+      undefined,
       m.supported_parameters.includes("reasoning"),
     ),
     extra: {
@@ -246,6 +247,7 @@ const providers = {
               tps: null,
               reasoning_efforts: getReasoningEfforts(
                 id,
+                undefined,
                 m.supported_parameters.includes("reasoning"),
               ),
             },
@@ -289,6 +291,7 @@ const providers = {
           tps: null,
           reasoning_efforts: getReasoningEfforts(
             orId,
+            undefined,
             m.reasoning_effort || m.custom_reasoning,
           ),
           extra: { quantization: m.quantization || undefined },
@@ -437,7 +440,7 @@ const providers = {
               : ["text"],
             output_modalities: ["text"],
             tps: null,
-            reasoning_efforts: getReasoningEfforts(orId),
+            reasoning_efforts: getReasoningEfforts(orId, "groq-free"),
           },
         ]);
       }
@@ -472,7 +475,7 @@ const providers = {
             input_modalities: ["text"],
             output_modalities: ["text"],
             tps: null,
-            reasoning_efforts: getReasoningEfforts(orId),
+            reasoning_efforts: getReasoningEfforts(orId, "cerebras-free"),
           },
         ]);
       }
@@ -509,7 +512,7 @@ const providers = {
             input_modalities: ["text"],
             output_modalities: ["text"],
             tps: null,
-            reasoning_efforts: getReasoningEfforts(orId),
+            reasoning_efforts: getReasoningEfforts(orId, "google-free"),
           },
         ]);
       }

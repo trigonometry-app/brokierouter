@@ -155,7 +155,7 @@ export const MODEL_SKIP = new Set([
 
 // ─── reasoning efforts ─────────────────────────────────────────────────────
 
-export type Efforts = string[];
+export type Efforts = (string | null)[];
 
 const MODEL_EFFORTS: Record<
   string,
@@ -288,10 +288,21 @@ export const REASONING_EFFORT_OVERRIDES: Record<
   },
 };
 
+// Providers whose APIs reject the reasoning_effort parameter entirely for
+// non-reasoning models. When a model on one of these providers gets the
+// default ["none"] (meaning it doesn't reason), we send [null] instead so
+// the parameter is omitted from the request.
+export const PICKY_PROVIDERS = new Set([
+  "groq-free",
+  "cerebras-free",
+  "google-free",
+]);
+
 const THINKING_KEYWORDS = ["r1", "reasoning", "think", "deepthink"];
 
 export const getReasoningEfforts = (
   modelId: string,
+  providerId?: string,
   supportsReasoningParam?: boolean,
 ): Efforts => {
   if (MODEL_EFFORTS[modelId]) return [...MODEL_EFFORTS[modelId]];
@@ -302,5 +313,6 @@ export const getReasoningEfforts = (
   const lower = modelId.toLowerCase();
   if (THINKING_KEYWORDS.some((k) => lower.includes(k)))
     return ["none", "medium"];
+  if (providerId && PICKY_PROVIDERS.has(providerId)) return [null];
   return ["none"];
 };
