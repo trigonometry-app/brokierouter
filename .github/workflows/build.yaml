@@ -1,0 +1,47 @@
+name: Build models.json
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      - uses: pnpm/action-setup@v6
+        with:
+          version: latest
+      - uses: astral-sh/setup-uv@v4
+
+      - run: pnpm install
+
+      - run: uv run scripts/fetch_arena.py
+
+      - run: pnpm run fetch:endpoints
+        env:
+          OPENROUTER_KEY: ${{ secrets.OPENROUTER_KEY }}
+      - run: pnpm run benchmark google
+        env:
+          GOOGLE_KEY: ${{ secrets.GOOGLE_KEY }}
+
+      # Build models.json
+      - run: pnpm run build
+        env:
+          CEREBRAS_KEY: ${{ secrets.CEREBRAS_KEY }}
+          GROQ_KEY: ${{ secrets.GROQ_KEY }}
+          GOOGLE_KEY: ${{ secrets.GOOGLE_KEY }}
+          CROF_KEY: ${{ secrets.CROF_KEY }}
+          GHM_KEY: ${{ secrets.GHM_KEY }}
+          GHC_KEY: ${{ secrets.GHC_KEY }}
+
+      # Commit models.json if changed
+      - name: Commit models.json if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet models.json || git add models.json && git commit -m "update models.json" && git push

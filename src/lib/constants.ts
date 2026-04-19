@@ -1,0 +1,256 @@
+import BENCHMARKS_DATA from "./benchmarks.json" with { type: "json" };
+
+export const BENCHMARKS: Record<
+  string,
+  Record<string, number>
+> = BENCHMARKS_DATA;
+
+// ─── groq tpm ─────────────────────────────────────────────────────────────
+
+export const GROQ_TPM: Record<string, number> = {
+  "allam-2-7b": 6_000,
+  "groq/compound": 70_000,
+  "groq/compound-mini": 70_000,
+  "llama-3.1-8b-instant": 6_000,
+  "llama-3.3-70b-versatile": 12_000,
+  "meta-llama/llama-4-scout-17b-16e-instruct": 30_000,
+  "openai/gpt-oss-120b": 8_000,
+  "openai/gpt-oss-20b": 8_000,
+  "qwen/qwen3-32b": 6_000,
+};
+
+// ─── vision sets ───────────────────────────────────────────────────────────
+
+export const CROF_VISION = new Set([
+  "kimi-k2.5",
+  "kimi-k2.5-lightning",
+  "gemma-4-31b-it",
+  "qwen3.5-397b-a17b",
+  "qwen3.5-9b",
+  "qwen3.5-9b-chat",
+]);
+
+export const GROQ_VISION = new Set([
+  "meta-llama/llama-4-scout-17b-16e-instruct",
+]);
+
+// ─── provider id mappings ──────────────────────────────────────────────────
+
+export const CROF_MAP: Record<string, { orId: string; variant?: string }> = {
+  "kimi-k2.5": { orId: "moonshotai/kimi-k2.5" },
+  "kimi-k2.5-lightning": { orId: "moonshotai/kimi-k2.5", variant: "lightning" },
+  "glm-5": { orId: "z-ai/glm-5" },
+  "glm-5.1": { orId: "z-ai/glm-5.1" },
+  "glm-5.1-precision": { orId: "z-ai/glm-5.1", variant: "precision" },
+  "minimax-m2.5": { orId: "minimax/minimax-m2.5" },
+  "qwen3.5-397b-a17b": { orId: "qwen/qwen3.5-397b-a17b" },
+  "qwen3.5-9b": { orId: "qwen/qwen3.5-9b" },
+  "qwen3.5-9b-chat": { orId: "qwen/qwen3.5-9b", variant: "chat" },
+  "glm-4.7": { orId: "z-ai/glm-4.7" },
+  "glm-4.7-flash": { orId: "z-ai/glm-4.7-flash" },
+  "deepseek-v3.2": { orId: "deepseek/deepseek-v3.2" },
+  "gemma-4-31b-it": { orId: "google/gemma-4-31b-it" },
+  greg: { orId: "crofai/greg" },
+};
+
+export const GHM_ID_TO_OR: Record<string, string> = {
+  "cohere/cohere-command-a": "cohere/command-a",
+  "cohere/cohere-command-r-08-2024": "cohere/command-r-08-2024",
+  "cohere/cohere-command-r-plus-08-2024": "cohere/command-r-plus-08-2024",
+  "deepseek/deepseek-v3-0324": "deepseek/deepseek-chat-v3-0324",
+  "meta/llama-3.2-11b-vision-instruct":
+    "meta-llama/llama-3.2-11b-vision-instruct",
+  "meta/llama-3.2-90b-vision-instruct":
+    "meta-llama/llama-3.2-90b-vision-instruct",
+  "meta/llama-3.3-70b-instruct": "meta-llama/llama-3.3-70b-instruct",
+  "meta/meta-llama-3.1-405b-instruct": "meta-llama/llama-3.1-405b-instruct",
+  "meta/llama-4-maverick-17b-128e-instruct-fp8": "meta-llama/llama-4-maverick",
+  "meta/llama-4-scout-17b-16e-instruct": "meta-llama/llama-4-scout",
+  "meta/meta-llama-3.1-8b-instruct": "meta-llama/llama-3.1-8b-instruct",
+  "mistral-ai/ministral-3b": "mistralai/ministral-3b",
+  "mistral-ai/mistral-medium-2505": "mistralai/mistral-medium-3",
+  "mistral-ai/mistral-small-2503": "mistralai/mistral-small-3.1-24b-instruct",
+  "xai/grok-3": "x-ai/grok-3",
+  "xai/grok-3-mini": "x-ai/grok-3-mini",
+};
+
+export const GROQ_ID_TO_OR: Record<string, string> = {
+  "llama-3.1-8b-instant": "meta-llama/llama-3.1-8b-instruct",
+  "llama-3.3-70b-versatile": "meta-llama/llama-3.3-70b-instruct",
+  "meta-llama/llama-4-scout-17b-16e-instruct": "meta-llama/llama-4-scout",
+  "openai/gpt-oss-120b": "openai/gpt-oss-120b",
+  "openai/gpt-oss-20b": "openai/gpt-oss-20b",
+  "qwen/qwen3-32b": "qwen/qwen3-32b",
+  "allam-2-7b": "humain-ai/allam-2-7b",
+};
+
+export const CEREBRAS_ID_TO_OR: Record<string, string> = {
+  "llama-3.3-70b": "meta-llama/llama-3.3-70b-instruct",
+  "llama3.1-8b": "meta-llama/llama-3.1-8b-instruct",
+  "zai-glm-4.7": "z-ai/glm-4.7",
+  "gpt-oss-120b": "openai/gpt-oss-120b",
+  "qwen-3-235b-a22b-instruct-2507": "qwen/qwen3-235b-a22b-2507",
+};
+
+export const GOOGLE_NAME_TO_OR: Record<string, string> = {
+  "models/gemini-2.5-flash": "google/gemini-2.5-flash",
+  "models/gemma-3-1b-it": "google/gemma-3-1b-it",
+  "models/gemma-3-4b-it": "google/gemma-3-4b-it",
+  "models/gemma-3-12b-it": "google/gemma-3-12b-it",
+  "models/gemma-3-27b-it": "google/gemma-3-27b-it",
+  "models/gemma-3n-e4b-it": "google/gemma-3n-e4b-it",
+  "models/gemma-3n-e2b-it": "google/gemma-3n-e2b-it",
+  "models/gemma-4-26b-a4b-it": "google/gemma-4-26b-a4b-it",
+  "models/gemma-4-31b-it": "google/gemma-4-31b-it",
+  "models/gemini-2.5-flash-lite": "google/gemini-2.5-flash-lite",
+  "models/gemini-3-flash-preview": "google/gemini-3-flash-preview",
+};
+
+export const GHC_ID_TO_OR: Record<string, string> = {
+  "gemini-3.1-pro-preview": "google/gemini-3.1-pro-preview",
+  "gpt-5.2-codex": "openai/gpt-5.2-codex",
+  "gpt-5.3-codex": "openai/gpt-5.3-codex",
+  "gpt-5.4-mini": "openai/gpt-5.4-mini",
+  "gpt-5-mini": "openai/gpt-5-mini",
+  "grok-code-fast-1": "x-ai/grok-code-fast-1",
+  "claude-haiku-4.5": "anthropic/claude-haiku-4.5",
+  "gemini-3-flash-preview": "google/gemini-3-flash-preview",
+  "gemini-2.5-pro": "google/gemini-2.5-pro",
+  "oswe-vscode-prime": "openai/raptor-mini",
+  "gpt-5.2": "openai/gpt-5.2",
+  "gpt-4.1": "openai/gpt-4.1",
+  "gpt-4o": "openai/gpt-4o",
+};
+
+// ─── reasoning efforts ─────────────────────────────────────────────────────
+
+export type Efforts = string[];
+
+const MODEL_EFFORTS: Record<
+  string,
+  ("none" | "minimal" | "low" | "medium" | "high" | "xhigh" | "max")[]
+> = {
+  // ANTHROPIC ─────────────────────────────────────────────
+  // Effort API added progressively. Supported on: Opus 4.5, Sonnet 4.6, Opus 4.6, Opus 4.7
+  // Older models use budget_tokens (on/off toggle) → "none" | "medium" standin
+  // xhigh: Opus 4.7 only. max: Opus 4.6+, Sonnet 4.6.
+  "anthropic/claude-3-haiku": ["none"],
+  "anthropic/claude-3.5-haiku": ["none"],
+  "anthropic/claude-haiku-4.5": ["none"],
+  "anthropic/claude-3.7-sonnet": ["none", "medium"], // budget_tokens on/off
+  "anthropic/claude-sonnet-4": ["none", "medium"], // budget_tokens on/off
+  "anthropic/claude-sonnet-4.5": ["none", "medium"], // budget_tokens on/off
+  "anthropic/claude-sonnet-4.6": ["none", "low", "medium", "high", "max"],
+  "anthropic/claude-opus-4": ["none", "medium"], // budget_tokens on/off
+  "anthropic/claude-opus-4.1": ["none", "medium"], // budget_tokens on/off
+  "anthropic/claude-opus-4.5": ["none", "low", "medium", "high"], // effort API, no max
+  "anthropic/claude-opus-4.6": ["none", "low", "medium", "high", "max"],
+  "anthropic/claude-opus-4.6-fast": ["none", "low", "medium", "high", "max"],
+  "anthropic/claude-opus-4.7": [
+    "none",
+    "low",
+    "medium",
+    "high",
+    "xhigh",
+    "max",
+  ],
+
+  // OPENAI ─────────────────────────────────────────────────
+  // GPT-4o / 4.1 family: no reasoning
+  "openai/gpt-4o": ["none"],
+  "openai/gpt-4o-2024-05-13": ["none"],
+  "openai/gpt-4o-2024-08-06": ["none"],
+  "openai/gpt-4o-2024-11-20": ["none"],
+  "openai/gpt-4o-audio-preview": ["none"],
+  "openai/gpt-4o-mini": ["none"],
+  "openai/gpt-4o-mini-2024-07-18": ["none"],
+  "openai/gpt-4o-mini-search-preview": ["none"],
+  "openai/gpt-4o-search-preview": ["none"],
+  "openai/gpt-4.1": ["none"],
+  "openai/gpt-4.1-mini": ["none"],
+  "openai/gpt-4.1-nano": ["none"],
+  // o-series: low/medium/high only (no xhigh, no none)
+  "openai/o1-preview": ["medium"], // always-on, no control
+  "openai/o1": ["low", "medium", "high"],
+  "openai/o1-mini": ["low", "medium", "high"],
+  "openai/o1-pro": ["low", "medium", "high"],
+  "openai/o3-mini": ["low", "medium", "high"],
+  "openai/o3": ["low", "medium", "high"],
+  "openai/o3-pro": ["low", "medium", "high"],
+  "openai/o3-deep-research": ["medium"], // always-on deep research
+  "openai/o4-mini": ["low", "medium", "high"],
+  "openai/o4-mini-deep-research": ["medium"], // always-on
+  "openai/gpt-oss-120b": ["low", "medium", "high"],
+  // GPT-5 (original): minimal/low/medium/high — no "none", no xhigh
+  "openai/gpt-5": ["minimal", "low", "medium", "high"],
+  "openai/gpt-5-mini": ["minimal", "low", "medium", "high"],
+  "openai/gpt-5-nano": ["minimal", "low", "medium", "high"],
+  "openai/gpt-5-chat": ["none"], // chat/non-reasoning variant
+  "openai/gpt-5-codex": ["low", "medium", "high"], // no minimal, no xhigh
+  "openai/gpt-5-image": ["none"],
+  "openai/gpt-5-image-mini": ["none"],
+  "openai/gpt-5-pro": ["high"], // fixed at high only
+  // GPT-5.1: none added as default; codex-max first to get xhigh
+  "openai/gpt-5.1": ["none", "low", "medium", "high"],
+  "openai/gpt-5.1-chat": ["medium"], // chat variant, fixed medium
+  "openai/gpt-5.1-codex": ["low", "medium", "high"],
+  "openai/gpt-5.1-codex-mini": ["low", "medium", "high"],
+  "openai/gpt-5.1-codex-max": ["low", "medium", "high", "xhigh"], // xhigh debut
+  // GPT-5.2: xhigh added across the board
+  "openai/gpt-5.2": ["none", "low", "medium", "high", "xhigh"],
+  "openai/gpt-5.2-chat": ["none"],
+  "openai/gpt-5.2-codex": ["low", "medium", "high", "xhigh"],
+  "openai/gpt-5.2-pro": ["high", "xhigh"], // pro = always reasoning, wide range
+  // GPT-5.3
+  "openai/gpt-5.3-chat": ["none"],
+  "openai/gpt-5.3-codex": ["low", "medium", "high", "xhigh"],
+  // GPT-5.4: full range none→xhigh; mini/nano also reach xhigh (confirmed in release chart)
+  "openai/gpt-5.4": ["none", "low", "medium", "high", "xhigh"],
+  "openai/gpt-5.4-mini": ["none", "low", "medium", "high", "xhigh"],
+  "openai/gpt-5.4-nano": ["none", "low", "medium", "high", "xhigh"],
+  "openai/gpt-5.4-pro": ["low", "medium", "high", "xhigh"],
+
+  // GOOGLE ─────────────────────────────────────────────────
+  "google/gemini-2.0-flash-001": ["none"],
+  "google/gemini-2.0-flash-lite-001": ["none"],
+  "google/gemini-2.5-pro": ["none", "low", "medium", "high"],
+  "google/gemini-2.5-flash": ["none", "low", "medium", "high"],
+  "google/gemini-2.5-flash-lite": ["none", "low", "medium"],
+  "google/gemini-2.5-flash-image": ["none"],
+  "google/gemini-2.5-flash-lite-preview-09-2025": ["none"],
+  "google/gemini-3-flash-preview": ["minimal", "low", "medium", "high"],
+  "google/gemini-3-pro-image-preview": ["none", "low", "medium", "high"],
+  "google/gemini-3.1-pro-preview": ["low", "medium", "high"],
+  "google/gemini-3.1-pro-preview-customtools": ["low", "medium", "high"],
+  "google/gemini-3.1-flash-lite-preview": ["minimal", "low", "medium", "high"],
+
+  // XAI ─────────────────────────────────────────────────────
+  "x-ai/grok-3": ["none", "medium"], // Think on/off
+  "x-ai/grok-3-mini": ["none", "low", "medium", "high"],
+  "x-ai/grok-4.1-fast": ["none", "medium", "high"],
+  "x-ai/grok-code-fast-1": ["none", "medium"],
+
+  // OTHERS that always reason ───────────────────────────────
+  "deepseek/deepseek-r1": ["medium"],
+  "deepseek/deepseek-r1-0528": ["medium"],
+  "deepseek/deepseek-r1-distill-llama-70b": ["medium"],
+  "deepseek/deepseek-r1-distill-qwen-32b": ["medium"],
+  "deepseek/deepseek-v3.2-speciale": ["medium"],
+};
+
+const THINKING_KEYWORDS = ["r1", "reasoning", "think", "deepthink"];
+
+export const getReasoningEfforts = (
+  modelId: string,
+  supportsReasoningParam?: boolean,
+): Efforts => {
+  if (MODEL_EFFORTS[modelId]) return [...MODEL_EFFORTS[modelId]];
+  for (const prefix of Object.keys(MODEL_EFFORTS)) {
+    if (modelId.startsWith(prefix)) console.warn("No effort for", modelId);
+  }
+  if (supportsReasoningParam) return ["none", "medium"];
+  const lower = modelId.toLowerCase();
+  if (THINKING_KEYWORDS.some((k) => lower.includes(k)))
+    return ["none", "medium"];
+  return ["none"];
+};
