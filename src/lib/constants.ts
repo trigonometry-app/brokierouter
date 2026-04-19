@@ -34,6 +34,27 @@ export const GROQ_VISION = new Set([
   "meta-llama/llama-4-scout-17b-16e-instruct",
 ]);
 
+// ─── provider skip lists ───────────────────────────────────────────────────
+
+export const GROQ_SKIP = new Set([
+  "whisper-large-v3",
+  "whisper-large-v3-turbo",
+  "meta-llama/llama-prompt-guard-2-22m",
+  "meta-llama/llama-prompt-guard-2-86m",
+  "openai/gpt-oss-safeguard-20b",
+  "canopylabs/orpheus-arabic-saudi",
+  "canopylabs/orpheus-v1-english",
+]);
+
+export const CEREBRAS_SKIP = new Set(["zai-glm-4.7", "gpt-oss-120b"]);
+
+export const CEREBRAS_CONTEXT: Record<string, number> = {
+  "llama3.1-8b": 8192,
+  "qwen-3-235b-a22b-instruct-2507": 30000,
+};
+
+export const GHM_SKIP = new Set(["openai/o1-mini"]);
+
 // ─── provider id mappings ──────────────────────────────────────────────────
 
 export const CROF_MAP: Record<string, { orId: string; variant?: string }> = {
@@ -104,6 +125,8 @@ export const GOOGLE_NAME_TO_OR: Record<string, string> = {
   "models/gemma-4-31b-it": "google/gemma-4-31b-it",
   "models/gemini-2.5-flash-lite": "google/gemini-2.5-flash-lite",
   "models/gemini-3-flash-preview": "google/gemini-3-flash-preview",
+  "models/gemini-3.1-flash-lite-preview":
+    "google/gemini-3.1-flash-lite-preview",
 };
 
 export const GHC_ID_TO_OR: Record<string, string> = {

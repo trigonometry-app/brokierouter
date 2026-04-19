@@ -430,10 +430,11 @@ for (const { model_id, or_id } of models) {
     // Rough token estimate: ~4 chars per token
     const tokenEstimate = charCount / 4;
     const streamingTime = lastContentTime - firstContentTime;
-    const tps =
+    const rawTps =
       streamingTime > 0
         ? Math.round((tokenEstimate / streamingTime) * 1000)
         : 0;
+    const tps = Math.min(rawTps, providerKey === "ghm" ? 200 : 2000);
 
     const modelNote = actualModel && actualModel !== model_id ? ` | actual: ${actualModel}` : "";
     console.log(

@@ -21,13 +21,13 @@
     "github-models": 13
   },
   "deepseek/deepseek-chat-v3-0324": {
-    "github-models": 96
+    "github-models": 100
   },
   "deepseek/deepseek-r1": {
-    "github-models": 96
+    "github-models": 78
   },
   "deepseek/deepseek-r1-0528": {
-    "github-models": 97
+    "github-models": 100
   },
   "gemini-3.1-flash-lite-preview": {
     "google-free": 235
@@ -85,38 +85,41 @@
     "google-free": 28
   },
   "meta-llama/llama-3.1-405b-instruct": {
-    "github-models": 61990
+    "github-models": 200
   },
   "meta-llama/llama-3.1-8b-instruct": {
     "groq-free": 560,
     "cerebras-free": 2200,
-    "github-models": 135474
+    "github-models": 200
   },
   "meta-llama/llama-3.2-90b-vision-instruct": {
     "github-models": 30
   },
   "meta-llama/llama-3.3-70b-instruct": {
     "groq-free": 280,
-    "github-models": 124
+    "github-models": 122
   },
   "meta-llama/llama-4-maverick": {
-    "github-models": 91
+    "github-models": 134
   },
   "meta-llama/llama-4-scout": {
     "groq-free": 750,
-    "github-models": 58
+    "github-models": 78
   },
   "microsoft/phi-4-mini-instruct": {
-    "github-models": 38
+    "github-models": 35
   },
   "microsoft/phi-4-mini-reasoning": {
-    "github-models": 24
+    "github-models": 21
+  },
+  "microsoft/phi-4-reasoning": {
+    "github-models": 27
   },
   "mistral-ai/codestral-2501": {
     "github-models": 61
   },
   "mistralai/ministral-3b": {
-    "github-models": 100
+    "github-models": 112
   },
   "mistralai/mistral-medium-3": {
     "github-models": 27
@@ -126,27 +129,27 @@
   },
   "openai/gpt-4.1": {
     "github-copilot": 140,
-    "github-models": 172
+    "github-models": 200
   },
   "openai/gpt-4.1-mini": {
-    "github-models": 87
+    "github-models": 95
   },
   "openai/gpt-4.1-nano": {
-    "github-models": 198
+    "github-models": 200
   },
   "openai/gpt-4o": {
     "github-copilot": 80,
-    "github-models": 188
+    "github-models": 163
   },
   "openai/gpt-4o-mini": {
-    "github-models": 83
+    "github-models": 99
   },
   "openai/gpt-5": {
     "github-copilot": 140,
-    "github-models": 129
+    "github-models": 162
   },
   "openai/gpt-5-chat": {
-    "github-models": 143
+    "github-models": 200
   },
   "openai/gpt-5-codex": {
     "github-copilot": 140
@@ -155,7 +158,7 @@
     "github-copilot": 40
   },
   "openai/gpt-5-nano": {
-    "github-models": 176
+    "github-models": 174
   },
   "openai/gpt-5.1": {
     "github-copilot": 80
@@ -182,22 +185,22 @@
     "groq-free": 1000
   },
   "openai/o1": {
-    "github-models": 79
+    "github-models": 73
   },
   "openai/o1-mini": {
-    "github-models": 129
+    "github-models": 139
   },
   "openai/o1-preview": {
-    "github-models": 83
+    "github-models": 75
   },
   "openai/o3": {
-    "github-models": 219
+    "github-models": 168
   },
   "openai/o3-mini": {
-    "github-models": 175
+    "github-models": 200
   },
   "openai/o4-mini": {
-    "github-models": 126
+    "github-models": 145
   },
   "openai/raptor-mini": {
     "github-copilot": 140
@@ -209,7 +212,10 @@
     "groq-free": 400
   },
   "x-ai/grok-3": {
-    "github-models": 37
+    "github-models": 38
+  },
+  "x-ai/grok-3-mini": {
+    "github-models": 86
   },
   "x-ai/grok-code-fast-1": {
     "github-copilot": 200

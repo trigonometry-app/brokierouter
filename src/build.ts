@@ -35,6 +35,10 @@ import {
   CROF_MAP,
   CROF_VISION,
   GROQ_VISION,
+  GROQ_SKIP,
+  CEREBRAS_SKIP,
+  CEREBRAS_CONTEXT,
+  GHM_SKIP,
   GHM_ID_TO_OR,
   GHC_ID_TO_OR,
   GROQ_ID_TO_OR,
@@ -42,6 +46,26 @@ import {
   GOOGLE_NAME_TO_OR,
   getReasoningEfforts,
 } from "./lib/constants.ts";
+
+// ─── helpers ─────────────────────────────────────────────────────────────
+
+const requireContextLength = (
+  value: number | undefined,
+  source: string,
+): number => {
+  if (!value) throw new Error(`Missing context_length for ${source}`);
+  return value;
+};
+
+const requireModalities = (
+  value: string[] | undefined,
+  field: string,
+  source: string,
+): string[] => {
+  if (!value || !value.length)
+    throw new Error(`Missing ${field} for ${source}`);
+  return value;
+};
 
 // ─── crof speed scraper ─────────────────────────────────────────────────
 
@@ -75,10 +99,21 @@ const endpointToProvider = (
   return {
     id: `${prefix}/${ep.tag}`,
     model_id: m.id,
-    context_length: ep.context_length || undefined,
+    context_length: requireContextLength(
+      ep.context_length,
+      `endpoint ${ep.model_id}/${ep.tag}`,
+    ),
     pricing: { prompt: ep.pricing.prompt, completion: ep.pricing.completion },
-    input_modalities: m.architecture.input_modalities,
-    output_modalities: m.architecture.output_modalities,
+    input_modalities: requireModalities(
+      m.architecture.input_modalities,
+      "input_modalities",
+      m.id,
+    ),
+    output_modalities: requireModalities(
+      m.architecture.output_modalities,
+      "output_modalities",
+      m.id,
+    ),
     tps,
     reasoning_efforts: getReasoningEfforts(
       m.id.replace(":free", ""),
@@ -131,6 +166,7 @@ const providers = {
       // Iterate endpoints directly — each endpoint is one provider
       for (const endpoints of Object.values(endpointData)) {
         for (const ep of endpoints) {
+          if (!ep.context_length) continue;
           const m = modelById.get(ep.model_id);
           if (!m) continue;
           const id = ep.model_id.replace(":free", "");
@@ -187,13 +223,24 @@ const providers = {
             {
               id: `hack-club/${id.split("/")[0]}`,
               model_id: m.id,
-              context_length: m.context_length || undefined,
+              context_length: requireContextLength(
+                m.context_length,
+                `hackclub fallback ${m.id}`,
+              ),
               pricing: {
                 prompt: m.pricing.prompt,
                 completion: m.pricing.completion,
               },
-              input_modalities: m.architecture.input_modalities,
-              output_modalities: m.architecture.output_modalities,
+              input_modalities: requireModalities(
+                m.architecture.input_modalities,
+                "input_modalities",
+                m.id,
+              ),
+              output_modalities: requireModalities(
+                m.architecture.output_modalities,
+                "output_modalities",
+                m.id,
+              ),
               tps: null,
               reasoning_efforts: getReasoningEfforts(
                 id,
@@ -225,7 +272,10 @@ const providers = {
         const provider: Provider = {
           id: mapping?.variant ? `crofai/${mapping.variant}` : "crofai",
           model_id: m.id,
-          context_length: m.context_length || undefined,
+          context_length: requireContextLength(
+            m.context_length,
+            `crofai ${m.id}`,
+          ),
           pricing: {
             prompt: m.pricing.prompt,
             completion: m.pricing.completion,
@@ -274,6 +324,7 @@ const providers = {
       ]);
       for (const m of raw) {
         const orId = GHM_ID_TO_OR[m.id] ?? m.id;
+        if (GHM_SKIP.has(m.id)) continue;
         let context = Math.min(m.limits.max_input_tokens, 8000);
         if (capped4000.has(orId)) context = Math.min(context, 4000);
         providers.set(orId, [
@@ -333,20 +384,22 @@ const providers = {
         const provider: Provider = {
           id: "github-copilot",
           model_id: m.id,
+          context_length: requireContextLength(
+            m.capabilities?.limits?.max_context_window_tokens,
+            `ghc ${m.id}`,
+          ),
           tps: null,
           reasoning_efforts: getReasoningEfforts(orId),
           cost_multiplier: m.billing?.multiplier,
-          input_modalities: m.capabilities?.supports?.input_modalities,
-          output_modalities: m.capabilities?.supports?.output_modalities,
+          input_modalities: m.capabilities?.supports?.vision
+            ? ["text", "image"]
+            : ["text"],
+          output_modalities: ["text"],
           extra: {
             model_picker_enabled: m.model_picker_enabled,
             supported_endpoints: m.supported_endpoints,
           },
         };
-        if (m.capabilities?.limits?.max_context_window_tokens) {
-          provider.context_length =
-            m.capabilities.limits.max_context_window_tokens;
-        }
         providers.set(orId, [provider]);
       }
       return { providers, unmapped };
@@ -364,17 +417,8 @@ const providers = {
     parse(raw: { data: GroqModel[] }): ParseResult {
       const providers = new Map<string, Provider[]>();
       const unmapped: string[] = [];
-      const skip = new Set([
-        "whisper-large-v3",
-        "whisper-large-v3-turbo",
-        "meta-llama/llama-prompt-guard-2-22m",
-        "meta-llama/llama-prompt-guard-2-86m",
-        "openai/gpt-oss-safeguard-20b",
-        "canopylabs/orpheus-arabic-saudi",
-        "canopylabs/orpheus-v1-english",
-      ]);
       for (const m of raw.data) {
-        if (skip.has(m.id)) continue;
+        if (GROQ_SKIP.has(m.id)) continue;
         const orId = GROQ_ID_TO_OR[m.id] ?? m.id;
         if (!GROQ_ID_TO_OR[m.id]) unmapped.push(m.id);
         const tpm = GROQ_TPM[m.id];
@@ -385,7 +429,7 @@ const providers = {
           {
             id: "groq-free",
             model_id: m.id,
-            context_length: context || undefined,
+            context_length: requireContextLength(context, `groq ${m.id}`),
             input_modalities: GROQ_VISION.has(m.id)
               ? ["text", "image"]
               : ["text"],
@@ -410,13 +454,19 @@ const providers = {
     parse(raw: { data: CerebrasModel[] }): ParseResult {
       const providers = new Map<string, Provider[]>();
       const unmapped: string[] = [];
+      const skip = CEREBRAS_SKIP;
       for (const m of raw.data) {
+        if (skip.has(m.id)) continue;
         const orId = CEREBRAS_ID_TO_OR[m.id] ?? m.id;
         if (!CEREBRAS_ID_TO_OR[m.id]) unmapped.push(m.id);
         providers.set(orId, [
           {
             id: "cerebras-free",
             model_id: m.id,
+            context_length: requireContextLength(
+              CEREBRAS_CONTEXT[m.id],
+              `cerebras ${m.id}`,
+            ),
             input_modalities: ["text"],
             output_modalities: ["text"],
             tps: null,
@@ -450,7 +500,10 @@ const providers = {
           {
             id: "google-free",
             model_id: m.name.replace("models/", ""),
-            context_length: m.inputTokenLimit || undefined,
+            context_length: requireContextLength(
+              m.inputTokenLimit,
+              `google ${m.name}`,
+            ),
             input_modalities: ["text"],
             output_modalities: ["text"],
             tps: null,

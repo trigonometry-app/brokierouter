@@ -23,13 +23,13 @@ export type Model = {
 export type Provider = {
   id: string;
   model_id: string;
-  context_length?: number;
+  context_length: number;
   pricing?: { prompt: string; completion: string };
-  input_modalities?: string[];
-  output_modalities?: string[];
+  input_modalities: string[];
+  output_modalities: string[];
   tps: number | null;
   cost_multiplier?: number;
-  reasoning_efforts?: string[];
+  reasoning_efforts: string[];
   extra?: Record<string, unknown>;
 };
 
@@ -78,8 +78,8 @@ export const GHCModelSchema = object({
       ),
       supports: optional(
         object({
-          input_modalities: optional(array(string())),
-          output_modalities: optional(array(string())),
+          vision: optional(boolean()),
+          streaming: optional(boolean()),
         }),
       ),
     }),

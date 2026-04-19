@@ -147,6 +147,7 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "llama-3-70b-instruct": ("meta-llama/llama-3-70b-instruct", False),
     "llama-3.1-8b-instruct": ("meta-llama/llama-3.1-8b-instruct", False),
     "llama-3.1-70b-instruct": ("meta-llama/llama-3.1-70b-instruct", False),
+    "llama-3.1-405b-instruct-fp8": ("meta-llama/llama-3.1-405b-instruct", False),
     "llama-3.2-1b-instruct": ("meta-llama/llama-3.2-1b-instruct", False),
     "llama-3.2-3b-instruct": ("meta-llama/llama-3.2-3b-instruct", False),
     "llama-3.3-70b-instruct": ("meta-llama/llama-3.3-70b-instruct", False),
