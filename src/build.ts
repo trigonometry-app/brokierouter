@@ -45,6 +45,7 @@ import {
   CEREBRAS_ID_TO_OR,
   GOOGLE_NAME_TO_OR,
   getReasoningEfforts,
+  REASONING_EFFORT_OVERRIDES,
 } from "./lib/constants.ts";
 
 // ─── helpers ─────────────────────────────────────────────────────────────
@@ -614,6 +615,16 @@ const merge = (
       ) {
         provider.tps = crofSpeeds[provider.model_id];
       }
+    }
+  }
+
+  // Apply per-provider reasoning effort overrides
+  for (const model of models.values()) {
+    const overrides = REASONING_EFFORT_OVERRIDES[model.id];
+    if (!overrides) continue;
+    for (const provider of model.providers) {
+      const allowed = overrides[provider.id];
+      if (allowed) provider.reasoning_efforts = [...allowed];
     }
   }
 

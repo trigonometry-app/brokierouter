@@ -261,6 +261,20 @@ const MODEL_EFFORTS: Record<
   "deepseek/deepseek-v3.2-speciale": ["medium"],
 };
 
+// ─── per-provider reasoning effort restrictions ───────────────────────────
+// Some providers don't support all effort levels for a given model.
+// Key = model ID, value = map of provider ID prefix → allowed efforts.
+
+export const REASONING_EFFORT_OVERRIDES: Record<
+  string,
+  Record<string, Efforts>
+> = {
+  "z-ai/glm-4.7": {
+    "openrouter/google-vertex": ["medium"],
+    "hack-club/google-vertex": ["medium"],
+  },
+};
+
 const THINKING_KEYWORDS = ["r1", "reasoning", "think", "deepthink"];
 
 export const getReasoningEfforts = (

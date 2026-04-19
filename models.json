@@ -1425,7 +1425,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 14.38749456993816,
+        "tps": 7.3484692283495345,
         "reasoning_efforts": [
           "none"
         ],
@@ -1447,7 +1447,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6.855654600401044,
+        "tps": 4.47213595499958,
         "reasoning_efforts": [
           "none"
         ],
@@ -2979,7 +2979,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 5.5677643628300215,
+        "tps": 6,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -3766,7 +3766,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 11.874342087037917,
+        "tps": 11,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -3790,7 +3790,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 13.228756555322953,
+        "tps": 13.30413469565007,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -4607,7 +4607,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 7.416198487095663,
+        "tps": 7.810249675906654,
         "reasoning_efforts": [
           "none",
           "medium"
@@ -4845,7 +4845,6 @@
         ],
         "tps": 108,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {}
@@ -5094,7 +5093,6 @@
         ],
         "tps": 108,
         "reasoning_efforts": [
-          "none",
           "medium"
         ],
         "extra": {}
@@ -6818,7 +6816,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9.1104335791443,
+        "tps": 8.94427190999916,
         "reasoning_efforts": [
           "none"
         ],
@@ -13081,7 +13079,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 7.3484692283495345,
+        "tps": 7.810249675906654,
         "reasoning_efforts": [
           "none"
         ],
@@ -25513,7 +25511,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 11.090536506409418,
+        "tps": 10.63014581273465,
         "reasoning_efforts": [
           "none"
         ],
@@ -25841,12 +25839,12 @@
     "elo_thinking": null
   },
   {
-    "id": "groq/compound",
-    "name": "groq/compound",
+    "id": "groq/compound-mini",
+    "name": "groq/compound mini",
     "providers": [
       {
         "id": "groq-free",
-        "model_id": "groq/compound",
+        "model_id": "groq/compound-mini",
         "context_length": 70000,
         "input_modalities": [
           "text"
@@ -25864,12 +25862,12 @@
     "elo_thinking": null
   },
   {
-    "id": "groq/compound-mini",
-    "name": "groq/compound mini",
+    "id": "groq/compound",
+    "name": "groq/compound",
     "providers": [
       {
         "id": "groq-free",
-        "model_id": "groq/compound-mini",
+        "model_id": "groq/compound",
         "context_length": 70000,
         "input_modalities": [
           "text"
