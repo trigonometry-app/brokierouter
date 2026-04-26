@@ -27,4 +27,6 @@ export const displayName = (name: string): string =>
     .replace(/ 17b 128e$/i, "")
     .replace(/ 17b 16e instruct$/i, "")
     .replace(/ 17b 16e$/i, "")
-    .replace(/(?<=3\.2.+) Vision$/, "");
+    .replace(/(?<=3\.2.+) Vision$/, "")
+    .replace(/^Qwen3 (?=.*2507)/, "Qwen 3.1 ")
+    .replace(/ 2507(?= |$)/, "");
