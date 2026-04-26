@@ -1424,7 +1424,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 77.12923284000121,
+        "tps": 100,
         "reasoning_efforts": [
           "medium"
         ],
@@ -1446,7 +1446,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 48.70293533944303,
+        "tps": 75,
         "reasoning_efforts": [
           "medium"
         ],
@@ -1564,7 +1564,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 51.034560864334814,
+        "tps": 80,
         "reasoning_efforts": [
           "medium"
         ],
@@ -2360,7 +2360,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 72.6720272806984,
+        "tps": 100,
         "reasoning_efforts": [
           "medium"
         ],
@@ -2382,7 +2382,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 52.77551344009931,
+        "tps": 82,
         "reasoning_efforts": [
           "medium"
         ],
@@ -3346,7 +3346,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 60.81967705102637,
+        "tps": 96,
         "reasoning_efforts": [
           "medium"
         ],
@@ -3754,7 +3754,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 25.78585591832089,
+        "tps": 37,
         "reasoning_efforts": [
           "medium"
         ],
@@ -4549,7 +4549,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 80.45335623826709,
+        "tps": 100,
         "reasoning_efforts": [
           "medium"
         ],
@@ -5409,7 +5409,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 18.770507427923377,
+        "tps": 26,
         "reasoning_efforts": [
           "medium"
         ],
@@ -5954,7 +5954,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 32.59245793165883,
+        "tps": 46,
         "reasoning_efforts": [
           "medium"
         ],
@@ -7804,7 +7804,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 54.51010682690003,
+        "tps": 85,
         "reasoning_efforts": [
           "medium"
         ],
@@ -11570,7 +11570,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 58.534113401215215,
+        "tps": 92,
         "reasoning_efforts": [
           "medium"
         ],
@@ -14158,7 +14158,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 68.74694706360835,
+        "tps": 100,
         "reasoning_efforts": [
           "medium"
         ],
@@ -20327,7 +20327,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 73.2308047249459,
+        "tps": 100,
         "reasoning_efforts": [
           "medium"
         ],
@@ -20350,7 +20350,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 71.55303446582016,
+        "tps": 100,
         "reasoning_efforts": [
           "none"
         ],
@@ -26603,7 +26603,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 60.81967705102637,
+        "tps": 96,
         "reasoning_efforts": [
           "medium"
         ],
@@ -26633,7 +26633,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 83.21181934414075,
+        "tps": 100,
         "reasoning_efforts": [
           "medium"
         ],

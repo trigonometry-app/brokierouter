@@ -83,7 +83,6 @@ const fetchCrofSpeeds = async (): Promise<Record<string, number>> => {
     for (const m of models) {
       if (m.speed) {
         let speed = m.speed;
-        speed = Math.pow(speed, 0.9);
         if (speed > 100) speed = 100;
         speeds[m.id] = speed;
       }
