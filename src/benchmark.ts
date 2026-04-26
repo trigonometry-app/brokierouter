@@ -130,7 +130,9 @@ const PROVIDERS: Record<string, ProviderConfig> = {
       );
       if (!r.ok) {
         const body = await r.text();
-        throw new Error(`GHM stream failed: ${r.status} - ${body.slice(0, 300)}`);
+        throw new Error(
+          `GHM stream failed: ${r.status} - ${body.slice(0, 300)}`,
+        );
       }
       return r;
     },
@@ -171,26 +173,21 @@ const PROVIDERS: Record<string, ProviderConfig> = {
     },
     async streamRequest(model_id) {
       const token = await getGhcToken();
-      const r = await fetch(
-        "https://api.githubcopilot.com/chat/completions",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-            "editor-version": "vscode/0-insider",
-            "x-github-api-version": "2025-05-01",
-            "copilot-integration-id": "vscode-chat",
-          },
-          body: JSON.stringify({
-            model: model_id,
-            messages: [
-              { role: "user", content: "List all US presidents." },
-            ],
-            stream: true,
-          }),
+      const r = await fetch("https://api.githubcopilot.com/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+          "editor-version": "vscode/0-insider",
+          "x-github-api-version": "2025-05-01",
+          "copilot-integration-id": "vscode-chat",
         },
-      );
+        body: JSON.stringify({
+          model: model_id,
+          messages: [{ role: "user", content: "List all US presidents." }],
+          stream: true,
+        }),
+      });
       if (!r.ok) throw new Error(`GHC stream failed: ${r.status}`);
       return r;
     },
@@ -200,7 +197,7 @@ const PROVIDERS: Record<string, ProviderConfig> = {
     name: "CrofAI",
     benchmarkPrefix: "crofai",
     async fetchModels() {
-      const res = await fetch("https://ai.nahcrof.com/v2/models", {
+      const res = await fetch("https://crof.ai/v2/models", {
         headers: {
           Accept: "application/json",
           Authorization: `Bearer ${process.env.CROF_KEY ?? ""}`,
@@ -217,7 +214,7 @@ const PROVIDERS: Record<string, ProviderConfig> = {
       });
     },
     async streamRequest(model_id) {
-      const r = await fetch("https://ai.nahcrof.com/v2/chat/completions", {
+      const r = await fetch("https://crof.ai/v2/chat/completions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -436,7 +433,10 @@ for (const { model_id, or_id } of models) {
         : 0;
     const tps = Math.min(rawTps, providerKey === "ghm" ? 200 : 2000);
 
-    const modelNote = actualModel && actualModel !== model_id ? ` | actual: ${actualModel}` : "";
+    const modelNote =
+      actualModel && actualModel !== model_id
+        ? ` | actual: ${actualModel}`
+        : "";
     console.log(
       `  ${or_id} (${model_id}): ${tps} tps | ttfb ${ttfb}ms | ${totalTime}ms total | ${charCount} chars (~${Math.round(tokenEstimate)} tokens) | finish: ${finishReason || "unknown"}${modelNote}`,
     );

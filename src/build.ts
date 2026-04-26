@@ -268,11 +268,9 @@ const providers = {
 
   crof: {
     async fetch() {
-      return fetchValidated(
-        "https://ai.nahcrof.com/v2/models",
-        CrofResponseSchema,
-        { token: process.env.CROF_KEY ?? "" },
-      );
+      return fetchValidated("https://crof.ai/v2/models", CrofResponseSchema, {
+        token: process.env.CROF_KEY ?? "",
+      });
     },
     parse(raw: { data: CrofModel[] }): ParseResult {
       const providers = new Map<string, Provider[]>();
