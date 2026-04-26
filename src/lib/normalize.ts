@@ -19,6 +19,7 @@ export const displayName = (name: string): string =>
     .replace(/(?<=Mistral Small.+) 24b/i, "")
     .replace(/\b([01][0-9]) 20(2[0-9])\b/, "$2$1")
     .replace(/(?<=\b2[0-9])\.(?=[01][0-9]\b)/, "")
+    .replace(/^Qwen3 (.*) 2507\b/, "Qwen3.1 $1")
     .replace(/\bReasoner\b/, "Thinking")
     .replace(/\bThink\b/, "Thinking")
     .replace(/^(.+) Thinking (.+)$/, "$1 $2 Thinking")
@@ -27,6 +28,4 @@ export const displayName = (name: string): string =>
     .replace(/ 17b 128e$/i, "")
     .replace(/ 17b 16e instruct$/i, "")
     .replace(/ 17b 16e$/i, "")
-    .replace(/(?<=3\.2.+) Vision$/, "")
-    .replace(/^Qwen3 (?=.*2507)/, "Qwen 3.1 ")
-    .replace(/ 2507(?= |$)/, "");
+    .replace(/(?<=3\.2.+) Vision$/, "");

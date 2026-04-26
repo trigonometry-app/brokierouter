@@ -58,12 +58,16 @@ export const GHM_SKIP = new Set(["openai/o1-mini"]);
 // ─── provider id mappings ──────────────────────────────────────────────────
 
 export const CROF_MAP: Record<string, { orId: string; variant?: string }> = {
+  "deepseek-v4-pro": { orId: "deepseek/deepseek-v4-pro" },
+  "kimi-k2.6": { orId: "moonshotai/kimi-k2.6" },
+  "kimi-k2.6-precision": { orId: "moonshotai/kimi-k2.6", variant: "precision" },
   "kimi-k2.5": { orId: "moonshotai/kimi-k2.5" },
   "kimi-k2.5-lightning": { orId: "moonshotai/kimi-k2.5", variant: "lightning" },
   "glm-5": { orId: "z-ai/glm-5" },
   "glm-5.1": { orId: "z-ai/glm-5.1" },
   "glm-5.1-precision": { orId: "z-ai/glm-5.1", variant: "precision" },
   "minimax-m2.5": { orId: "minimax/minimax-m2.5" },
+  "qwen3.6-27b": { orId: "qwen/qwen3.6-27b" },
   "qwen3.5-397b-a17b": { orId: "qwen/qwen3.5-397b-a17b" },
   "qwen3.5-9b": { orId: "qwen/qwen3.5-9b" },
   "qwen3.5-9b-chat": { orId: "qwen/qwen3.5-9b", variant: "chat" },
@@ -319,9 +323,7 @@ export const getReasoningEfforts = (
 ) => {
   // Crof: all models have always-on reasoning, except -chat variants
   if (providerId === "crofai" && crofId) {
-    return crofId.includes("-chat")
-      ? ["none" as const]
-      : ["medium" as const];
+    return crofId.includes("-chat") ? ["none" as const] : ["medium" as const];
   }
   if (MODEL_EFFORTS[modelId]) return [...MODEL_EFFORTS[modelId]];
   for (const prefix of Object.keys(MODEL_EFFORTS)) {

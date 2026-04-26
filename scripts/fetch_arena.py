@@ -58,6 +58,10 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "deepseek-v3.2-thinking": ("deepseek/deepseek-v3.2", True),
     "deepseek-v3.2-exp": ("deepseek/deepseek-v3.2-exp", False),
     "deepseek-v3.2-exp-thinking": ("deepseek/deepseek-v3.2-exp", True),
+    "deepseek-v4-pro": ("deepseek/deepseek-v4-pro", False),
+    "deepseek-v4-pro-thinking": ("deepseek/deepseek-v4-pro", True),
+    "deepseek-v4-flash": ("deepseek/deepseek-v4-flash", False),
+    "deepseek-v4-flash-thinking": ("deepseek/deepseek-v4-flash", True),
     # Google Gemini
     "gemini-2.0-flash-001": ("google/gemini-2.0-flash-001", False),
     "gemini-2.5-flash": ("google/gemini-2.5-flash", False),
@@ -142,6 +146,7 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "kimi-k2-thinking-turbo": ("moonshotai/kimi-k2-thinking", True),
     "kimi-k2.5-instant": ("moonshotai/kimi-k2.5", False),
     "kimi-k2.5-thinking": ("moonshotai/kimi-k2.5", True),
+    "kimi-k2.6": ("moonshotai/kimi-k2.6", True),
     # Meta Llama
     "llama-3-8b-instruct": ("meta-llama/llama-3-8b-instruct", False),
     "llama-3-70b-instruct": ("meta-llama/llama-3-70b-instruct", False),
@@ -189,6 +194,7 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "qwen3.5-35b-a3b": ("qwen/qwen3.5-35b-a3b", True),
     "qwen3.5-397b-a17b": ("qwen/qwen3.5-397b-a17b", True),
     "qwen3.5-flash": ("qwen/qwen3.5-flash-02-23", True),
+    "qwen3.6-plus": ("qwen/qwen3.6-plus", True),
     "qwq-32b": ("qwen/qwq-32b", True),
     # "qwq-32b-preview": ("qwen/qwq-32b", True),  # DUPLICATE
     # Minimax
