@@ -1424,7 +1424,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 10.583005244258363,
+        "tps": 77.12923284000121,
         "reasoning_efforts": [
           "medium"
         ],
@@ -1446,7 +1446,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 8.717797887081348,
+        "tps": 48.70293533944303,
         "reasoning_efforts": [
           "medium"
         ],
@@ -1564,7 +1564,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 8.831760866327848,
+        "tps": 51.034560864334814,
         "reasoning_efforts": [
           "medium"
         ],
@@ -2360,7 +2360,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9.273618495495704,
+        "tps": 72.6720272806984,
         "reasoning_efforts": [
           "medium"
         ],
@@ -2382,7 +2382,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 8.94427190999916,
+        "tps": 52.77551344009931,
         "reasoning_efforts": [
           "medium"
         ],
@@ -3346,7 +3346,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9.797958971132712,
+        "tps": 60.81967705102637,
         "reasoning_efforts": [
           "medium"
         ],
@@ -3754,7 +3754,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 5.656854249492381,
+        "tps": 25.78585591832089,
         "reasoning_efforts": [
           "medium"
         ],
@@ -4549,7 +4549,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 11.874342087037917,
+        "tps": 80.45335623826709,
         "reasoning_efforts": [
           "medium"
         ],
@@ -4572,7 +4572,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 37.20215047547655,
+        "tps": 100,
         "reasoning_efforts": [
           "medium"
         ],
@@ -5409,7 +5409,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 5.0990195135927845,
+        "tps": 18.770507427923377,
         "reasoning_efforts": [
           "medium"
         ],
@@ -5954,7 +5954,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 7.0710678118654755,
+        "tps": 32.59245793165883,
         "reasoning_efforts": [
           "medium"
         ],
@@ -7804,7 +7804,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9.16515138991168,
+        "tps": 54.51010682690003,
         "reasoning_efforts": [
           "medium"
         ],
@@ -11570,7 +11570,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9.591663046625438,
+        "tps": 58.534113401215215,
         "reasoning_efforts": [
           "medium"
         ],
@@ -14158,7 +14158,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 10.677078252031311,
+        "tps": 68.74694706360835,
         "reasoning_efforts": [
           "medium"
         ],
@@ -20327,7 +20327,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 10.862780491200215,
+        "tps": 73.2308047249459,
         "reasoning_efforts": [
           "medium"
         ],
@@ -20350,7 +20350,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 10.723805294763608,
+        "tps": 71.55303446582016,
         "reasoning_efforts": [
           "none"
         ],
@@ -25735,34 +25735,6 @@
     "elo_thinking": null
   },
   {
-    "id": "inflection/inflection-3-productivity",
-    "name": "Inflection 3 Productivity",
-    "providers": [
-      {
-        "id": "openrouter/inflection",
-        "model_id": "inflection/inflection-3-productivity",
-        "context_length": 8000,
-        "pricing": {
-          "prompt": "0.0000025",
-          "completion": "0.00001"
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 2,
-        "reasoning_efforts": [
-          "none"
-        ],
-        "extra": {}
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
     "id": "inflection/inflection-3-pi",
     "name": "Inflection 3 Pi",
     "providers": [
@@ -25781,6 +25753,34 @@
           "text"
         ],
         "tps": null,
+        "reasoning_efforts": [
+          "none"
+        ],
+        "extra": {}
+      }
+    ],
+    "elo_direct": null,
+    "elo_thinking": null
+  },
+  {
+    "id": "inflection/inflection-3-productivity",
+    "name": "Inflection 3 Productivity",
+    "providers": [
+      {
+        "id": "openrouter/inflection",
+        "model_id": "inflection/inflection-3-productivity",
+        "context_length": 8000,
+        "pricing": {
+          "prompt": "0.0000025",
+          "completion": "0.00001"
+        },
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 2,
         "reasoning_efforts": [
           "none"
         ],
@@ -26261,34 +26261,6 @@
     "elo_thinking": null
   },
   {
-    "id": "openai/gpt-4-turbo-preview",
-    "name": "GPT 4 Turbo",
-    "providers": [
-      {
-        "id": "openrouter/openai",
-        "model_id": "openai/gpt-4-turbo-preview",
-        "context_length": 128000,
-        "pricing": {
-          "prompt": "0.00001",
-          "completion": "0.00003"
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": null,
-        "reasoning_efforts": [
-          "none"
-        ],
-        "extra": {}
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
     "id": "openai/gpt-3.5-turbo-0613",
     "name": "GPT 3.5 Turbo (older v0613)",
     "providers": [
@@ -26307,6 +26279,34 @@
           "text"
         ],
         "tps": 76.5,
+        "reasoning_efforts": [
+          "none"
+        ],
+        "extra": {}
+      }
+    ],
+    "elo_direct": null,
+    "elo_thinking": null
+  },
+  {
+    "id": "openai/gpt-4-turbo-preview",
+    "name": "GPT 4 Turbo",
+    "providers": [
+      {
+        "id": "openrouter/openai",
+        "model_id": "openai/gpt-4-turbo-preview",
+        "context_length": 128000,
+        "pricing": {
+          "prompt": "0.00001",
+          "completion": "0.00003"
+        },
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": null,
         "reasoning_efforts": [
           "none"
         ],
@@ -26603,7 +26603,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9.591663046625438,
+        "tps": 60.81967705102637,
         "reasoning_efforts": [
           "medium"
         ],
@@ -26633,7 +26633,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 11.661903789690601,
+        "tps": 83.21181934414075,
         "reasoning_efforts": [
           "medium"
         ],

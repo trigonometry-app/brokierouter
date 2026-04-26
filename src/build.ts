@@ -81,7 +81,12 @@ const fetchCrofSpeeds = async (): Promise<Record<string, number>> => {
     const models: { id: string; speed: number }[] = JSON.parse(match[1]);
     const speeds: Record<string, number> = {};
     for (const m of models) {
-      if (m.speed) speeds[m.id] = Math.sqrt(m.speed);
+      if (m.speed) {
+        let speed = m.speed;
+        speed = Math.pow(speed, 0.9);
+        if (speed > 100) speed = 100;
+        speeds[m.id] = speed;
+      }
     }
     return speeds;
   } catch (e) {
