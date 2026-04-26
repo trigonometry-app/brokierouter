@@ -293,7 +293,12 @@ const providers = {
             : ["text"],
           output_modalities: ["text"],
           tps: null,
-          reasoning_efforts: getReasoningEfforts(orId, "crofai", undefined, m.id),
+          reasoning_efforts: getReasoningEfforts(
+            orId,
+            "crofai",
+            undefined,
+            m.id,
+          ),
           extra: { quantization: m.quantization || undefined },
         };
         const arr = providers.get(orId);
@@ -340,7 +345,7 @@ const providers = {
             input_modalities: m.supported_input_modalities,
             output_modalities: m.supported_output_modalities,
             tps: null,
-            reasoning_efforts: getReasoningEfforts(orId),
+            reasoning_efforts: getReasoningEfforts(orId, "github-models"),
           },
         ]);
       }

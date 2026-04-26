@@ -151,10 +151,11 @@ export const GHC_ID_TO_OR: Record<string, string> = {
 
 // ─── model skip lists ─────────────────────────────────────────────────────
 
-// Dated checkpoints that are redundant with a canonical entry
+// Dated checkpoints that are redundant
 export const MODEL_SKIP = new Set([
   "openai/gpt-4o-2024-08-06",
   "openai/gpt-4o-mini-2024-07-18",
+  "openai/o1-preview",
 ]);
 
 // ─── reasoning efforts ─────────────────────────────────────────────────────
@@ -166,9 +167,9 @@ const MODEL_EFFORTS: Record<string, (Effort | null)[]> = {
   // Effort API added progressively. Supported on: Opus 4.5, Sonnet 4.6, Opus 4.6, Opus 4.7
   // Older models use budget_tokens (on/off toggle) → "none" | "medium" standin
   // xhigh: Opus 4.7 only. max: Opus 4.6+, Sonnet 4.6.
-  "anthropic/claude-3-haiku": ["none"],
-  "anthropic/claude-3.5-haiku": ["none"],
-  "anthropic/claude-haiku-4.5": ["none"],
+  "anthropic/claude-3-haiku": [null],
+  "anthropic/claude-3.5-haiku": [null],
+  "anthropic/claude-haiku-4.5": [null],
   "anthropic/claude-3.7-sonnet": ["none", "medium"], // budget_tokens on/off
   "anthropic/claude-sonnet-4": ["none", "medium"], // budget_tokens on/off
   "anthropic/claude-sonnet-4.5": ["none", "medium"], // budget_tokens on/off
@@ -189,20 +190,17 @@ const MODEL_EFFORTS: Record<string, (Effort | null)[]> = {
 
   // OPENAI ─────────────────────────────────────────────────
   // GPT-4o / 4.1 family: no reasoning
-  "openai/gpt-4o": ["none"],
-  "openai/gpt-4o-2024-05-13": ["none"],
-  "openai/gpt-4o-2024-08-06": ["none"],
-  "openai/gpt-4o-2024-11-20": ["none"],
-  "openai/gpt-4o-audio-preview": ["none"],
-  "openai/gpt-4o-mini": ["none"],
-  "openai/gpt-4o-mini-2024-07-18": ["none"],
-  "openai/gpt-4o-mini-search-preview": ["none"],
-  "openai/gpt-4o-search-preview": ["none"],
-  "openai/gpt-4.1": ["none"],
-  "openai/gpt-4.1-mini": ["none"],
-  "openai/gpt-4.1-nano": ["none"],
+  "openai/gpt-4o": [null],
+  "openai/gpt-4o-2024-05-13": [null],
+  "openai/gpt-4o-2024-11-20": [null],
+  "openai/gpt-4o-audio-preview": [null],
+  "openai/gpt-4o-mini": [null],
+  "openai/gpt-4o-mini-search-preview": [null],
+  "openai/gpt-4o-search-preview": [null],
+  "openai/gpt-4.1": [null],
+  "openai/gpt-4.1-mini": [null],
+  "openai/gpt-4.1-nano": [null],
   // o-series: low/medium/high only (no xhigh, no none)
-  "openai/o1-preview": ["medium"], // always-on, no control
   "openai/o1": ["low", "medium", "high"],
   "openai/o1-mini": ["low", "medium", "high"],
   "openai/o1-pro": ["low", "medium", "high"],
@@ -216,26 +214,27 @@ const MODEL_EFFORTS: Record<string, (Effort | null)[]> = {
   "openai/gpt-oss-120b": ["low", "medium", "high"],
   // GPT-5 (original): minimal/low/medium/high — no "none", no xhigh
   "openai/gpt-5": ["minimal", "low", "medium", "high"],
+  "openai/gpt-5-image": ["minimal", "low", "medium", "high"],
   "openai/gpt-5-mini": ["minimal", "low", "medium", "high"],
+  "openai/gpt-5-image-mini": ["minimal", "low", "medium", "high"],
+  "openai/raptor-mini": ["minimal", "low", "medium", "high"],
   "openai/gpt-5-nano": ["minimal", "low", "medium", "high"],
-  "openai/gpt-5-chat": ["none"], // chat/non-reasoning variant
+  "openai/gpt-5-chat": [null], // chat/non-reasoning variant
   "openai/gpt-5-codex": ["low", "medium", "high"], // no minimal, no xhigh
-  "openai/gpt-5-image": ["none"],
-  "openai/gpt-5-image-mini": ["none"],
   "openai/gpt-5-pro": ["high"], // fixed at high only
   // GPT-5.1: none added as default; codex-max first to get xhigh
   "openai/gpt-5.1": ["none", "low", "medium", "high"],
-  "openai/gpt-5.1-chat": ["medium"], // chat variant, fixed medium
+  "openai/gpt-5.1-chat": [null],
   "openai/gpt-5.1-codex": ["low", "medium", "high"],
   "openai/gpt-5.1-codex-mini": ["low", "medium", "high"],
   "openai/gpt-5.1-codex-max": ["low", "medium", "high", "xhigh"], // xhigh debut
   // GPT-5.2: xhigh added across the board
   "openai/gpt-5.2": ["none", "low", "medium", "high", "xhigh"],
-  "openai/gpt-5.2-chat": ["none"],
+  "openai/gpt-5.2-chat": [null],
   "openai/gpt-5.2-codex": ["low", "medium", "high", "xhigh"],
   "openai/gpt-5.2-pro": ["high", "xhigh"], // pro = always reasoning, wide range
   // GPT-5.3
-  "openai/gpt-5.3-chat": ["none"],
+  "openai/gpt-5.3-chat": [null],
   "openai/gpt-5.3-codex": ["low", "medium", "high", "xhigh"],
   // GPT-5.4: full range none→xhigh; mini/nano also reach xhigh (confirmed in release chart)
   "openai/gpt-5.4": ["none", "low", "medium", "high", "xhigh"],
@@ -263,10 +262,10 @@ const MODEL_EFFORTS: Record<string, (Effort | null)[]> = {
   "google/gemini-3.1-flash-lite-preview": ["minimal", "low", "medium", "high"],
 
   // XAI ─────────────────────────────────────────────────────
-  "x-ai/grok-3": ["none", "medium"], // Think on/off
-  "x-ai/grok-3-mini": ["none", "low", "medium", "high"],
+  "x-ai/grok-3": [null], // no reasoning
+  "x-ai/grok-3-mini": ["medium", "high"],
   "x-ai/grok-4.1-fast": ["none", "medium", "high"],
-  "x-ai/grok-code-fast-1": ["none", "medium"],
+  "x-ai/grok-code-fast-1": [null], // no reasoning
 
   // OTHERS
   "deepseek/deepseek-r1": ["medium"],
@@ -301,6 +300,9 @@ export const REASONING_EFFORT_OVERRIDES: Record<
   "google/gemma-4-31b-it": {
     "google-free": ["minimal", "high"],
   },
+  "google/gemini-3-flash-preview": {
+    "github-copilot": ["low", "medium", "high"],
+  },
 };
 
 // Providers whose APIs reject the reasoning_effort parameter entirely for
@@ -311,6 +313,7 @@ export const PICKY_PROVIDERS = new Set([
   "groq-free",
   "cerebras-free",
   "google-free",
+  "github-models",
 ]);
 
 const THINKING_KEYWORDS = ["r1", "reasoning", "think", "deepthink"];

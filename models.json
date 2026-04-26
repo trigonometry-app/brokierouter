@@ -442,7 +442,7 @@
         ],
         "tps": 39,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -464,7 +464,7 @@
         ],
         "tps": 54,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       }
@@ -590,7 +590,6 @@
         "context_length": 128000,
         "tps": 140,
         "reasoning_efforts": [
-          "minimal",
           "low",
           "medium",
           "high"
@@ -1425,7 +1424,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 18.2208671582886,
+        "tps": 10.583005244258363,
         "reasoning_efforts": [
           "medium"
         ],
@@ -1447,7 +1446,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 10,
+        "tps": 8.717797887081348,
         "reasoning_efforts": [
           "medium"
         ],
@@ -1565,7 +1564,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 8.660254037844387,
+        "tps": 8.831760866327848,
         "reasoning_efforts": [
           "medium"
         ],
@@ -2361,7 +2360,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9.746794344808963,
+        "tps": 9.273618495495704,
         "reasoning_efforts": [
           "medium"
         ],
@@ -2383,7 +2382,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 9.16515138991168,
+        "tps": 8.94427190999916,
         "reasoning_efforts": [
           "medium"
         ],
@@ -3805,7 +3804,7 @@
         ],
         "tps": 61,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -3827,7 +3826,7 @@
         ],
         "tps": 29.5,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       }
@@ -4550,7 +4549,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 12.409673645990857,
+        "tps": 11.874342087037917,
         "reasoning_efforts": [
           "medium"
         ],
@@ -4573,7 +4572,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 36.75595189897821,
+        "tps": 37.20215047547655,
         "reasoning_efforts": [
           "medium"
         ],
@@ -5955,7 +5954,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 6.244997998398398,
+        "tps": 7.0710678118654755,
         "reasoning_efforts": [
           "medium"
         ],
@@ -6843,7 +6842,7 @@
         ],
         "tps": 96,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -6860,7 +6859,7 @@
         ],
         "tps": 200,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -9495,7 +9494,7 @@
         ],
         "tps": 35,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -9517,7 +9516,7 @@
         ],
         "tps": 71,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -9534,7 +9533,7 @@
         ],
         "tps": 200,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       },
       {
@@ -9543,7 +9542,7 @@
         "context_length": 128000,
         "tps": 140,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "cost_multiplier": 0,
         "input_modalities": [
@@ -9581,8 +9580,7 @@
         ],
         "tps": 39,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          null
         ],
         "extra": {}
       },
@@ -9602,8 +9600,7 @@
         ],
         "tps": 51,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          null
         ],
         "extra": {}
       },
@@ -9623,8 +9620,7 @@
         ],
         "tps": 39,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          null
         ],
         "extra": {}
       },
@@ -9644,8 +9640,7 @@
         ],
         "tps": 51,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          null
         ],
         "extra": {}
       },
@@ -9661,8 +9656,7 @@
         ],
         "tps": 38,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          null
         ]
       }
     ],
@@ -9963,7 +9957,7 @@
         ],
         "tps": 68,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -9984,7 +9978,7 @@
         ],
         "tps": 68,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -10005,7 +9999,7 @@
         ],
         "tps": 68,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -10015,7 +10009,7 @@
         "context_length": 200000,
         "tps": 180,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "cost_multiplier": 0.33,
         "input_modalities": [
@@ -12255,7 +12249,7 @@
         ],
         "tps": 100,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -12689,29 +12683,6 @@
     "elo_thinking": 1389.906065807953
   },
   {
-    "id": "openai/o1-preview",
-    "name": "openai/o1",
-    "providers": [
-      {
-        "id": "github-models",
-        "model_id": "openai/o1-preview",
-        "context_length": 8000,
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 75,
-        "reasoning_efforts": [
-          "medium"
-        ]
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": 1387.9132121260434
-  },
-  {
     "id": "qwen/qwen3-coder",
     "name": "Qwen3 Coder 480b A35b",
     "providers": [
@@ -12951,7 +12922,7 @@
         ],
         "tps": 27,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -13308,7 +13279,7 @@
         ],
         "tps": 43,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -13330,7 +13301,7 @@
         ],
         "tps": 90,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -13347,7 +13318,7 @@
         ],
         "tps": 95,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -14187,7 +14158,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 11.045361017187261,
+        "tps": 10.677078252031311,
         "reasoning_efforts": [
           "medium"
         ],
@@ -14428,8 +14399,6 @@
         ],
         "tps": 68,
         "reasoning_efforts": [
-          "none",
-          "low",
           "medium",
           "high"
         ],
@@ -14451,8 +14420,6 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none",
-          "low",
           "medium",
           "high"
         ],
@@ -14474,8 +14441,6 @@
         ],
         "tps": 68,
         "reasoning_efforts": [
-          "none",
-          "low",
           "medium",
           "high"
         ],
@@ -14497,8 +14462,6 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none",
-          "low",
           "medium",
           "high"
         ],
@@ -14516,8 +14479,6 @@
         ],
         "tps": 86,
         "reasoning_efforts": [
-          "none",
-          "low",
           "medium",
           "high"
         ]
@@ -14768,7 +14729,7 @@
         ],
         "tps": 23,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -16273,7 +16234,7 @@
         ],
         "tps": 31.5,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -16295,7 +16256,7 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       }
@@ -16573,7 +16534,7 @@
         ],
         "tps": 44,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -16595,7 +16556,7 @@
         ],
         "tps": 42,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -16613,7 +16574,7 @@
         ],
         "tps": 163,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       },
       {
@@ -16622,7 +16583,7 @@
         "context_length": 128000,
         "tps": 80,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "cost_multiplier": 0,
         "input_modalities": [
@@ -16656,7 +16617,7 @@
         ],
         "tps": 40,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -16898,7 +16859,7 @@
         ],
         "tps": 134,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -16955,7 +16916,7 @@
         ],
         "tps": 38,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -16976,7 +16937,7 @@
         ],
         "tps": 25,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -16997,7 +16958,7 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       }
@@ -17110,7 +17071,7 @@
         ],
         "tps": 78,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       },
       {
@@ -17155,7 +17116,7 @@
         ],
         "tps": 29,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -17177,7 +17138,7 @@
         ],
         "tps": 38,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -17194,7 +17155,7 @@
         ],
         "tps": 200,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -17561,7 +17522,7 @@
         ],
         "tps": 122,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       },
       {
@@ -17995,7 +17956,7 @@
         ],
         "tps": 40,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -18017,7 +17978,7 @@
         ],
         "tps": 34,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -18035,7 +17996,7 @@
         ],
         "tps": 99,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -18225,7 +18186,7 @@
         ],
         "tps": 84,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -18628,7 +18589,7 @@
         ],
         "tps": 13,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -18792,7 +18753,7 @@
         ],
         "tps": 80,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       },
@@ -18813,7 +18774,7 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       }
@@ -18910,7 +18871,7 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -18953,7 +18914,7 @@
         ],
         "tps": 19,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -19326,7 +19287,7 @@
         ],
         "tps": 200,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       },
       {
@@ -22063,7 +22024,7 @@
         ],
         "tps": 55,
         "reasoning_efforts": [
-          "medium"
+          null
         ],
         "extra": {}
       },
@@ -22085,7 +22046,7 @@
         ],
         "tps": 11.5,
         "reasoning_efforts": [
-          "medium"
+          null
         ],
         "extra": {}
       }
@@ -22479,7 +22440,10 @@
         ],
         "tps": 95,
         "reasoning_efforts": [
-          "none"
+          "minimal",
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {}
       }
@@ -22637,7 +22601,10 @@
         ],
         "tps": 58.5,
         "reasoning_efforts": [
-          "none"
+          "minimal",
+          "low",
+          "medium",
+          "high"
         ],
         "extra": {}
       }
@@ -23451,8 +23418,7 @@
         ],
         "tps": 113,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          null
         ],
         "extra": {}
       },
@@ -23462,8 +23428,7 @@
         "context_length": 128000,
         "tps": 200,
         "reasoning_efforts": [
-          "none",
-          "medium"
+          null
         ],
         "cost_multiplier": 0.25,
         "input_modalities": [
@@ -23564,7 +23529,7 @@
         ],
         "tps": 38,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       }
@@ -24730,7 +24695,7 @@
         ],
         "tps": 90,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       }
@@ -24758,7 +24723,7 @@
         ],
         "tps": 105,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       }
@@ -25600,7 +25565,7 @@
         ],
         "tps": 42,
         "reasoning_efforts": [
-          "none"
+          null
         ],
         "extra": {}
       }
@@ -25918,7 +25883,7 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -26668,7 +26633,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 10.488088481701515,
+        "tps": 11.661903789690601,
         "reasoning_efforts": [
           "medium"
         ],
@@ -26696,7 +26661,7 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -26719,7 +26684,7 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -26742,7 +26707,7 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -26767,7 +26732,7 @@
         ],
         "tps": 30,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -26790,7 +26755,7 @@
         ],
         "tps": 61,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -26813,7 +26778,7 @@
         ],
         "tps": 112,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -26860,7 +26825,7 @@
         ],
         "tps": 35,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -26909,7 +26874,7 @@
         ],
         "tps": null,
         "reasoning_efforts": [
-          "none"
+          null
         ]
       }
     ],
@@ -26950,7 +26915,10 @@
         "context_length": 264000,
         "tps": 140,
         "reasoning_efforts": [
-          "none"
+          "minimal",
+          "low",
+          "medium",
+          "high"
         ],
         "cost_multiplier": 0,
         "input_modalities": [
@@ -26996,12 +26964,12 @@
     "elo_thinking": null
   },
   {
-    "id": "groq/compound-mini",
-    "name": "groq/compound mini",
+    "id": "groq/compound",
+    "name": "groq/compound",
     "providers": [
       {
         "id": "groq-free",
-        "model_id": "groq/compound-mini",
+        "model_id": "groq/compound",
         "context_length": 70000,
         "input_modalities": [
           "text"
@@ -27019,12 +26987,12 @@
     "elo_thinking": null
   },
   {
-    "id": "groq/compound",
-    "name": "groq/compound",
+    "id": "groq/compound-mini",
+    "name": "groq/compound mini",
     "providers": [
       {
         "id": "groq-free",
-        "model_id": "groq/compound",
+        "model_id": "groq/compound-mini",
         "context_length": 70000,
         "input_modalities": [
           "text"
