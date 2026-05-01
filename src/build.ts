@@ -51,6 +51,9 @@ import {
 
 // ─── helpers ─────────────────────────────────────────────────────────────
 
+const isEffortVariant = (id: string): boolean =>
+  /:(thinking|extended)$/.test(id) || /-(high|low)$/.test(id);
+
 const requireContextLength = (
   value: number | undefined,
   source: string,
@@ -154,9 +157,6 @@ const providers = {
       const modelById = new Map<string, ORModel>();
       for (const m of raw.data) modelById.set(m.id, m);
 
-      const isEffortVariant = (id: string): boolean =>
-        /:(thinking|extended)$/.test(id) || /-(high|low)$/.test(id);
-
       // Process endpoints first — each endpoint is one provider
       for (const [queriedId, endpoints] of Object.entries(endpointData)) {
         const norm = queriedId.replace(":free", "");
@@ -215,7 +215,8 @@ const providers = {
     ): ParseResult {
       const providers = new Map<string, Provider[]>();
       for (const m of raw.data) {
-        const id = m.id.replace(":free", "").replace(":extended", "");
+        const id = m.id.replace(":free", "");
+        if (isEffortVariant(id)) continue;
         const orEntry = orModels.get(id);
         if (orEntry) {
           // Copy OR's providers with hack-club prefix

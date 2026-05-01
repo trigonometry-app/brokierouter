@@ -241,6 +241,8 @@ const MODEL_EFFORTS: Record<string, (Effort | null)[]> = {
   "openai/gpt-5.4-mini": ["none", "low", "medium", "high", "xhigh"],
   "openai/gpt-5.4-nano": ["none", "low", "medium", "high", "xhigh"],
   "openai/gpt-5.4-pro": ["low", "medium", "high", "xhigh"],
+  "openai/gpt-5.5": ["none", "low", "medium", "high", "xhigh"],
+  "openai/gpt-5.5-pro": ["low", "medium", "high", "xhigh"],
 
   // GOOGLE ─────────────────────────────────────────────────
   "google/gemini-2.0-flash-001": ["minimal"],
