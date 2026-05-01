@@ -13,6 +13,7 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "amazon-nova-lite-v1.0": ("amazon/nova-lite-v1", False),
     "amazon-nova-micro-v1.0": ("amazon/nova-micro-v1", False),
     "amazon-nova-pro-v1.0": ("amazon/nova-pro-v1", False),
+    "nova-2-lite": ("amazon/nova-2-lite-v1", False),
     # Anthropic Claude 3 / 3.5 / 3.7
     "claude-3-haiku-20240307": ("anthropic/claude-3-haiku", False),
     "claude-3-5-haiku-20241022": ("anthropic/claude-3.5-haiku", False),
@@ -136,12 +137,14 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     # xAI Grok
     "grok-3-preview-02-24": ("x-ai/grok-3", False),
     "grok-3-mini-high": ("x-ai/grok-3-mini", True),
+    "grok-3-mini-beta": ("x-ai/grok-3-mini-beta", True),
     "grok-4-0709": ("x-ai/grok-4", True),  # always reasoning
     "grok-4-fast-chat": ("x-ai/grok-4-fast", False),
     "grok-4-fast-reasoning": ("x-ai/grok-4-fast", True),
     "grok-4-1-fast-reasoning": ("x-ai/grok-4.1-fast", True),
     "grok-4.20-beta1": ("x-ai/grok-4.20", False),
     "grok-4.20-beta-0309-reasoning": ("x-ai/grok-4.20", True),
+    "grok-4.20-multi-agent-beta-0309": ("x-ai/grok-4.20-multi-agent", True),
     # Moonshot Kimi
     "kimi-k2-0711-preview": ("moonshotai/kimi-k2", False),
     "kimi-k2-0905-preview": ("moonshotai/kimi-k2-0905", False),
@@ -206,20 +209,33 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "minimax-m2.5": ("minimax/minimax-m2.5", True),
     "minimax-m2.7": ("minimax/minimax-m2.7", True),
     # Mistral
+    # https://docs.mistral.ai/models/model-cards/mistral-7b-0-1
     "mistral-7b-instruct": ("mistralai/mistral-7b-instruct-v0.1", False),
+    # https://docs.mistral.ai/models/model-cards/mistral-large-2-0-24-07
     "mistral-large-2407": ("mistralai/mistral-large-2407", False),
+    # https://docs.mistral.ai/models/model-cards/mistral-large-2-1-24-11
     "mistral-large-2411": ("mistralai/mistral-large-2411", False),
+    # https://docs.mistral.ai/models/model-cards/mistral-large-3-25-12
     "mistral-large-3": ("mistralai/mistral-large", False),
+    # https://docs.mistral.ai/models/model-cards/mistral-medium-3-25-05
     "mistral-medium-2505": ("mistralai/mistral-medium-3", False),
+    # https://docs.mistral.ai/models/model-cards/mistral-medium-3-1-25-08
+    "mistral-medium-2508": ("mistralai/mistral-medium-3.1", False),
+    # https://docs.mistral.ai/models/model-cards/mistral-small-3-2-25-06
+    "mistral-small-2506": ("mistralai/mistral-small-3.2-24b-instruct", False),
+    # https://docs.mistral.ai/models/model-cards/mistral-small-3-0-25-01
     "mistral-small-24b-instruct-2501": (
         "mistralai/mistral-small-24b-instruct-2501",
         False,
     ),
+    # https://docs.mistral.ai/models/model-cards/mistral-small-3-1-25-03
     "mistral-small-3.1-24b-instruct-2503": (
         "mistralai/mistral-small-3.1-24b-instruct",
         False,
     ),
+    # https://docs.mistral.ai/models/model-cards/mixtral-8x7b-0-1
     "mixtral-8x7b-instruct-v0.1": ("mistralai/mixtral-8x7b-instruct", False),
+    # https://docs.mistral.ai/models/model-cards/mixtral-8x22b-0-1-0-3
     "mixtral-8x22b-instruct-v0.1": ("mistralai/mixtral-8x22b-instruct", False),
     # Others
     "jamba-1.5-large": ("ai21/jamba-large-1.7", False),
@@ -232,6 +248,7 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "phi-4": ("microsoft/phi-4", False),
     "step-3.5-flash": ("stepfun/step-3.5-flash", True),
     "trinity-large-preview": ("arcee-ai/trinity-large-preview", False),
+    "intellect-3": ("prime-intellect/intellect-3", False),
 }
 
 os.makedirs("data", exist_ok=True)
