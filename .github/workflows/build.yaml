@@ -28,7 +28,7 @@ jobs:
       - run: pnpm run fetch:endpoints
         env:
           OPENROUTER_KEY: ${{ secrets.OPENROUTER_KEY }}
-      - run: pnpm run benchmark google
+      - run: pnpm run benchmark google-free
         env:
           GOOGLE_KEY: ${{ secrets.GOOGLE_KEY }}
 
