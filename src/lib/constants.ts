@@ -266,6 +266,7 @@ const MODEL_EFFORTS: Record<string, (Effort | null)[]> = {
   "x-ai/grok-3-mini": ["medium", "high"],
   "x-ai/grok-4.1-fast": ["none", "medium", "high"],
   "x-ai/grok-code-fast-1": [null], // no reasoning
+  "x-ai/grok-4.20-multi-agent": ["medium"],
 
   // OTHERS
   "deepseek/deepseek-r1": ["medium"],

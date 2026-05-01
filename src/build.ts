@@ -152,38 +152,40 @@ const providers = {
       const modelById = new Map<string, ORModel>();
       for (const m of raw.data) modelById.set(m.id, m);
 
-      // Skip models where thinking/reasoning effort is baked into the ID
       const isEffortVariant = (id: string): boolean =>
         /:(thinking|extended)$/.test(id) || /-(high|low)$/.test(id);
 
-      // Seed entries from all models
-      for (const m of raw.data) {
-        if (isEffortVariant(m.id)) continue;
-        const id = m.id.replace(":free", "");
-        if (!out.has(id)) {
-          out.set(id, {
-            name: displayName(
-              m.name.replace(/^[^:]+:\s*/, "").replace(/\s*\(free\)\s*$/i, ""),
-            ),
-            providers: [],
-          });
+      // Process endpoints first — each endpoint is one provider
+      for (const [queriedId, endpoints] of Object.entries(endpointData)) {
+        const norm = queriedId.replace(":free", "");
+        if (
+          endpoints.length &&
+          endpoints.every((ep) => ep.model_id.replace(":free", "") !== norm)
+        ) {
+          console.warn(`Redirect: ${queriedId} → ${endpoints[0]!.model_id}`);
+          continue;
         }
-      }
-
-      // Iterate endpoints directly — each endpoint is one provider
-      for (const endpoints of Object.values(endpointData)) {
         for (const ep of endpoints) {
           if (!ep.context_length) continue;
           const m = modelById.get(ep.model_id);
           if (!m) continue;
           const id = ep.model_id.replace(":free", "");
-          const entry = out.get(id);
-          if (!entry) continue;
+          if (isEffortVariant(id)) continue;
+          if (!out.has(id)) {
+            out.set(id, {
+              name: displayName(
+                m.name
+                  .replace(/^[^:]+:\s*/, "")
+                  .replace(/\s*\(free\)\s*$/i, ""),
+              ),
+              providers: [],
+            });
+          }
           const epFree =
             ep.pricing.prompt === "0" &&
             ep.pricing.completion === "0" &&
             !m.architecture.output_modalities.includes("audio");
-          entry.providers.push(
+          out.get(id)!.providers.push(
             endpointToProvider(
               m,
               ep,
@@ -536,15 +538,12 @@ type EloMap = Record<
 >;
 
 const merge = (
-  orData: { data: ORModel[] },
-  hcData: { data: ORModel[] },
+  orModels: Map<string, { name: string; providers: Provider[] }>,
+  hcResult: ParseResult,
   providerResults: { name: string; result: ParseResult }[],
   elos: EloMap,
-  endpointData: Record<string, EndpointData[]>,
   crofSpeeds: Record<string, number>,
 ): Model[] => {
-  const orModels = providers.openrouter.parse(orData, endpointData);
-  const hcResult = providers.hackclub.parse(hcData, orModels);
   const dropped: string[] = [];
   const unofficial: string[] = [];
 
@@ -729,12 +728,14 @@ const providerResults = [
   { name: "Google", result: providers.google.parse(googleData) },
 ];
 
+const orModels = providers.openrouter.parse(orData, endpointData);
+const hcResult = providers.hackclub.parse(hcData, orModels);
+
 const models = merge(
-  orData,
-  hcData,
+  orModels,
+  hcResult,
   providerResults,
   elos,
-  endpointData,
   crofSpeeds,
 );
 writeFileSync("models.json", JSON.stringify(models, null, 2));
