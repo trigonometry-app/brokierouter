@@ -60,8 +60,6 @@ const extractContent = (json: string): string => {
 type ProviderConfig = {
   /** Friendly name for the provider */
   name: string;
-  /** Provider ID as used in benchmarks.json (e.g. "github-models") */
-  benchmarkPrefix: string;
   /** Fetch list of model IDs (provider-native) from the provider */
   fetchModels(): Promise<{ model_id: string; or_id: string }[]>;
   /** Build a streaming chat completion request for a model */
@@ -86,9 +84,8 @@ const getGhcToken = async (): Promise<string> => {
 };
 
 const PROVIDERS: Record<string, ProviderConfig> = {
-  ghm: {
+  "github-models": {
     name: "GitHub Models",
-    benchmarkPrefix: "github-models",
     async fetchModels() {
       const res = await fetch("https://models.github.ai/catalog/models", {
         headers: {
@@ -138,9 +135,8 @@ const PROVIDERS: Record<string, ProviderConfig> = {
     },
   },
 
-  ghc: {
+  "github-copilot": {
     name: "GitHub Copilot",
-    benchmarkPrefix: "github-copilot",
     async fetchModels() {
       const token = await getGhcToken();
       const res = await fetch("https://api.githubcopilot.com/models", {
@@ -193,9 +189,8 @@ const PROVIDERS: Record<string, ProviderConfig> = {
     },
   },
 
-  crof: {
+  crofai: {
     name: "CrofAI",
-    benchmarkPrefix: "crofai",
     async fetchModels() {
       const res = await fetch("https://crof.ai/v2/models", {
         headers: {
@@ -231,9 +226,8 @@ const PROVIDERS: Record<string, ProviderConfig> = {
     },
   },
 
-  groq: {
+  "groq-free": {
     name: "Groq",
-    benchmarkPrefix: "groq-free",
     async fetchModels() {
       const res = await fetch("https://api.groq.com/openai/v1/models", {
         headers: {
@@ -277,9 +271,8 @@ const PROVIDERS: Record<string, ProviderConfig> = {
     },
   },
 
-  cerebras: {
+  "cerebras-free": {
     name: "Cerebras",
-    benchmarkPrefix: "cerebras-free",
     async fetchModels() {
       const res = await fetch("https://api.cerebras.ai/v1/models", {
         headers: {
@@ -312,9 +305,8 @@ const PROVIDERS: Record<string, ProviderConfig> = {
     },
   },
 
-  google: {
+  "google-free": {
     name: "Google",
-    benchmarkPrefix: "google-free",
     async fetchModels() {
       const res = await fetch(
         `https://generativelanguage.googleapis.com/v1beta/models`,
@@ -331,6 +323,7 @@ const PROVIDERS: Record<string, ProviderConfig> = {
       };
       return models
         .filter((m) => m.supportedGenerationMethods.includes("generateContent"))
+        .filter((m) => !m.name.endsWith("-latest"))
         .map((m) => {
           const googleName = m.name.replace("models/", "");
           return {
@@ -366,7 +359,7 @@ if (!providerKey || !PROVIDERS[providerKey]) {
   process.exit(1);
 }
 
-if (providerKey === "ghc") {
+if (providerKey === "github-copilot") {
   console.error(
     "Warning: GHC costs premium requests. Press Ctrl+C to abort, or wait 5s to continue...",
   );
@@ -380,11 +373,12 @@ console.log(`Found ${models.length} models\n`);
 
 const BENCHMARKS_PATH = new URL("./lib/benchmarks.json", import.meta.url)
   .pathname;
-const benchmarks: Record<string, Record<string, number>> = JSON.parse(
-  readFileSync(BENCHMARKS_PATH, "utf-8"),
-);
+const benchmarks: Record<
+  string,
+  Record<string, { tps: number; ttfb: number }>
+> = JSON.parse(readFileSync(BENCHMARKS_PATH, "utf-8"));
 
-const results: Record<string, Record<string, number>> = {};
+const results: Record<string, Record<string, { tps: number; ttfb: number }>> = {};
 
 for (const { model_id, or_id } of models) {
   try {
@@ -442,7 +436,7 @@ for (const { model_id, or_id } of models) {
     );
 
     results[or_id] ??= {};
-    results[or_id][config.benchmarkPrefix] = tps;
+    results[or_id][providerKey] = { tps, ttfb };
   } catch (e) {
     console.log(`  ${or_id} (${model_id}): ERROR - ${(e as Error).message}`);
   }
@@ -450,7 +444,7 @@ for (const { model_id, or_id } of models) {
 
 // Remove all old entries for this provider first
 for (const entry of Object.values(benchmarks)) {
-  delete entry[config.benchmarkPrefix];
+  delete entry[providerKey];
 }
 
 // Merge new results

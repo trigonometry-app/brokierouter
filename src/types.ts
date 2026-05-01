@@ -28,6 +28,7 @@ export type Provider = {
   input_modalities: string[];
   output_modalities: string[];
   tps: number | null;
+  ttfb: number | null;
   cost_multiplier?: number;
   reasoning_efforts: (string | null)[];
   extra?: Record<string, unknown>;
@@ -119,6 +120,10 @@ const ThroughputSchema = object({
   p50: number(),
 });
 
+const LatencySchema = object({
+  p50: number(),
+});
+
 export const EndpointDataSchema = object({
   model_id: string(),
   tag: string(),
@@ -129,6 +134,7 @@ export const EndpointDataSchema = object({
   }),
   quantization: string(),
   throughput_last_30m: nullable(ThroughputSchema),
+  latency_last_30m: nullable(LatencySchema),
 });
 export type EndpointData = InferOutput<typeof EndpointDataSchema>;
 

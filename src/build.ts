@@ -102,6 +102,7 @@ const endpointToProvider = (
   prefix: string,
 ): Provider => {
   const tps = ep.throughput_last_30m?.p50 ?? null;
+  const ttfb = ep.latency_last_30m?.p50 ?? null;
   return {
     id: `${prefix}/${ep.tag}`,
     model_id: m.id,
@@ -121,6 +122,7 @@ const endpointToProvider = (
       m.id,
     ),
     tps,
+    ttfb,
     reasoning_efforts: getReasoningEfforts(
       m.id.replace(":free", ""),
       undefined,
@@ -255,6 +257,7 @@ const providers = {
                 m.id,
               ),
               tps: null,
+              ttfb: null,
               reasoning_efforts: getReasoningEfforts(
                 id,
                 undefined,
@@ -297,6 +300,7 @@ const providers = {
             : ["text"],
           output_modalities: ["text"],
           tps: null,
+          ttfb: null,
           reasoning_efforts: getReasoningEfforts(
             orId,
             "crofai",
@@ -349,6 +353,7 @@ const providers = {
             input_modalities: m.supported_input_modalities,
             output_modalities: m.supported_output_modalities,
             tps: null,
+            ttfb: null,
             reasoning_efforts: getReasoningEfforts(orId, "github-models"),
           },
         ]);
@@ -403,6 +408,7 @@ const providers = {
             `ghc ${m.id}`,
           ),
           tps: null,
+          ttfb: null,
           reasoning_efforts: getReasoningEfforts(orId),
           cost_multiplier: m.billing?.multiplier,
           input_modalities: m.capabilities?.supports?.vision
@@ -449,6 +455,7 @@ const providers = {
               : ["text"],
             output_modalities: ["text"],
             tps: null,
+            ttfb: null,
             reasoning_efforts: getReasoningEfforts(orId, "groq-free"),
           },
         ]);
@@ -484,6 +491,7 @@ const providers = {
             input_modalities: ["text"],
             output_modalities: ["text"],
             tps: null,
+            ttfb: null,
             reasoning_efforts: getReasoningEfforts(orId, "cerebras-free"),
           },
         ]);
@@ -521,6 +529,7 @@ const providers = {
             input_modalities: ["text"],
             output_modalities: ["text"],
             tps: null,
+            ttfb: null,
             reasoning_efforts: getReasoningEfforts(orId, "google-free"),
           },
         ]);
@@ -554,7 +563,7 @@ const merge = (
     models.set(id, {
       id,
       name,
-      providers: provs.map((p) => ({ ...p, tps: p.tps ?? null })),
+      providers: provs.map((p) => ({ ...p, tps: p.tps ?? null, ttfb: p.ttfb ?? null })),
       elo_direct: elos[id]?.elo_direct ?? null,
       elo_thinking: elos[id]?.elo_thinking ?? null,
     });
@@ -589,6 +598,7 @@ const merge = (
     model.providers.push({
       ...provider,
       tps: provider.tps ?? null,
+      ttfb: provider.ttfb ?? null,
     });
   };
 
@@ -605,13 +615,15 @@ const merge = (
       console.warn(`${source}: needs mapping "${id}"`);
   }
 
-  // Apply benchmark TPS (only for non-OR providers)
+  // Apply benchmark TPS + TTFB (only for non-OR providers)
   for (const model of models.values()) {
     const benchmarks = BENCHMARKS[model.id];
     if (!benchmarks) continue;
     for (const provider of model.providers) {
-      if (benchmarks[provider.id] !== undefined) {
-        provider.tps = benchmarks[provider.id];
+      const bench = benchmarks[provider.id];
+      if (bench !== undefined) {
+        provider.tps = bench.tps;
+        provider.ttfb = bench.ttfb;
       }
     }
   }

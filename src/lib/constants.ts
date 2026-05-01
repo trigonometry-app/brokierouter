@@ -2,7 +2,7 @@ import BENCHMARKS_DATA from "./benchmarks.json" with { type: "json" };
 
 export const BENCHMARKS: Record<
   string,
-  Record<string, number>
+  Record<string, { tps: number; ttfb: number | null }>
 > = BENCHMARKS_DATA;
 
 // ─── groq tpm ─────────────────────────────────────────────────────────────
