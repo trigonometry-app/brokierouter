@@ -1,0 +1,33 @@
+name: Benchmark
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      - uses: pnpm/action-setup@v6
+        with:
+          version: latest
+
+      - run: pnpm install
+
+      - run: pnpm run benchmark google-free
+        env:
+          GOOGLE_KEY: ${{ secrets.GOOGLE_KEY }}
+
+      - name: Commit benchmarks.json if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet src/lib/benchmarks.json || git add src/lib/benchmarks.json && git commit -m "update benchmarks" && git push

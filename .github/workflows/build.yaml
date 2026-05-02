@@ -1,7 +1,7 @@
 name: Build models.json
 on:
   schedule:
-    - cron: "0 0,12 * * *"
+    - cron: "0 */2 * * *"
   workflow_dispatch:
 
 permissions:
@@ -28,9 +28,6 @@ jobs:
       - run: pnpm run fetch:endpoints
         env:
           OPENROUTER_KEY: ${{ secrets.OPENROUTER_KEY }}
-      - run: pnpm run benchmark google-free
-        env:
-          GOOGLE_KEY: ${{ secrets.GOOGLE_KEY }}
 
       # Build models.json
       - run: pnpm run build
