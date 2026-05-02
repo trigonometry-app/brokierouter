@@ -21,7 +21,7 @@ export type Model = {
 };
 
 export type Provider = {
-  id: string;
+  provider: string;
   model_id: string;
   context_length: number;
   pricing?: { prompt: string; completion: string };
@@ -31,6 +31,7 @@ export type Provider = {
   ttfb: number | null;
   cost_multiplier?: number;
   reasoning_efforts: (string | null)[];
+  note?: string;
   extra?: Record<string, unknown>;
 };
 

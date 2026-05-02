@@ -103,13 +103,14 @@ const fetchCrofSpeeds = async (): Promise<Record<string, number>> => {
 const endpointToProvider = (
   m: ORModel,
   ep: EndpointData,
-  prefix: string,
+  providerName: string,
+  note?: string,
 ): Provider => {
   const tps = ep.throughput_last_30m?.p50 ?? null;
   const ttfb = ep.latency_last_30m?.p50 ?? null;
   return {
-    id: `${prefix}/${ep.tag}`,
-    model_id: m.id,
+    provider: providerName,
+    model_id: ep.tag ? `${m.id};${ep.tag}` : m.id,
     context_length: requireContextLength(
       ep.context_length,
       `endpoint ${ep.model_id}/${ep.tag}`,
@@ -132,6 +133,7 @@ const endpointToProvider = (
       undefined,
       m.supported_parameters.includes("reasoning"),
     ),
+    note,
     extra: {
       quantization: ep.quantization !== "unknown" ? ep.quantization : undefined,
     },
@@ -196,7 +198,8 @@ const providers = {
             endpointToProvider(
               m,
               ep,
-              fastBase ? `${base}/fast` : base,
+              base,
+              fastBase ? "fast tier" : undefined,
             ),
           );
         }
@@ -229,13 +232,13 @@ const providers = {
           const hcProvs = orEntry.providers
             .filter(
               (p) =>
-                p.id.startsWith("openrouter/") && // not openrouter-free/
-                !p.id.includes("/cerebras"), // HC has banned Cerebras
+                p.provider === "openrouter" && // not openrouter-free
+                !p.model_id.includes(";cerebras"), // HC has banned Cerebras
             )
             .map(
               (p): Provider => ({
                 ...p,
-                id: p.id.replace(/^openrouter\//, "hack-club/"),
+                provider: "hack-club",
               }),
             );
           if (hcProvs.length) providers.set(id, hcProvs);
@@ -243,7 +246,7 @@ const providers = {
           // Fallback for models not in OR
           providers.set(id, [
             {
-              id: `hack-club/${id.split("/")[0]}`,
+              provider: "hack-club",
               model_id: m.id,
               context_length: requireContextLength(
                 m.context_length,
@@ -292,8 +295,9 @@ const providers = {
         const orId = mapping?.orId ?? m.id;
         if (!mapping) unmapped.push(m.id);
         const provider: Provider = {
-          id: mapping?.variant ? `crofai/${mapping.variant}` : "crofai",
+          provider: "crofai",
           model_id: m.id,
+          note: mapping?.variant ? `${mapping.variant} variant` : undefined,
           context_length: requireContextLength(
             m.context_length,
             `crofai ${m.id}`,
@@ -354,7 +358,7 @@ const providers = {
         if (capped4000.has(orId)) context = Math.min(context, 4000);
         providers.set(orId, [
           {
-            id: "github-models",
+            provider: "github-models",
             model_id: m.id,
             context_length: context,
             input_modalities: m.supported_input_modalities,
@@ -408,7 +412,7 @@ const providers = {
         const orId = GHC_ID_TO_OR[m.id] ?? m.id;
         if (!GHC_ID_TO_OR[m.id]) unmapped.push(m.id);
         const provider: Provider = {
-          id: "github-copilot",
+          provider: "github-copilot",
           model_id: m.id,
           context_length: requireContextLength(
             m.capabilities?.limits?.max_context_window_tokens,
@@ -454,7 +458,7 @@ const providers = {
           : m.context_window;
         providers.set(orId, [
           {
-            id: "groq-free",
+            provider: "groq-free",
             model_id: m.id,
             context_length: requireContextLength(context, `groq ${m.id}`),
             input_modalities: GROQ_VISION.has(m.id)
@@ -489,7 +493,7 @@ const providers = {
         if (!CEREBRAS_ID_TO_OR[m.id]) unmapped.push(m.id);
         providers.set(orId, [
           {
-            id: "cerebras-free",
+            provider: "cerebras-free",
             model_id: m.id,
             context_length: requireContextLength(
               CEREBRAS_CONTEXT[m.id],
@@ -527,7 +531,7 @@ const providers = {
         if (!GOOGLE_NAME_TO_OR[m.name]) unmapped.push(m.name);
         providers.set(orId, [
           {
-            id: "google-free",
+            provider: "google-free",
             model_id: m.name.replace("models/", ""),
             context_length: requireContextLength(
               m.inputTokenLimit,
@@ -552,6 +556,13 @@ type EloMap = Record<
   string,
   { elo_direct: number | null; elo_thinking: number | null }
 >;
+
+// Reconstruct old-style "provider/tag" key for benchmark & override lookups
+const providerKey = (p: Provider): string => {
+  const idx = p.model_id.lastIndexOf(";");
+  if (idx === -1) return p.provider;
+  return `${p.provider}/${p.model_id.slice(idx + 1)}`;
+};
 
 const merge = (
   orModels: Map<string, { name: string; providers: Provider[] }>,
@@ -601,7 +612,14 @@ const merge = (
     }
     ensureModel(id, nameFallback, source);
     const model = models.get(id)!;
-    if (model.providers.some((p) => p.id === provider.id)) return;
+    if (
+      model.providers.some(
+        (p) =>
+          p.provider === provider.provider &&
+          p.model_id === provider.model_id,
+      )
+    )
+      return;
     model.providers.push({
       ...provider,
       tps: provider.tps ?? null,
@@ -627,7 +645,7 @@ const merge = (
     const benchmarks = BENCHMARKS[model.id];
     if (!benchmarks) continue;
     for (const provider of model.providers) {
-      const bench = benchmarks[provider.id];
+      const bench = benchmarks[providerKey(provider)];
       if (bench !== undefined) {
         provider.tps = bench.tps;
         provider.ttfb = bench.ttfb;
@@ -639,7 +657,7 @@ const merge = (
   for (const model of models.values()) {
     for (const provider of model.providers) {
       if (
-        provider.id.startsWith("crofai") &&
+        provider.provider === "crofai" &&
         crofSpeeds[provider.model_id] !== undefined
       ) {
         provider.tps = crofSpeeds[provider.model_id];
@@ -652,7 +670,7 @@ const merge = (
     const overrides = REASONING_EFFORT_OVERRIDES[model.id];
     if (!overrides) continue;
     for (const provider of model.providers) {
-      const allowed = overrides[provider.id];
+      const allowed = overrides[providerKey(provider)];
       if (allowed) provider.reasoning_efforts = [...allowed];
     }
   }
