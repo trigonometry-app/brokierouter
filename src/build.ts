@@ -47,6 +47,7 @@ import {
   getReasoningEfforts,
   REASONING_EFFORT_OVERRIDES,
   MODEL_SKIP,
+  FAST_MODEL_MAP,
 } from "./lib/constants.ts";
 
 // ─── helpers ─────────────────────────────────────────────────────────────
@@ -173,10 +174,13 @@ const providers = {
           if (!m) continue;
           const id = ep.model_id.replace(":free", "");
           if (isEffortVariant(id)) continue;
-          if (!out.has(id)) {
-            out.set(id, {
+          const fastBase = FAST_MODEL_MAP[id];
+          const targetId = fastBase ?? id;
+          if (!out.has(targetId)) {
+            const nameModel = fastBase ? modelById.get(fastBase) : m;
+            out.set(targetId, {
               name: displayName(
-                m.name
+                (nameModel ?? m).name
                   .replace(/^[^:]+:\s*/, "")
                   .replace(/\s*\(free\)\s*$/i, ""),
               ),
@@ -187,11 +191,12 @@ const providers = {
             ep.pricing.prompt === "0" &&
             ep.pricing.completion === "0" &&
             !m.architecture.output_modalities.includes("audio");
-          out.get(id)!.providers.push(
+          const base = epFree ? "openrouter-free" : "openrouter";
+          out.get(targetId)!.providers.push(
             endpointToProvider(
               m,
               ep,
-              epFree ? "openrouter-free" : "openrouter",
+              fastBase ? `${base}/fast` : base,
             ),
           );
         }
@@ -217,6 +222,7 @@ const providers = {
       for (const m of raw.data) {
         const id = m.id.replace(":free", "");
         if (isEffortVariant(id)) continue;
+        if (FAST_MODEL_MAP[id]) continue;
         const orEntry = orModels.get(id);
         if (orEntry) {
           // Copy OR's providers with hack-club prefix

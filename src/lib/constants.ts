@@ -158,6 +158,12 @@ export const MODEL_SKIP = new Set([
   "openai/o1-preview",
 ]);
 
+// Fast-tier models that are the same model at a different service tier.
+// Key = fast model ID, value = base model ID to merge into.
+export const FAST_MODEL_MAP: Record<string, string> = {
+  "anthropic/claude-opus-4.6-fast": "anthropic/claude-opus-4.6",
+};
+
 // ─── reasoning efforts ─────────────────────────────────────────────────────
 
 type Effort = "none" | "minimal" | "low" | "medium" | "high" | "xhigh" | "max";
