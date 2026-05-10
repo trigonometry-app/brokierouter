@@ -24,7 +24,7 @@ export type Provider = {
   provider: string;
   model_id: string;
   context_length: number;
-  pricing?: { prompt: string; completion: string };
+  per_mtok?: { prompt: number; completion: number };
   input_modalities: string[];
   output_modalities: string[];
   tps: number | null;
@@ -67,7 +67,14 @@ export type GHMModel = InferOutput<typeof GHMModelSchema>;
 export const GHCModelSchema = object({
   id: string(),
   model_picker_enabled: boolean(),
-  supported_endpoints: optional(array(union([string(), object({ id: string(), max_output_tokens: optional(number()) })]))),
+  supported_endpoints: optional(
+    array(
+      union([
+        string(),
+        object({ id: string(), max_output_tokens: optional(number()) }),
+      ]),
+    ),
+  ),
   billing: optional(object({ multiplier: optional(number()) })),
   policy: optional(object({ state: string() })),
   capabilities: optional(
@@ -146,6 +153,10 @@ export const GHMResponseSchema = array(GHMModelSchema);
 export const GHCResponseSchema = object({ data: array(GHCModelSchema) });
 export const CrofResponseSchema = object({ data: array(CrofModelSchema) });
 export const GroqResponseSchema = object({ data: array(GroqModelSchema) });
-export const CerebrasResponseSchema = object({ data: array(CerebrasModelSchema) });
-export const GoogleResponseSchema = object({ models: array(GoogleModelSchema) });
+export const CerebrasResponseSchema = object({
+  data: array(CerebrasModelSchema),
+});
+export const GoogleResponseSchema = object({
+  models: array(GoogleModelSchema),
+});
 export const EndpointArraySchema = array(EndpointDataSchema);

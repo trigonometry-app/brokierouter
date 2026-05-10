@@ -115,7 +115,10 @@ const endpointToProvider = (
       ep.context_length,
       `endpoint ${ep.model_id}/${ep.tag}`,
     ),
-    pricing: { prompt: ep.pricing.prompt, completion: ep.pricing.completion },
+    per_mtok: {
+      prompt: parseFloat(ep.pricing.prompt) * 1_000_000,
+      completion: parseFloat(ep.pricing.completion) * 1_000_000,
+    },
     input_modalities: requireModalities(
       m.architecture.input_modalities,
       "input_modalities",
@@ -252,9 +255,9 @@ const providers = {
                 m.context_length,
                 `hackclub fallback ${m.id}`,
               ),
-              pricing: {
-                prompt: m.pricing.prompt,
-                completion: m.pricing.completion,
+              per_mtok: {
+                prompt: parseFloat(m.pricing.prompt) * 1_000_000,
+                completion: parseFloat(m.pricing.completion) * 1_000_000,
               },
               input_modalities: requireModalities(
                 m.architecture.input_modalities,
@@ -302,9 +305,9 @@ const providers = {
             m.context_length,
             `crofai ${m.id}`,
           ),
-          pricing: {
-            prompt: m.pricing.prompt,
-            completion: m.pricing.completion,
+          per_mtok: {
+            prompt: parseFloat(m.pricing.prompt),
+            completion: parseFloat(m.pricing.completion),
           },
           input_modalities: CROF_VISION.has(m.id)
             ? ["text", "image"]
