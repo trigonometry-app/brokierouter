@@ -59,6 +59,15 @@ export const GHM_SKIP = new Set(["openai/o1-mini"]);
 
 export const CROF_MAP: Record<string, { orId: string; variant?: string }> = {
   "deepseek-v4-pro": { orId: "deepseek/deepseek-v4-pro" },
+  "deepseek-v4-pro-precision": {
+    orId: "deepseek/deepseek-v4-pro",
+    variant: "precision",
+  },
+  "mimo-v2.5-pro": { orId: "xiaomi/mimo-v2.5-pro" },
+  "mimo-v2.5-pro-precision": {
+    orId: "xiaomi/mimo-v2.5-pro",
+    variant: "precision",
+  },
   "kimi-k2.6": { orId: "moonshotai/kimi-k2.6" },
   "kimi-k2.6-precision": { orId: "moonshotai/kimi-k2.6", variant: "precision" },
   "kimi-k2.5": { orId: "moonshotai/kimi-k2.5" },
@@ -129,8 +138,7 @@ export const GOOGLE_NAME_TO_OR: Record<string, string> = {
   "models/gemma-4-31b-it": "google/gemma-4-31b-it",
   "models/gemini-2.5-flash-lite": "google/gemini-2.5-flash-lite",
   "models/gemini-3-flash-preview": "google/gemini-3-flash-preview",
-  "models/gemini-3.1-flash-lite-preview":
-    "google/gemini-3.1-flash-lite-preview",
+  "models/gemini-3.1-flash-lite": "google/gemini-3.1-flash-lite",
 };
 
 export const GHC_ID_TO_OR: Record<string, string> = {
@@ -268,7 +276,7 @@ const MODEL_EFFORTS: Record<string, (Effort | null)[]> = {
   "google/gemini-3-pro-image-preview": ["minimal", "low", "medium", "high"],
   "google/gemini-3.1-pro-preview": ["low", "medium", "high"],
   "google/gemini-3.1-pro-preview-customtools": ["low", "medium", "high"],
-  "google/gemini-3.1-flash-lite-preview": ["minimal", "low", "medium", "high"],
+  "google/gemini-3.1-flash-lite": ["minimal", "low", "medium", "high"],
 
   // XAI ─────────────────────────────────────────────────────
   "x-ai/grok-3": [null], // no reasoning
