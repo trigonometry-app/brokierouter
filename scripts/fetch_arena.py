@@ -19,7 +19,7 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "claude-3-5-haiku-20241022": ("anthropic/claude-3.5-haiku", False),
     "claude-3-7-sonnet-20250219": ("anthropic/claude-3.7-sonnet", False),
     "claude-3-7-sonnet-20250219-thinking-32k": (
-        "anthropic/claude-3.7-sonnet:thinking",
+        "anthropic/claude-3.7-sonnet",
         True,
     ),
     # Claude 4 family
