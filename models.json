@@ -32454,7 +32454,7 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": 1496
   },
   {
     "id": "google/lyria-3-clip-preview",
