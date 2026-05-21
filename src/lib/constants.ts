@@ -190,6 +190,10 @@ export const TOKEN_USE_PROXIES: Record<
     direct: tokenProxy(27_158_041),
     thinking: tokenProxy(165_546_938),
   },
+  "openai/gpt-5.5": {
+    direct: tokenProxy(2_833_914),
+    thinking: tokenProxy(22_458_733),
+  },
   "openai/gpt-5.4": {
     direct: tokenProxy(3_918_205),
     thinking: tokenProxy(Math.sqrt(9_900_000 * 120_000_000)),
