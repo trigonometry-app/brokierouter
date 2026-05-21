@@ -1374,7 +1374,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1474.8214426579223
+    "elo_thinking": 1474.8214426579223,
+    "token_use_thinking": 2438
   },
   {
     "id": "google/gemini-3-flash-preview",
@@ -2716,7 +2717,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 93,
+        "tps": 85,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -3309,7 +3310,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 98,
+        "tps": 100,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -4218,7 +4219,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 100,
+        "tps": 97,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -4831,7 +4832,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 100,
+        "tps": 90,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -4855,7 +4856,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 88,
+        "tps": 100,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -8610,7 +8611,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 49,
+        "tps": 65,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -43361,30 +43362,6 @@
     "elo_thinking": null
   },
   {
-    "id": "humain-ai/allam-2-7b",
-    "name": "humain ai/allam 2 7b",
-    "providers": [
-      {
-        "provider": "groq-free",
-        "model_id": "allam-2-7b",
-        "context_length": 4096,
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": null,
-        "ttfb": null,
-        "reasoning_efforts": [
-          null
-        ]
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
     "id": "groq/compound-mini",
     "name": "groq/compound mini",
     "providers": [
@@ -43416,6 +43393,30 @@
         "provider": "groq-free",
         "model_id": "groq/compound",
         "context_length": 70000,
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": null,
+        "ttfb": null,
+        "reasoning_efforts": [
+          null
+        ]
+      }
+    ],
+    "elo_direct": null,
+    "elo_thinking": null
+  },
+  {
+    "id": "humain-ai/allam-2-7b",
+    "name": "humain ai/allam 2 7b",
+    "providers": [
+      {
+        "provider": "groq-free",
+        "model_id": "allam-2-7b",
+        "context_length": 4096,
         "input_modalities": [
           "text"
         ],

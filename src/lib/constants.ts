@@ -212,6 +212,9 @@ export const TOKEN_USE_PROXIES: Record<
     direct: tokenProxy(36_039_325),
     thinking: tokenProxy(60_942_393),
   },
+  "x-ai/grok-4.20-multi-agent": {
+    thinking: tokenProxy(60_942_393 * 2), // est
+  },
   "qwen/qwen3-235b-a22b-2507": {
     direct: tokenProxy(14_764_063),
   },
