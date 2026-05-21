@@ -165,6 +165,7 @@ export const MODEL_SKIP = new Set([
   "openai/gpt-4o-2024-08-06",
   "openai/gpt-4o-mini-2024-07-18",
   "openai/o1-preview",
+  "google/gemini-3.1-flash-lite-preview",
 ]);
 
 // Fast-tier models that are the same model at a different service tier.

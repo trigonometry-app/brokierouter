@@ -77,7 +77,7 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "gemini-2.5-pro": ("google/gemini-2.5-pro", True),  # adaptive thinking
     "gemini-3-flash": ("google/gemini-3-flash-preview", True),
     "gemini-3-flash (thinking-minimal)": ("google/gemini-3-flash-preview", False),
-    "gemini-3.1-flash-lite-preview": ("google/gemini-3.1-flash-lite-preview", False),
+    "gemini-3.1-flash-lite-preview": ("google/gemini-3.1-flash-lite", False),
     "gemini-3.1-pro-preview": ("google/gemini-3.1-pro-preview", True),
     # "gemini-3.5-flash": ("google/gemini-3.5-flash", True),
     # Google Gemma
