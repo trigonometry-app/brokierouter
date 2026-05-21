@@ -79,7 +79,7 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "gemini-3-flash (thinking-minimal)": ("google/gemini-3-flash-preview", False),
     "gemini-3.1-flash-lite-preview": ("google/gemini-3.1-flash-lite-preview", False),
     "gemini-3.1-pro-preview": ("google/gemini-3.1-pro-preview", True),
-    "gemini-3.5-flash": ("google/gemini-3.5-flash", True),
+    # "gemini-3.5-flash": ("google/gemini-3.5-flash", True),
     # Google Gemma
     "gemma-2-27b-it": ("google/gemma-2-27b-it", False),
     "gemma-3-12b-it": ("google/gemma-3-12b-it", False),
@@ -145,6 +145,7 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "grok-4.20-beta1": ("x-ai/grok-4.20", False),
     "grok-4.20-beta-0309-reasoning": ("x-ai/grok-4.20", True),
     "grok-4.20-multi-agent-beta-0309": ("x-ai/grok-4.20-multi-agent", True),
+    "grok-4.3": ("x-ai/grok-4.3", True),
     # Moonshot Kimi
     "kimi-k2-0711-preview": ("moonshotai/kimi-k2", False),
     "kimi-k2-0905-preview": ("moonshotai/kimi-k2-0905", False),
@@ -200,6 +201,7 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "qwen3.5-397b-a17b": ("qwen/qwen3.5-397b-a17b", True),
     "qwen3.5-flash": ("qwen/qwen3.5-flash-02-23", True),
     "qwen3.6-plus": ("qwen/qwen3.6-plus", True),
+    "qwen3.6-max-preview": ("qwen/qwen3.6-max-preview", True),
     "qwq-32b": ("qwen/qwq-32b", True),
     # "qwq-32b-preview": ("qwen/qwq-32b", True),  # DUPLICATE
     # Minimax
@@ -249,6 +251,7 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "step-3.5-flash": ("stepfun/step-3.5-flash", True),
     "trinity-large-preview": ("arcee-ai/trinity-large-preview", False),
     "intellect-3": ("prime-intellect/intellect-3", False),
+    "granite-4.1-8b": ("ibm-granite/granite-4.1-8b", False),
 }
 
 os.makedirs("data", exist_ok=True)

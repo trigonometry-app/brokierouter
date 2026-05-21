@@ -2695,7 +2695,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 83,
+        "tps": 81,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -2719,7 +2719,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 94,
+        "tps": 76,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -3312,7 +3312,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 91,
+        "tps": 76,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -4221,7 +4221,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 82,
+        "tps": 100,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -4834,7 +4834,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 85,
+        "tps": 86,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -4858,7 +4858,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 81,
+        "tps": 84,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -4872,6 +4872,58 @@
     "elo_thinking": 1460.7231438452009,
     "token_use_direct": 270,
     "token_use_thinking": 2075
+  },
+  {
+    "id": "qwen/qwen3.6-max-preview",
+    "name": "Qwen3.6 Max",
+    "providers": [
+      {
+        "provider": "openrouter",
+        "model_id": "qwen/qwen3.6-max-preview;alibaba",
+        "context_length": 262144,
+        "per_mtok": {
+          "prompt": 1.04,
+          "completion": 6.24
+        },
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 34,
+        "ttfb": 1586,
+        "reasoning_efforts": [
+          "none",
+          "medium"
+        ],
+        "extra": {}
+      },
+      {
+        "provider": "hack-club",
+        "model_id": "qwen/qwen3.6-max-preview;alibaba",
+        "context_length": 262144,
+        "per_mtok": {
+          "prompt": 1.04,
+          "completion": 6.24
+        },
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 34,
+        "ttfb": 1586,
+        "reasoning_efforts": [
+          "none",
+          "medium"
+        ],
+        "extra": {}
+      }
+    ],
+    "elo_direct": null,
+    "elo_thinking": 1458.0584304938395
   },
   {
     "id": "z-ai/glm-5",
@@ -5916,6 +5968,61 @@
     "token_use_thinking": 1373
   },
   {
+    "id": "x-ai/grok-4.3",
+    "name": "Grok 4.3",
+    "providers": [
+      {
+        "provider": "openrouter",
+        "model_id": "x-ai/grok-4.3;xai",
+        "context_length": 1000000,
+        "per_mtok": {
+          "prompt": 1.25,
+          "completion": 2.5
+        },
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 81,
+        "ttfb": 676,
+        "reasoning_efforts": [
+          "none",
+          "medium"
+        ],
+        "extra": {}
+      },
+      {
+        "provider": "hack-club",
+        "model_id": "x-ai/grok-4.3;xai",
+        "context_length": 1000000,
+        "per_mtok": {
+          "prompt": 1.25,
+          "completion": 2.5
+        },
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 81,
+        "ttfb": 676,
+        "reasoning_efforts": [
+          "none",
+          "medium"
+        ],
+        "extra": {}
+      }
+    ],
+    "elo_direct": null,
+    "elo_thinking": 1453.9797121780753,
+    "token_use_direct": 156
+  },
+  {
     "id": "anthropic/claude-sonnet-4.5",
     "name": "Claude Sonnet 4.5",
     "providers": [
@@ -6666,7 +6773,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 100,
+        "tps": 98,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -12086,7 +12193,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 100,
+        "tps": 93,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -27533,6 +27640,60 @@
     "elo_thinking": null
   },
   {
+    "id": "ibm-granite/granite-4.1-8b",
+    "name": "Granite 4.1 8b",
+    "providers": [
+      {
+        "provider": "openrouter",
+        "model_id": "ibm-granite/granite-4.1-8b;wandb/bf16",
+        "context_length": 131072,
+        "per_mtok": {
+          "prompt": 0.049999999999999996,
+          "completion": 0.09999999999999999
+        },
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 59,
+        "ttfb": 180,
+        "reasoning_efforts": [
+          "none"
+        ],
+        "extra": {
+          "quantization": "bf16"
+        }
+      },
+      {
+        "provider": "hack-club",
+        "model_id": "ibm-granite/granite-4.1-8b;wandb/bf16",
+        "context_length": 131072,
+        "per_mtok": {
+          "prompt": 0.049999999999999996,
+          "completion": 0.09999999999999999
+        },
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tps": 59,
+        "ttfb": 180,
+        "reasoning_efforts": [
+          "none"
+        ],
+        "extra": {
+          "quantization": "bf16"
+        }
+      }
+    ],
+    "elo_direct": 1311.4468946362235,
+    "elo_thinking": null
+  },
+  {
     "id": "allenai/olmo-3-32b-think",
     "name": "allenai/olmo 3 32b think",
     "providers": [
@@ -32791,60 +32952,6 @@
           "none"
         ],
         "extra": {}
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
-    "id": "ibm-granite/granite-4.1-8b",
-    "name": "Granite 4.1 8b",
-    "providers": [
-      {
-        "provider": "openrouter",
-        "model_id": "ibm-granite/granite-4.1-8b;wandb/bf16",
-        "context_length": 131072,
-        "per_mtok": {
-          "prompt": 0.049999999999999996,
-          "completion": 0.09999999999999999
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 59,
-        "ttfb": 180,
-        "reasoning_efforts": [
-          "none"
-        ],
-        "extra": {
-          "quantization": "bf16"
-        }
-      },
-      {
-        "provider": "hack-club",
-        "model_id": "ibm-granite/granite-4.1-8b;wandb/bf16",
-        "context_length": 131072,
-        "per_mtok": {
-          "prompt": 0.049999999999999996,
-          "completion": 0.09999999999999999
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 59,
-        "ttfb": 180,
-        "reasoning_efforts": [
-          "none"
-        ],
-        "extra": {
-          "quantization": "bf16"
-        }
       }
     ],
     "elo_direct": null,
@@ -40973,58 +41080,6 @@
     "elo_thinking": null
   },
   {
-    "id": "qwen/qwen3.6-max-preview",
-    "name": "Qwen3.6 Max",
-    "providers": [
-      {
-        "provider": "openrouter",
-        "model_id": "qwen/qwen3.6-max-preview;alibaba",
-        "context_length": 262144,
-        "per_mtok": {
-          "prompt": 1.04,
-          "completion": 6.24
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 34,
-        "ttfb": 1586,
-        "reasoning_efforts": [
-          "none",
-          "medium"
-        ],
-        "extra": {}
-      },
-      {
-        "provider": "hack-club",
-        "model_id": "qwen/qwen3.6-max-preview;alibaba",
-        "context_length": 262144,
-        "per_mtok": {
-          "prompt": 1.04,
-          "completion": 6.24
-        },
-        "input_modalities": [
-          "text"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 34,
-        "ttfb": 1586,
-        "reasoning_efforts": [
-          "none",
-          "medium"
-        ],
-        "extra": {}
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null
-  },
-  {
     "id": "rekaai/reka-edge",
     "name": "Reka Edge",
     "providers": [
@@ -42233,61 +42288,6 @@
     "elo_thinking": null
   },
   {
-    "id": "x-ai/grok-4.3",
-    "name": "Grok 4.3",
-    "providers": [
-      {
-        "provider": "openrouter",
-        "model_id": "x-ai/grok-4.3;xai",
-        "context_length": 1000000,
-        "per_mtok": {
-          "prompt": 1.25,
-          "completion": 2.5
-        },
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 81,
-        "ttfb": 676,
-        "reasoning_efforts": [
-          "none",
-          "medium"
-        ],
-        "extra": {}
-      },
-      {
-        "provider": "hack-club",
-        "model_id": "x-ai/grok-4.3;xai",
-        "context_length": 1000000,
-        "per_mtok": {
-          "prompt": 1.25,
-          "completion": 2.5
-        },
-        "input_modalities": [
-          "text",
-          "image"
-        ],
-        "output_modalities": [
-          "text"
-        ],
-        "tps": 81,
-        "ttfb": 676,
-        "reasoning_efforts": [
-          "none",
-          "medium"
-        ],
-        "extra": {}
-      }
-    ],
-    "elo_direct": null,
-    "elo_thinking": null,
-    "token_use_direct": 156
-  },
-  {
     "id": "x-ai/grok-build-0.1",
     "name": "Grok Build 0.1",
     "providers": [
@@ -43364,13 +43364,13 @@
     "elo_thinking": null
   },
   {
-    "id": "humain-ai/allam-2-7b",
-    "name": "humain ai/allam 2 7b",
+    "id": "groq/compound-mini",
+    "name": "groq/compound mini",
     "providers": [
       {
         "provider": "groq-free",
-        "model_id": "allam-2-7b",
-        "context_length": 4096,
+        "model_id": "groq/compound-mini",
+        "context_length": 70000,
         "input_modalities": [
           "text"
         ],
@@ -43412,13 +43412,13 @@
     "elo_thinking": null
   },
   {
-    "id": "groq/compound-mini",
-    "name": "groq/compound mini",
+    "id": "humain-ai/allam-2-7b",
+    "name": "humain ai/allam 2 7b",
     "providers": [
       {
         "provider": "groq-free",
-        "model_id": "groq/compound-mini",
-        "context_length": 70000,
+        "model_id": "allam-2-7b",
+        "context_length": 4096,
         "input_modalities": [
           "text"
         ],
