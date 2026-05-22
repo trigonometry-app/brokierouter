@@ -1,0 +1,563 @@
+{
+  "ai21/jamba-large-1.7": {
+    "direct": 8081460
+  },
+  "anthropic/claude-3-haiku": {
+    "direct": 3082534
+  },
+  "anthropic/claude-3.5-haiku": {
+    "direct": 2274324
+  },
+  "anthropic/claude-3.7-sonnet": {
+    "direct": 5569155,
+    "thinking": 57881651
+  },
+  "anthropic/claude-haiku-4.5": {
+    "direct": 8301719,
+    "thinking": 87283932
+  },
+  "anthropic/claude-opus-4.5": {
+    "direct": 7872264,
+    "thinking": 71875727
+  },
+  "anthropic/claude-opus-4.6": {
+    "direct": 10895113,
+    "thinking": 156962674
+  },
+  "anthropic/claude-opus-4.7": {
+    "direct": 11555162,
+    "thinking": 111936386
+  },
+  "anthropic/claude-sonnet-4": {
+    "direct": 5983677,
+    "thinking": 55467519
+  },
+  "anthropic/claude-sonnet-4.5": {
+    "direct": 7875947,
+    "thinking": 63667849
+  },
+  "anthropic/claude-sonnet-4.6": {
+    "direct": 13758308,
+    "thinking": 198158559
+  },
+  "arcee-ai/trinity-large-thinking": {
+    "thinking": 154767285
+  },
+  "cohere/command-a": {
+    "direct": 3845686
+  },
+  "deepseek/deepseek-chat": {
+    "direct": 2601526
+  },
+  "deepseek/deepseek-chat-v3-0324": {
+    "direct": 3967696
+  },
+  "deepseek/deepseek-chat-v3.1": {
+    "direct": 9238929,
+    "thinking": 59729426
+  },
+  "deepseek/deepseek-r1": {
+    "thinking": 62282030
+  },
+  "deepseek/deepseek-r1-0528": {
+    "thinking": 49146756
+  },
+  "deepseek/deepseek-v3.1-terminus": {
+    "direct": 8087996,
+    "thinking": 42471072
+  },
+  "deepseek/deepseek-v3.2": {
+    "direct": 15266067,
+    "thinking": 61435588
+  },
+  "deepseek/deepseek-v3.2-exp": {
+    "direct": 10189429,
+    "thinking": 39721057
+  },
+  "deepseek/deepseek-v4-flash": {
+    "direct": 10913640,
+    "thinking": 98716774
+  },
+  "deepseek/deepseek-v4-pro": {
+    "direct": 13522583,
+    "thinking": 103731256
+  },
+  "google/gemini-2.0-flash-001": {
+    "direct": 5016945
+  },
+  "google/gemini-2.5-flash": {
+    "direct": 17480533,
+    "thinking": 52286476
+  },
+  "google/gemini-2.5-flash-lite": {
+    "direct": 35613125,
+    "thinking": 107610017
+  },
+  "google/gemini-2.5-flash-lite-preview-09-2025": {
+    "direct": 27844957,
+    "thinking": 44523953
+  },
+  "google/gemini-2.5-pro": {
+    "thinking": 54625404
+  },
+  "google/gemini-3-flash-preview": {
+    "direct": 4095332,
+    "thinking": 72019315
+  },
+  "google/gemini-3.1-flash-lite": {
+    "thinking": 52553498
+  },
+  "google/gemini-3.1-pro-preview": {
+    "thinking": 57292121
+  },
+  "google/gemini-3.5-flash": {
+    "thinking": 72602272
+  },
+  "google/gemma-3-12b-it": {
+    "direct": 5344397
+  },
+  "google/gemma-3-27b-it": {
+    "direct": 3986135
+  },
+  "google/gemma-3-4b-it": {
+    "direct": 3834701
+  },
+  "google/gemma-3n-e4b-it": {
+    "direct": 10496297
+  },
+  "google/gemma-4-26b-a4b-it": {
+    "direct": 13876975,
+    "thinking": 72952603
+  },
+  "google/gemma-4-31b-it": {
+    "direct": 7135092,
+    "thinking": 39244141
+  },
+  "ibm-granite/granite-4.1-8b": {
+    "direct": 3955769
+  },
+  "inception/mercury-2": {
+    "thinking": 69582378
+  },
+  "inclusionai/ling-2.6-1t": {
+    "direct": 15731716
+  },
+  "inclusionai/ling-2.6-flash": {
+    "direct": 14693534
+  },
+  "inclusionai/ring-2.6-1t": {
+    "thinking": 104922281
+  },
+  "kwaipilot/kat-coder-pro-v2": {
+    "direct": 8691264
+  },
+  "liquid/lfm-2-24b-a2b": {
+    "direct": 11201848
+  },
+  "liquid/lfm-2.5-1.2b-instruct:free": {
+    "direct": 4555391
+  },
+  "liquid/lfm-2.5-1.2b-thinking:free": {
+    "thinking": 31107599
+  },
+  "meta-llama/llama-3.1-405b-instruct": {
+    "direct": 3892465
+  },
+  "meta-llama/llama-3.1-70b-instruct": {
+    "direct": 4674398
+  },
+  "meta-llama/llama-3.1-8b-instruct": {
+    "direct": 5184067
+  },
+  "meta-llama/llama-3.3-70b-instruct": {
+    "direct": 3835089
+  },
+  "meta-llama/llama-4-maverick": {
+    "direct": 8154181
+  },
+  "meta-llama/llama-4-scout": {
+    "direct": 7335858
+  },
+  "microsoft/phi-4-mini-instruct": {
+    "direct": 30502873
+  },
+  "minimax/minimax-m1": {
+    "thinking": 24329789
+  },
+  "minimax/minimax-m2": {
+    "thinking": 67501394
+  },
+  "minimax/minimax-m2.1": {
+    "thinking": 58399239
+  },
+  "minimax/minimax-m2.5": {
+    "thinking": 56257382
+  },
+  "minimax/minimax-m2.7": {
+    "thinking": 86930041
+  },
+  "mistralai/ministral-14b-2512": {
+    "direct": 10754215
+  },
+  "mistralai/ministral-3b-2512": {
+    "direct": 15544993
+  },
+  "mistralai/ministral-8b-2512": {
+    "direct": 13375623
+  },
+  "mistralai/mistral-large": {
+    "direct": 5196739
+  },
+  "mistralai/mistral-large-2411": {
+    "direct": 2623156
+  },
+  "mistralai/mistral-medium-3": {
+    "direct": 3951290
+  },
+  "mistralai/mistral-medium-3-5": {
+    "thinking": 89942616
+  },
+  "mistralai/mistral-medium-3.1": {
+    "direct": 7623381
+  },
+  "mistralai/mistral-small-3.1-24b-instruct": {
+    "direct": 4711223
+  },
+  "mistralai/mistral-small-3.2-24b-instruct": {
+    "direct": 4537070
+  },
+  "moonshotai/kimi-k2": {
+    "direct": 11501556
+  },
+  "moonshotai/kimi-k2-0905": {
+    "direct": 7884136
+  },
+  "moonshotai/kimi-k2-thinking": {
+    "thinking": 100010575
+  },
+  "moonshotai/kimi-k2.5": {
+    "direct": 12791702,
+    "thinking": 88638618
+  },
+  "moonshotai/kimi-k2.6": {
+    "direct": 27158041,
+    "thinking": 165546938
+  },
+  "nousresearch/hermes-4-405b": {
+    "direct": 3943811,
+    "thinking": 38958718
+  },
+  "nousresearch/hermes-4-70b": {
+    "direct": 6359595,
+    "thinking": 49009543
+  },
+  "nvidia/llama-3.3-nemotron-super-49b-v1.5": {
+    "direct": 6516125,
+    "thinking": 53024734
+  },
+  "nvidia/nemotron-3-nano-30b-a3b": {
+    "direct": 12726512,
+    "thinking": 143433821
+  },
+  "nvidia/nemotron-3-super-120b-a12b": {
+    "thinking": 103959403
+  },
+  "nvidia/nemotron-nano-9b-v2": {
+    "direct": 22937144,
+    "thinking": 33012407
+  },
+  "openai/gpt-4.1": {
+    "direct": 4498986
+  },
+  "openai/gpt-4.1-mini": {
+    "direct": 4602459
+  },
+  "openai/gpt-4.1-nano": {
+    "direct": 5243782
+  },
+  "openai/gpt-4o": {
+    "direct": 2913286
+  },
+  "openai/gpt-4o-2024-11-20": {
+    "direct": 2672647
+  },
+  "openai/gpt-5": {
+    "direct": 4001436,
+    "thinking": 42068496
+  },
+  "openai/gpt-5-codex": {
+    "thinking": 72068846
+  },
+  "openai/gpt-5-mini": {
+    "direct": 2851853,
+    "thinking": 20583987
+  },
+  "openai/gpt-5-nano": {
+    "direct": 9038601,
+    "thinking": 45222532
+  },
+  "openai/gpt-5.1": {
+    "direct": 3878635,
+    "thinking": 68667516
+  },
+  "openai/gpt-5.1-codex": {
+    "thinking": 56740228
+  },
+  "openai/gpt-5.1-codex-mini": {
+    "thinking": 74720080
+  },
+  "openai/gpt-5.2": {
+    "direct": 3811797,
+    "thinking": 21463750
+  },
+  "openai/gpt-5.2-codex": {
+    "thinking": 201659619
+  },
+  "openai/gpt-5.3-codex": {
+    "thinking": 77499767
+  },
+  "openai/gpt-5.4": {
+    "direct": 3918205,
+    "thinking": 34502947
+  },
+  "openai/gpt-5.4-mini": {
+    "direct": 2448213,
+    "thinking": 35304686
+  },
+  "openai/gpt-5.4-nano": {
+    "direct": 3712937,
+    "thinking": 26539070
+  },
+  "openai/gpt-5.5": {
+    "direct": 2833914,
+    "thinking": 22458733
+  },
+  "openai/gpt-oss-120b": {
+    "thinking": 24480921
+  },
+  "openai/gpt-oss-20b": {
+    "thinking": 24279507
+  },
+  "openai/o1": {
+    "thinking": 35158726
+  },
+  "openai/o3": {
+    "thinking": 48350584
+  },
+  "openai/o3-mini": {
+    "thinking": 61122199
+  },
+  "openai/o4-mini": {
+    "thinking": 82396980
+  },
+  "prime-intellect/intellect-3": {
+    "thinking": 73567416
+  },
+  "qwen/qwen3-14b": {
+    "direct": 4751075,
+    "thinking": 25949862
+  },
+  "qwen/qwen3-235b-a22b": {
+    "direct": 4099824,
+    "thinking": 30357424
+  },
+  "qwen/qwen3-235b-a22b-2507": {
+    "direct": 14764063
+  },
+  "qwen/qwen3-235b-a22b-thinking-2507": {
+    "thinking": 63327034
+  },
+  "qwen/qwen3-30b-a3b": {
+    "direct": 3051185,
+    "thinking": 32145521
+  },
+  "qwen/qwen3-30b-a3b-instruct-2507": {
+    "direct": 14725856
+  },
+  "qwen/qwen3-30b-a3b-thinking-2507": {
+    "thinking": 52839528
+  },
+  "qwen/qwen3-32b": {
+    "thinking": 29881909
+  },
+  "qwen/qwen3-8b": {
+    "direct": 11751256,
+    "thinking": 38530076
+  },
+  "qwen/qwen3-coder": {
+    "direct": 9011240
+  },
+  "qwen/qwen3-coder-30b-a3b-instruct": {
+    "direct": 13200411
+  },
+  "qwen/qwen3-coder-next": {
+    "direct": 26048581
+  },
+  "qwen/qwen3-max": {
+    "direct": 12663621
+  },
+  "qwen/qwen3-max-thinking": {
+    "thinking": 85667482
+  },
+  "qwen/qwen3-next-80b-a3b-instruct": {
+    "direct": 14523280
+  },
+  "qwen/qwen3-next-80b-a3b-thinking": {
+    "thinking": 51330758
+  },
+  "qwen/qwen3-vl-235b-a22b-instruct": {
+    "direct": 10737924
+  },
+  "qwen/qwen3-vl-235b-a22b-thinking": {
+    "thinking": 42786924
+  },
+  "qwen/qwen3-vl-30b-a3b-instruct": {
+    "direct": 20702337
+  },
+  "qwen/qwen3-vl-30b-a3b-thinking": {
+    "thinking": 42736106
+  },
+  "qwen/qwen3-vl-32b-instruct": {
+    "direct": 14762325
+  },
+  "qwen/qwen3-vl-8b-instruct": {
+    "direct": 26257635
+  },
+  "qwen/qwen3-vl-8b-thinking": {
+    "thinking": 46369230
+  },
+  "qwen/qwen3.5-122b-a10b": {
+    "direct": 29347648,
+    "thinking": 91338871
+  },
+  "qwen/qwen3.5-27b": {
+    "direct": 25094584,
+    "thinking": 97861354
+  },
+  "qwen/qwen3.5-35b-a3b": {
+    "direct": 36574753,
+    "thinking": 100478692
+  },
+  "qwen/qwen3.5-397b-a17b": {
+    "direct": 20035242,
+    "thinking": 85941062
+  },
+  "qwen/qwen3.5-9b": {
+    "direct": 78448873,
+    "thinking": 201809248
+  },
+  "qwen/qwen3.6-27b": {
+    "direct": 22301660,
+    "thinking": 144477839
+  },
+  "qwen/qwen3.6-35b-a3b": {
+    "direct": 24315413,
+    "thinking": 143188723
+  },
+  "qwen/qwen3.6-max-preview": {
+    "thinking": 73850272
+  },
+  "qwen/qwen3.6-plus": {
+    "thinking": 101285828
+  },
+  "qwen/qwen3.7-max": {
+    "thinking": 96731568
+  },
+  "stepfun/step-3.5-flash": {
+    "thinking": 260578071
+  },
+  "tencent/hy3-preview": {
+    "direct": 13782552,
+    "thinking": 123592124
+  },
+  "upstage/solar-pro-3": {
+    "thinking": 120518036
+  },
+  "x-ai/grok-3": {
+    "direct": 5274662
+  },
+  "x-ai/grok-3-mini": {
+    "thinking": 99851733
+  },
+  "x-ai/grok-4": {
+    "thinking": 88425405
+  },
+  "x-ai/grok-4-fast": {
+    "direct": 4323530,
+    "thinking": 43415817
+  },
+  "x-ai/grok-4.1-fast": {
+    "direct": 4435790,
+    "thinking": 52603091
+  },
+  "x-ai/grok-4.20": {
+    "direct": 36039325,
+    "thinking": 60942393
+  },
+  "x-ai/grok-4.20-multi-agent": {
+    "thinking": 60942393
+  },
+  "x-ai/grok-4.3": {
+    "direct": 7815637,
+    "thinking": 32842942
+  },
+  "x-ai/grok-code-fast-1": {
+    "thinking": 63508282
+  },
+  "xiaomi/mimo-v2-flash": {
+    "direct": 16793383,
+    "thinking": 98070100
+  },
+  "xiaomi/mimo-v2-omni": {
+    "thinking": 87394632
+  },
+  "xiaomi/mimo-v2-pro": {
+    "thinking": 77110949
+  },
+  "xiaomi/mimo-v2.5": {
+    "thinking": 74414889
+  },
+  "xiaomi/mimo-v2.5-pro": {
+    "direct": 28388397,
+    "thinking": 91897190
+  },
+  "z-ai/glm-4.5": {
+    "thinking": 60769349
+  },
+  "z-ai/glm-4.5-air": {
+    "thinking": 67921610
+  },
+  "z-ai/glm-4.5v": {
+    "direct": 6950791,
+    "thinking": 30655308
+  },
+  "z-ai/glm-4.6": {
+    "direct": 8717866,
+    "thinking": 57434392
+  },
+  "z-ai/glm-4.6v": {
+    "direct": 6446295,
+    "thinking": 90103481
+  },
+  "z-ai/glm-4.7": {
+    "direct": 13148408,
+    "thinking": 167493394
+  },
+  "z-ai/glm-4.7-flash": {
+    "direct": 19792243,
+    "thinking": 63917223
+  },
+  "z-ai/glm-5": {
+    "direct": 12641846,
+    "thinking": 109321829
+  },
+  "z-ai/glm-5-turbo": {
+    "thinking": 94390306
+  },
+  "z-ai/glm-5.1": {
+    "direct": 75784572
+  },
+  "z-ai/glm-5v-turbo": {
+    "thinking": 42277446
+  }
+}

@@ -1044,7 +1044,7 @@
     "elo_direct": 1466.7918557412177,
     "elo_thinking": 1478.8376631893818,
     "token_use_direct": 78,
-    "token_use_thinking": 689
+    "token_use_thinking": 690
   },
   {
     "id": "x-ai/grok-4.20",
@@ -1377,7 +1377,7 @@
     ],
     "elo_direct": null,
     "elo_thinking": 1474.8214426579223,
-    "token_use_thinking": 2438
+    "token_use_thinking": 1219
   },
   {
     "id": "google/gemini-3-flash-preview",
@@ -2671,7 +2671,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 26,
+        "tps": 33,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -2695,7 +2695,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 84,
+        "tps": 79,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -3148,7 +3148,8 @@
     ],
     "elo_direct": 1467.9610399472783,
     "elo_thinking": null,
-    "token_use_direct": 199
+    "token_use_direct": 275,
+    "token_use_thinking": 3963
   },
   {
     "id": "xiaomi/mimo-v2.5-pro",
@@ -3264,7 +3265,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 79,
+        "tps": 89,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -3288,7 +3289,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 76,
+        "tps": 83,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -4197,7 +4198,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 89,
+        "tps": 96,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -4221,7 +4222,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 100,
+        "tps": 93,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -4810,7 +4811,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 85,
+        "tps": 77,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -4834,7 +4835,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 98,
+        "tps": 78,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -4899,7 +4900,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1458.0584304938395
+    "elo_thinking": 1458.0584304938395,
+    "token_use_thinking": 1477
   },
   {
     "id": "z-ai/glm-5",
@@ -5775,7 +5777,7 @@
     "elo_direct": null,
     "elo_thinking": 1455.063452475996,
     "token_use_direct": 49,
-    "token_use_thinking": 197
+    "token_use_thinking": 706
   },
   {
     "id": "openai/gpt-5.1",
@@ -5996,7 +5998,8 @@
     ],
     "elo_direct": null,
     "elo_thinking": 1453.9797121780753,
-    "token_use_direct": 156
+    "token_use_direct": 156,
+    "token_use_thinking": 657
   },
   {
     "id": "anthropic/claude-sonnet-4.5",
@@ -6292,7 +6295,9 @@
       }
     ],
     "elo_direct": 1453.388242949132,
-    "elo_thinking": 1453.5725338455889
+    "elo_thinking": 1453.5725338455889,
+    "token_use_direct": 158,
+    "token_use_thinking": 1273
   },
   {
     "id": "google/gemma-4-31b-it",
@@ -6797,7 +6802,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 49,
+        "tps": 80,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -7528,7 +7533,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 45,
+        "tps": 88,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -7564,7 +7569,9 @@
       }
     ],
     "elo_direct": 1431.876399886505,
-    "elo_thinking": 1448.8269192096525
+    "elo_thinking": 1448.8269192096525,
+    "token_use_direct": 256,
+    "token_use_thinking": 1773
   },
   {
     "id": "anthropic/claude-opus-4.1",
@@ -7820,7 +7827,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1447.0953606592088
+    "elo_thinking": 1447.0953606592088,
+    "token_use_thinking": 1542
   },
   {
     "id": "google/gemini-2.5-pro",
@@ -8067,7 +8075,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1446.8152921359476
+    "elo_thinking": 1446.8152921359476,
+    "token_use_thinking": 1093
   },
   {
     "id": "qwen/qwen3.6-plus",
@@ -8123,7 +8132,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1445.9845139971753
+    "elo_thinking": 1445.9845139971753,
+    "token_use_thinking": 2026
   },
   {
     "id": "qwen/qwen3.5-397b-a17b",
@@ -8744,7 +8754,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 54,
+        "tps": 76,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -9219,7 +9229,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 63,
+        "tps": 69,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -10111,7 +10121,8 @@
       }
     ],
     "elo_direct": 1438.4880931842729,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 1051
   },
   {
     "id": "google/gemma-4-26b-a4b-it",
@@ -10672,7 +10683,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1438.238284133985
+    "elo_thinking": 1438.238284133985,
+    "token_use_direct": 278,
+    "token_use_thinking": 1459
   },
   {
     "id": "openai/gpt-5",
@@ -10856,7 +10869,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1433.7927152226869
+    "elo_thinking": 1433.7927152226869,
+    "token_use_direct": 80,
+    "token_use_thinking": 841
   },
   {
     "id": "openai/o3",
@@ -10933,7 +10948,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1431.1344809598145
+    "elo_thinking": 1431.1344809598145,
+    "token_use_thinking": 967
   },
   {
     "id": "moonshotai/kimi-k2-thinking",
@@ -11138,7 +11154,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1427.3128518321191
+    "elo_thinking": 1427.3128518321191,
+    "token_use_thinking": 1488
   },
   {
     "id": "openai/gpt-5-chat",
@@ -11453,7 +11470,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1425.624018168246
+    "elo_thinking": 1425.624018168246,
+    "token_use_direct": 174,
+    "token_use_thinking": 1149
   },
   {
     "id": "deepseek/deepseek-v3.2-exp",
@@ -11605,7 +11624,9 @@
       }
     ],
     "elo_direct": 1422.8187258542873,
-    "elo_thinking": 1424.5657444458293
+    "elo_thinking": 1424.5657444458293,
+    "token_use_direct": 204,
+    "token_use_thinking": 794
   },
   {
     "id": "qwen/qwen3-max",
@@ -11655,7 +11676,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1424.0350541375715
+    "elo_thinking": 1424.0350541375715,
+    "token_use_direct": 253
   },
   {
     "id": "anthropic/claude-opus-4",
@@ -12291,7 +12313,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 55,
+        "tps": 68,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -12302,7 +12324,9 @@
       }
     ],
     "elo_direct": 1423.865772769144,
-    "elo_thinking": 1421.9741425646328
+    "elo_thinking": 1421.9741425646328,
+    "token_use_direct": 305,
+    "token_use_thinking": 1229
   },
   {
     "id": "qwen/qwen3-235b-a22b-2507",
@@ -12977,7 +13001,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1422.1160071747383
+    "elo_thinking": 1422.1160071747383,
+    "token_use_thinking": 983
   },
   {
     "id": "qwen/qwen3.5-122b-a10b",
@@ -13285,7 +13310,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1418.7014270019959
+    "elo_thinking": 1418.7014270019959,
+    "token_use_direct": 587,
+    "token_use_thinking": 1827
   },
   {
     "id": "moonshotai/kimi-k2-0905",
@@ -13768,7 +13795,9 @@
       }
     ],
     "elo_direct": 1417.6831445102903,
-    "elo_thinking": 1416.714484242221
+    "elo_thinking": 1416.714484242221,
+    "token_use_direct": 185,
+    "token_use_thinking": 1195
   },
   {
     "id": "deepseek/deepseek-v3.1-terminus",
@@ -13968,7 +13997,9 @@
       }
     ],
     "elo_direct": 1415.9449409288302,
-    "elo_thinking": 1417.2768278314888
+    "elo_thinking": 1417.2768278314888,
+    "token_use_direct": 162,
+    "token_use_thinking": 849
   },
   {
     "id": "moonshotai/kimi-k2",
@@ -14022,7 +14053,8 @@
       }
     ],
     "elo_direct": 1417.1369693090378,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 230
   },
   {
     "id": "mistralai/mistral-large",
@@ -14074,7 +14106,8 @@
       }
     ],
     "elo_direct": 1415.4716287571698,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 104
   },
   {
     "id": "qwen/qwen3-vl-235b-a22b-instruct",
@@ -14366,7 +14399,8 @@
       }
     ],
     "elo_direct": 1415.3616307012135,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 215
   },
   {
     "id": "openai/gpt-4.1",
@@ -14550,7 +14584,8 @@
       }
     ],
     "elo_direct": 1413.1811669280135,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 90
   },
   {
     "id": "x-ai/grok-3",
@@ -14574,7 +14609,8 @@
       }
     ],
     "elo_direct": 1411.6478401633367,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 105
   },
   {
     "id": "z-ai/glm-4.5",
@@ -14678,7 +14714,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1411.213356751127
+    "elo_thinking": 1411.213356751127,
+    "token_use_thinking": 1215
   },
   {
     "id": "google/gemini-2.5-flash",
@@ -14985,7 +15022,8 @@
       }
     ],
     "elo_direct": 1409.7145485117076,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 152
   },
   {
     "id": "anthropic/claude-haiku-4.5",
@@ -15248,7 +15286,9 @@
       }
     ],
     "elo_direct": 1409.5911108337807,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 166,
+    "token_use_thinking": 1746
   },
   {
     "id": "minimax/minimax-m2.7",
@@ -15793,7 +15833,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1408.0900672323307
+    "elo_thinking": 1408.0900672323307,
+    "token_use_direct": 502,
+    "token_use_thinking": 1957
   },
   {
     "id": "openai/gpt-5.4-nano",
@@ -15909,7 +15951,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1406.886284276396
+    "elo_thinking": 1406.886284276396,
+    "token_use_direct": 74,
+    "token_use_thinking": 531
   },
   {
     "id": "qwen/qwen3-235b-a22b",
@@ -15961,7 +16005,9 @@
       }
     ],
     "elo_direct": 1402.8332024617946,
-    "elo_thinking": 1374.6189143518197
+    "elo_thinking": 1374.6189143518197,
+    "token_use_direct": 82,
+    "token_use_thinking": 607
   },
   {
     "id": "openai/o1",
@@ -16038,7 +16084,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1401.6794525650525
+    "elo_thinking": 1401.6794525650525,
+    "token_use_thinking": 703
   },
   {
     "id": "qwen/qwen3-next-80b-a3b-instruct",
@@ -16526,7 +16573,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1399.413243831785
+    "elo_thinking": 1399.413243831785,
+    "token_use_thinking": 1267
   },
   {
     "id": "anthropic/claude-sonnet-4",
@@ -16822,7 +16870,9 @@
       }
     ],
     "elo_direct": 1388.6101711045333,
-    "elo_thinking": 1398.8171949007233
+    "elo_thinking": 1398.8171949007233,
+    "token_use_direct": 120,
+    "token_use_thinking": 1109
   },
   {
     "id": "qwen/qwen3.5-35b-a3b",
@@ -17400,7 +17450,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1397.7270127216664
+    "elo_thinking": 1397.7270127216664,
+    "token_use_thinking": 1246
   },
   {
     "id": "qwen/qwen3.5-flash-02-23",
@@ -17556,7 +17607,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1395.5615958264107
+    "elo_thinking": 1395.5615958264107,
+    "token_use_thinking": 856
   },
   {
     "id": "deepseek/deepseek-chat-v3-0324",
@@ -17856,7 +17908,8 @@
       }
     ],
     "elo_direct": 1395.0912779795017,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 79
   },
   {
     "id": "stepfun/step-3.5-flash",
@@ -18056,7 +18109,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1395.0185676897024
+    "elo_thinking": 1395.0185676897024,
+    "token_use_thinking": 5212
   },
   {
     "id": "minimax/minimax-m2.5",
@@ -19056,7 +19110,9 @@
       }
     ],
     "elo_direct": 1392.875557307234,
-    "elo_thinking": 1387.3972127261436
+    "elo_thinking": 1387.3972127261436,
+    "token_use_direct": 336,
+    "token_use_thinking": 1961
   },
   {
     "id": "openai/gpt-5-mini",
@@ -19269,7 +19325,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1390.1405880365014
+    "elo_thinking": 1390.1405880365014,
+    "token_use_direct": 57,
+    "token_use_thinking": 412
   },
   {
     "id": "openai/o4-mini",
@@ -19346,7 +19404,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1389.8181881782646
+    "elo_thinking": 1389.8181881782646,
+    "token_use_thinking": 1648
   },
   {
     "id": "qwen/qwen3-coder",
@@ -19737,7 +19796,8 @@
       }
     ],
     "elo_direct": 1387.357737634896,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 180
   },
   {
     "id": "mistralai/mistral-medium-3",
@@ -19808,7 +19868,8 @@
       }
     ],
     "elo_direct": 1386.5903889577014,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 79
   },
   {
     "id": "minimax/minimax-m2.1",
@@ -20008,7 +20069,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1384.9439758723465
+    "elo_thinking": 1384.9439758723465,
+    "token_use_thinking": 1168
   },
   {
     "id": "qwen/qwen3-30b-a3b-instruct-2507",
@@ -20284,7 +20346,8 @@
       }
     ],
     "elo_direct": 1383.361889255554,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 295
   },
   {
     "id": "openai/gpt-4.1-mini",
@@ -20447,7 +20510,8 @@
       }
     ],
     "elo_direct": 1382.2134064752295,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 92
   },
   {
     "id": "google/gemini-2.5-flash-lite-preview-09-2025",
@@ -20625,7 +20689,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1377.6512430502403
+    "elo_thinking": 1377.6512430502403,
+    "token_use_direct": 129,
+    "token_use_thinking": 1802
   },
   {
     "id": "google/gemini-2.5-flash-lite",
@@ -20996,7 +21062,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1372.9050840609516
+    "elo_thinking": 1372.9050840609516,
+    "token_use_thinking": 1358
   },
   {
     "id": "qwen/qwen3-next-80b-a3b-thinking",
@@ -21534,7 +21601,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1367.9813398448227
+    "elo_thinking": 1367.9813398448227,
+    "token_use_direct": 396,
+    "token_use_thinking": 1278
   },
   {
     "id": "google/gemma-3-27b-it",
@@ -21778,7 +21847,8 @@
       }
     ],
     "elo_direct": 1365.7351826111944,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 80
   },
   {
     "id": "minimax/minimax-m1",
@@ -21878,7 +21948,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1363.5889310945186
+    "elo_thinking": 1363.5889310945186,
+    "token_use_thinking": 487
   },
   {
     "id": "x-ai/grok-3-mini",
@@ -21903,7 +21974,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1361.9375821469293
+    "elo_thinking": 1361.9375821469293,
+    "token_use_thinking": 1997
   },
   {
     "id": "nvidia/nemotron-3-super-120b-a12b",
@@ -22186,7 +22258,8 @@
       }
     ],
     "elo_direct": 1360.2096787193886,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 100
   },
   {
     "id": "deepseek/deepseek-chat",
@@ -22286,7 +22359,8 @@
       }
     ],
     "elo_direct": 1358.192559930351,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 52
   },
   {
     "id": "mistralai/mistral-small-3.2-24b-instruct",
@@ -22482,7 +22556,8 @@
       }
     ],
     "elo_direct": 1357.1933319630111,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 91
   },
   {
     "id": "prime-intellect/intellect-3",
@@ -22538,7 +22613,8 @@
       }
     ],
     "elo_direct": 1356.5957931881958,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 1471
   },
   {
     "id": "cohere/command-a",
@@ -22604,7 +22680,8 @@
       }
     ],
     "elo_direct": 1353.653408266085,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 77
   },
   {
     "id": "z-ai/glm-4.5v",
@@ -22712,7 +22789,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1353.2262139216166
+    "elo_thinking": 1353.2262139216166,
+    "token_use_direct": 139,
+    "token_use_thinking": 613
   },
   {
     "id": "openai/gpt-oss-120b",
@@ -23773,7 +23852,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1347.457991378022
+    "elo_thinking": 1347.457991378022,
+    "token_use_thinking": 1222
   },
   {
     "id": "inception/mercury-2",
@@ -24376,7 +24456,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1346.084986779221
+    "elo_thinking": 1346.084986779221,
+    "token_use_thinking": 1350
   },
   {
     "id": "openai/gpt-4o-2024-05-13",
@@ -24532,7 +24613,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1343.0117579272778
+    "elo_thinking": 1343.0117579272778,
+    "token_use_direct": 130,
+    "token_use_thinking": 1060
   },
   {
     "id": "google/gemma-3-12b-it",
@@ -24676,7 +24759,8 @@
       }
     ],
     "elo_direct": 1341.8202691754,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 107
   },
   {
     "id": "openai/gpt-5-nano",
@@ -24860,7 +24944,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1337.419992824604
+    "elo_thinking": 1337.419992824604,
+    "token_use_direct": 181,
+    "token_use_thinking": 904
   },
   {
     "id": "amazon/nova-2-lite-v1",
@@ -25086,7 +25172,8 @@
       }
     ],
     "elo_direct": 1334.535673935864,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 58
   },
   {
     "id": "meta-llama/llama-3.1-405b-instruct",
@@ -25110,7 +25197,8 @@
       }
     ],
     "elo_direct": 1332.634922608661,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 78
   },
   {
     "id": "qwen/qwen3-30b-a3b",
@@ -25306,7 +25394,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1327.2921304435863
+    "elo_thinking": 1327.2921304435863,
+    "token_use_direct": 61,
+    "token_use_thinking": 643
   },
   {
     "id": "meta-llama/llama-4-maverick",
@@ -25519,7 +25609,8 @@
       }
     ],
     "elo_direct": 1326.814342938485,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 163
   },
   {
     "id": "openai/gpt-4-turbo",
@@ -25711,7 +25802,8 @@
       }
     ],
     "elo_direct": 1323.0292959718415,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 45
   },
   {
     "id": "meta-llama/llama-4-scout",
@@ -25937,7 +26029,8 @@
       }
     ],
     "elo_direct": 1322.3419644417604,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 147
   },
   {
     "id": "openai/gpt-4.1-nano",
@@ -26100,7 +26193,8 @@
       }
     ],
     "elo_direct": 1321.613234272254,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 105
   },
   {
     "id": "google/gemma-3n-e4b-it",
@@ -26150,7 +26244,8 @@
       }
     ],
     "elo_direct": 1318.0763747124342,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 210
   },
   {
     "id": "meta-llama/llama-3.3-70b-instruct",
@@ -26887,7 +26982,8 @@
       }
     ],
     "elo_direct": 1318.0159812682355,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 77
   },
   {
     "id": "openai/gpt-4o-mini",
@@ -27759,7 +27855,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": 1316.6808127878298
+    "elo_thinking": 1316.6808127878298,
+    "token_use_direct": 255,
+    "token_use_thinking": 2869
   },
   {
     "id": "mistralai/mistral-large-2407",
@@ -27915,7 +28013,8 @@
       }
     ],
     "elo_direct": 1311.4468946362235,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 79
   },
   {
     "id": "allenai/olmo-3-32b-think",
@@ -27996,7 +28095,8 @@
       }
     ],
     "elo_direct": 1304.8824843542134,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 52
   },
   {
     "id": "google/gemma-3-4b-it",
@@ -28052,7 +28152,8 @@
       }
     ],
     "elo_direct": 1303.1906778279122,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 77
   },
   {
     "id": "mistralai/mistral-small-3.1-24b-instruct",
@@ -28121,7 +28222,8 @@
       }
     ],
     "elo_direct": 1303.1509784543148,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 94
   },
   {
     "id": "qwen/qwen-2.5-72b-instruct",
@@ -28409,7 +28511,8 @@
       }
     ],
     "elo_direct": 1292.9105542140082,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 93
   },
   {
     "id": "amazon/nova-pro-v1",
@@ -28559,7 +28662,8 @@
       }
     ],
     "elo_direct": 1288.4556302641315,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 162
   },
   {
     "id": "google/gemma-2-27b-it",
@@ -29075,7 +29179,8 @@
       }
     ],
     "elo_direct": 1260.329136344102,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 62
   },
   {
     "id": "amazon/nova-lite-v1",
@@ -30949,7 +31054,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 3095
   },
   {
     "id": "arcee-ai/trinity-mini",
@@ -33090,7 +33196,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 315
   },
   {
     "id": "inclusionai/ling-2.6-flash",
@@ -33140,7 +33247,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 294
   },
   {
     "id": "inclusionai/ring-2.6-1t",
@@ -33192,7 +33300,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 2098
   },
   {
     "id": "inflection/inflection-3-pi",
@@ -33388,7 +33497,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 174
   },
   {
     "id": "liquid/lfm-2-24b-a2b",
@@ -33438,7 +33548,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 224
   },
   {
     "id": "liquid/lfm-2.5-1.2b-instruct",
@@ -33844,7 +33955,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 610
   },
   {
     "id": "microsoft/wizardlm-2-8x22b",
@@ -34308,7 +34420,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 215
   },
   {
     "id": "mistralai/ministral-3b-2512",
@@ -34408,7 +34521,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 311
   },
   {
     "id": "mistralai/ministral-8b-2512",
@@ -34508,7 +34622,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 268
   },
   {
     "id": "mistralai/mistral-large-2512",
@@ -34618,7 +34733,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 1799
   },
   {
     "id": "mistralai/mistral-nemo",
@@ -35465,7 +35581,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 79,
+    "token_use_thinking": 779
   },
   {
     "id": "nousresearch/hermes-4-70b",
@@ -35521,7 +35639,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 127,
+    "token_use_thinking": 980
   },
   {
     "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
@@ -35666,7 +35786,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 459,
+    "token_use_thinking": 660
   },
   {
     "id": "openai/gpt-3.5-turbo-0613",
@@ -35962,7 +36084,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 53
   },
   {
     "id": "openai/gpt-4o-audio-preview",
@@ -36172,7 +36295,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 1441
   },
   {
     "id": "openai/gpt-5-image-mini",
@@ -36662,7 +36786,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 1494
   },
   {
     "id": "openai/gpt-5.1-codex",
@@ -36766,7 +36891,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 1135
   },
   {
     "id": "openai/gpt-5.2-codex",
@@ -36902,7 +37028,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 4033
   },
   {
     "id": "openai/gpt-5.2-pro",
@@ -37070,7 +37197,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 1550
   },
   {
     "id": "openai/gpt-5.4-image-2",
@@ -38695,7 +38823,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 95,
+    "token_use_thinking": 519
   },
   {
     "id": "qwen/qwen3-30b-a3b-thinking-2507",
@@ -38791,7 +38921,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 1057
   },
   {
     "id": "qwen/qwen3-8b",
@@ -38891,7 +39022,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 235,
+    "token_use_thinking": 771
   },
   {
     "id": "qwen/qwen3-coder-30b-a3b-instruct",
@@ -39075,7 +39208,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 264
   },
   {
     "id": "qwen/qwen3-coder-flash",
@@ -39317,7 +39451,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 521
   },
   {
     "id": "qwen/qwen3-coder-plus",
@@ -39417,7 +39552,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 1713
   },
   {
     "id": "qwen/qwen3-vl-30b-a3b-instruct",
@@ -39749,7 +39885,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 414
   },
   {
     "id": "qwen/qwen3-vl-30b-a3b-thinking",
@@ -39897,7 +40034,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 855
   },
   {
     "id": "qwen/qwen3-vl-32b-instruct",
@@ -39949,7 +40087,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 295
   },
   {
     "id": "qwen/qwen3-vl-8b-instruct",
@@ -40145,7 +40284,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 525
   },
   {
     "id": "qwen/qwen3-vl-8b-thinking",
@@ -40197,7 +40337,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 927
   },
   {
     "id": "qwen/qwen3.5-9b",
@@ -40381,7 +40522,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 1569,
+    "token_use_thinking": 4036
   },
   {
     "id": "qwen/qwen3.5-plus-02-15",
@@ -40917,7 +41060,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 40,
+        "tps": 71,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -40928,7 +41071,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 446,
+    "token_use_thinking": 2890
   },
   {
     "id": "qwen/qwen3.6-35b-a3b",
@@ -41192,7 +41337,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 486,
+    "token_use_thinking": 2864
   },
   {
     "id": "qwen/qwen3.6-flash",
@@ -41300,7 +41447,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 1935
   },
   {
     "id": "rekaai/reka-edge",
@@ -42044,7 +42192,9 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_direct": 276,
+    "token_use_thinking": 2472
   },
   {
     "id": "thedrummer/cydonia-24b-v4.1",
@@ -42458,7 +42608,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 2410
   },
   {
     "id": "writer/palmyra-x5",
@@ -42624,7 +42775,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 1748
   },
   {
     "id": "z-ai/glm-4-32b",
@@ -42774,7 +42926,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 1888
   },
   {
     "id": "z-ai/glm-5v-turbo",
@@ -42834,7 +42987,8 @@
       }
     ],
     "elo_direct": null,
-    "elo_thinking": null
+    "elo_thinking": null,
+    "token_use_thinking": 846
   },
   {
     "id": "~anthropic/claude-haiku-latest",

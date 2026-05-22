@@ -1,4 +1,5 @@
 import BENCHMARKS_DATA from "./benchmarks.json" with { type: "json" };
+import TOKEN_USAGE_DATA from "./token-usage.json" with { type: "json" };
 
 export const BENCHMARKS: Record<
   string,
@@ -178,157 +179,25 @@ export const FAST_MODEL_MAP: Record<string, string> = {
 // ─── token use proxies ─────────────────────────────────────────────────────
 
 const tokenProxy = (totalTokens: number) => Math.round(totalTokens / 50000);
+const TOKEN_USAGE = TOKEN_USAGE_DATA as Record<
+  string,
+  { direct?: number; thinking?: number }
+>;
 
 export const TOKEN_USE_PROXIES: Record<
   string,
   { direct?: number; thinking?: number }
-> = {
-  "z-ai/glm-4.7": {
-    direct: tokenProxy(13_148_408),
-    thinking: tokenProxy(167_493_394),
-  },
-  "moonshotai/kimi-k2.6": {
-    direct: tokenProxy(27_158_041),
-    thinking: tokenProxy(165_546_938),
-  },
-  "openai/gpt-5.5": {
-    direct: tokenProxy(2_833_914),
-    thinking: tokenProxy(22_458_733),
-  },
-  "openai/gpt-5.4": {
-    direct: tokenProxy(3_918_205),
-    thinking: tokenProxy(Math.sqrt(9_900_000 * 120_000_000)),
-  },
-  "openai/gpt-5.2": {
-    direct: tokenProxy(3_811_797),
-    thinking: tokenProxy(21_463_750),
-  },
-  "openai/gpt-5.1": {
-    direct: tokenProxy(3_878_635),
-    thinking: tokenProxy(68_667_516),
-  },
-  "google/gemini-3.5-flash": {
-    thinking: tokenProxy(72_602_272),
-  },
-  "google/gemini-3.1-pro-preview": {
-    thinking: tokenProxy(57_292_121),
-  },
-  "x-ai/grok-4.20": {
-    direct: tokenProxy(36_039_325),
-    thinking: tokenProxy(60_942_393),
-  },
-  "x-ai/grok-4.20-multi-agent": {
-    thinking: tokenProxy(60_942_393 * 2), // est
-  },
-  "qwen/qwen3-235b-a22b-2507": {
-    direct: tokenProxy(14_764_063),
-  },
-  "qwen/qwen3-32b": {
-    thinking: tokenProxy(29_881_909),
-  },
-  "x-ai/grok-4.3": {
-    direct: tokenProxy(7_815_637),
-  },
-  "anthropic/claude-sonnet-4.6": {
-    direct: tokenProxy(Math.sqrt(13_758_308 * 7_229_330)),
-  },
-  "anthropic/claude-opus-4.5": {
-    direct: tokenProxy(7_872_264),
-    thinking: tokenProxy(71_875_727),
-  },
-  "anthropic/claude-opus-4.6": {
-    direct: tokenProxy(10_895_113),
-    thinking: tokenProxy(156_962_674),
-  },
-  "anthropic/claude-opus-4.7": {
-    direct: tokenProxy(11_555_162),
-    thinking: tokenProxy(111_936_386),
-  },
-  "google/gemini-3-flash-preview": {
-    direct: tokenProxy(4_095_332),
-    thinking: tokenProxy(72_019_315),
-  },
-  "google/gemini-2.5-flash-lite": {
-    direct: tokenProxy(35_613_125),
-    thinking: tokenProxy(107_610_017),
-  },
-  "google/gemini-2.5-flash-lite-preview-09-2025": {
-    direct: tokenProxy(27_844_957),
-    thinking: tokenProxy(44_523_953),
-  },
-  "google/gemini-2.5-flash": {
-    direct: tokenProxy(17_480_533),
-    thinking: tokenProxy(52_286_476),
-  },
-  "openai/gpt-5.4-mini": {
-    direct: tokenProxy(2_448_213),
-    thinking: tokenProxy(9_872_802),
-  },
-  "z-ai/glm-5": {
-    direct: tokenProxy(12_641_846),
-    thinking: tokenProxy(109_321_829),
-  },
-  "z-ai/glm-5.1": {
-    direct: tokenProxy(75_784_572),
-  },
-  "meta-llama/llama-3.1-8b-instruct": {
-    direct: tokenProxy(5_184_067),
-  },
-  "moonshotai/kimi-k2-thinking": {
-    thinking: tokenProxy(100_010_575),
-  },
-  "nvidia/nemotron-3-super-120b-a12b": {
-    thinking: tokenProxy(103_959_403),
-  },
-  "deepseek/deepseek-v4-pro": {
-    direct: tokenProxy(13_522_583),
-    thinking: tokenProxy(103_731_266),
-  },
-  "deepseek/deepseek-v4-flash": {
-    direct: tokenProxy(10_913_640),
-    thinking: tokenProxy(98_716_774),
-  },
-  "moonshotai/kimi-k2-0905": {
-    direct: tokenProxy(7_884_136),
-  },
-  "google/gemma-4-31b-it": {
-    direct: tokenProxy(7_135_092),
-    thinking: tokenProxy(39_244_141),
-  },
-  "minimax/minimax-m2.7": {
-    thinking: tokenProxy(86_930_041),
-  },
-  "minimax/minimax-m2.5": {
-    thinking: tokenProxy(56_257_382),
-  },
-  "openai/gpt-oss-120b": {
-    thinking: tokenProxy(Math.sqrt(77_700_466 * 7_713_152)),
-  },
-  "openai/gpt-oss-20b": {
-    thinking: tokenProxy(Math.sqrt(60_996_569 * 9_664_387)),
-  },
-  "xiaomi/mimo-v2.5-pro": {
-    direct: tokenProxy(28_388_397),
-    thinking: tokenProxy(91_897_190),
-  },
-  "qwen/qwen3.5-35b-a3b": {
-    direct: tokenProxy(36_574_753),
-    thinking: tokenProxy(100_478_692),
-  },
-  "inception/mercury-2": {
-    thinking: tokenProxy(69_582_378),
-  },
-  "qwen/qwen3.5-397b-a17b": {
-    direct: tokenProxy(20_035_242),
-    thinking: tokenProxy(85_941_062),
-  },
-  "qwen/qwen3-next-80b-a3b-instruct": {
-    direct: tokenProxy(14_523_280),
-  },
-  "qwen/qwen3-next-80b-a3b-thinking": {
-    thinking: tokenProxy(51_330_758),
-  },
-};
+> = Object.fromEntries(
+  Object.entries(TOKEN_USAGE).map(([id, usage]) => [
+    id,
+    {
+      ...(usage.direct !== undefined ? { direct: tokenProxy(usage.direct) } : {}),
+      ...(usage.thinking !== undefined
+        ? { thinking: tokenProxy(usage.thinking) }
+        : {}),
+    },
+  ]),
+);
 
 // ─── reasoning efforts ─────────────────────────────────────────────────────
 
