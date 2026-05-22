@@ -252,6 +252,10 @@ export const TOKEN_USE_PROXIES: Record<
     direct: tokenProxy(35_613_125),
     thinking: tokenProxy(107_610_017),
   },
+  "google/gemini-2.5-flash-lite-preview-09-2025": {
+    direct: tokenProxy(27_844_957),
+    thinking: tokenProxy(44_523_953),
+  },
   "google/gemini-2.5-flash": {
     direct: tokenProxy(17_480_533),
     thinking: tokenProxy(52_286_476),
@@ -269,6 +273,12 @@ export const TOKEN_USE_PROXIES: Record<
   },
   "meta-llama/llama-3.1-8b-instruct": {
     direct: tokenProxy(5_184_067),
+  },
+  "moonshotai/kimi-k2-thinking": {
+    thinking: tokenProxy(100_010_575),
+  },
+  "nvidia/nemotron-3-super-120b-a12b": {
+    thinking: tokenProxy(103_959_403),
   },
   "deepseek/deepseek-v4-pro": {
     direct: tokenProxy(13_522_583),
