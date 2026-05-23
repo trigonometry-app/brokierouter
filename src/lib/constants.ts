@@ -191,7 +191,9 @@ export const TOKEN_USE_PROXIES: Record<
   Object.entries(TOKEN_USAGE).map(([id, usage]) => [
     id,
     {
-      ...(usage.direct !== undefined ? { direct: tokenProxy(usage.direct) } : {}),
+      ...(usage.direct !== undefined
+        ? { direct: tokenProxy(usage.direct) }
+        : {}),
       ...(usage.thinking !== undefined
         ? { thinking: tokenProxy(usage.thinking) }
         : {}),
@@ -311,6 +313,7 @@ const MODEL_EFFORTS: Record<string, (Effort | null)[]> = {
   "x-ai/grok-4.1-fast": ["none", "medium", "high"],
   "x-ai/grok-code-fast-1": [null], // no reasoning
   "x-ai/grok-4.20-multi-agent": ["medium", "high"],
+  "x-ai/grok-4.3": ["none", "low", "medium", "high"],
 
   // OTHERS
   "deepseek/deepseek-r1": ["medium"],

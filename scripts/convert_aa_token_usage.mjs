@@ -76,6 +76,7 @@ const AA_TO_OR = {
   "gemini-3-1-flash-lite-preview": ["google/gemini-3.1-flash-lite", "thinking"],
   "gemini-3-1-pro-preview": ["google/gemini-3.1-pro-preview", "thinking"],
   "gemini-3-5-flash": ["google/gemini-3.5-flash", "thinking"],
+  "gemini-3-5-flash-minimal": ["google/gemini-3.5-flash", "direct"],
   "gemma-3-12b": ["google/gemma-3-12b-it", "direct"],
   "gemma-3-27b": ["google/gemma-3-27b-it", "direct"],
   "gemma-3-4b": ["google/gemma-3-4b-it", "direct"],
@@ -152,7 +153,7 @@ const AA_TO_OR = {
   "grok-4-20-non-reasoning": ["x-ai/grok-4.20", "direct"],
   "grok-4-20": ["x-ai/grok-4.20", "thinking"],
   "grok-4-3-non-reasoning": ["x-ai/grok-4.3", "direct"],
-  "grok-4-3-low": ["x-ai/grok-4.3", "thinking"],
+  "grok-4-3-medium": ["x-ai/grok-4.3", "thinking"],
   "grok-code-fast-1": ["x-ai/grok-code-fast-1", "thinking"],
 
   // Moonshot
@@ -318,10 +319,6 @@ const MANUAL_TOTALS = {
   },
   "openai/gpt-oss-20b": {
     thinking: Math.round(Math.sqrt(9_664_387 * 60_996_569)),
-  },
-  // xAI exposes low/high, but not medium, for this AA snapshot.
-  "x-ai/grok-4.3": {
-    thinking: Math.round(Math.sqrt(12_254_755 * 88_019_615)),
   },
 };
 

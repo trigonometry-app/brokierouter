@@ -111,7 +111,8 @@
     "thinking": 57292121
   },
   "google/gemini-3.5-flash": {
-    "thinking": 72602272
+    "thinking": 72602272,
+    "direct": 11543185
   },
   "google/gemma-3-12b-it": {
     "direct": 5344397
@@ -499,7 +500,7 @@
   },
   "x-ai/grok-4.3": {
     "direct": 7815637,
-    "thinking": 32842942
+    "thinking": 28249084
   },
   "x-ai/grok-code-fast-1": {
     "thinking": 63508282
