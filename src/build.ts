@@ -20,6 +20,7 @@ import {
   CerebrasResponseSchema,
   GoogleResponseSchema,
   EndpointArraySchema,
+  HackClubStatusSchema,
 } from "./types.ts";
 import {
   fetchJSON,
@@ -190,6 +191,14 @@ const providers = {
 
   hackclub: {
     async fetch() {
+      const status = await fetchValidated(
+        "https://ai.hackclub.com/up",
+        HackClubStatusSchema,
+      );
+      if (status.status !== "up") {
+        console.warn(`Hack Club status is ${status.status}; skipping`);
+        return { data: [] };
+      }
       return fetchValidated(
         "https://ai.hackclub.com/proxy/v1/models",
         ORResponseSchema,
