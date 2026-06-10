@@ -203,6 +203,7 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "qwen3.5-flash": ("qwen/qwen3.5-flash-02-23", True),
     "qwen3.6-plus": ("qwen/qwen3.6-plus", True),
     "qwen3.6-max-preview": ("qwen/qwen3.6-max-preview", True),
+    "qwen3.7-max-preview": ("qwen/qwen3.7-max", True),
     "qwq-32b": ("qwen/qwq-32b", True),
     # "qwq-32b-preview": ("qwen/qwq-32b", True),  # DUPLICATE
     # Minimax
@@ -211,6 +212,7 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "minimax-m2.1-preview": ("minimax/minimax-m2.1", True),
     "minimax-m2.5": ("minimax/minimax-m2.5", True),
     "minimax-m2.7": ("minimax/minimax-m2.7", True),
+    "minimax-m3": ("minimax/minimax-m3", True),
     # Mistral
     # https://docs.mistral.ai/models/model-cards/mistral-7b-0-1
     "mistral-7b-instruct": ("mistralai/mistral-7b-instruct-v0.1", False),
@@ -224,6 +226,8 @@ ARENA_TO_OR: dict[str, tuple[str, bool]] = {
     "mistral-medium-2505": ("mistralai/mistral-medium-3", False),
     # https://docs.mistral.ai/models/model-cards/mistral-medium-3-1-25-08
     "mistral-medium-2508": ("mistralai/mistral-medium-3.1", False),
+    # https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04
+    "mistral-medium-3.5": ("mistralai/mistral-medium-3-5", True),
     # https://docs.mistral.ai/models/model-cards/mistral-small-3-2-25-06
     "mistral-small-2506": ("mistralai/mistral-small-3.2-24b-instruct", False),
     # https://docs.mistral.ai/models/model-cards/mistral-small-3-0-25-01
