@@ -284,6 +284,7 @@ const AA_TO_OR = {
   "minimax-m2-1": ["minimax/minimax-m2.1", "thinking"],
   "minimax-m2-5": ["minimax/minimax-m2.5", "thinking"],
   "minimax-m2-7": ["minimax/minimax-m2.7", "thinking"],
+  "minimax-m3": ["minimax/minimax-m3", "thinking"],
   "mimo-v2-flash": ["xiaomi/mimo-v2-flash", "direct"],
   "mimo-v2-flash-reasoning": ["xiaomi/mimo-v2-flash", "thinking"],
   "mimo-v2-omni": ["xiaomi/mimo-v2-omni", "thinking"],

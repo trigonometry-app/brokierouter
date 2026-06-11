@@ -200,6 +200,9 @@
   "minimax/minimax-m2.7": {
     "thinking": 86930041
   },
+  "minimax/minimax-m3": {
+    "thinking": 90820385
+  },
   "mistralai/ministral-14b-2512": {
     "direct": 10754215
   },
