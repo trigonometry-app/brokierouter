@@ -28,6 +28,9 @@
     "direct": 11555162,
     "thinking": 111936386
   },
+  "anthropic/claude-opus-4.8": {
+    "thinking": 112031016
+  },
   "anthropic/claude-sonnet-4": {
     "direct": 5983677,
     "thinking": 55467519

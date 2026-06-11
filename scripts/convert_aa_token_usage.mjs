@@ -26,6 +26,7 @@ const AA_TO_OR = {
   "claude-opus-4-6-adaptive": ["anthropic/claude-opus-4.6", "thinking"],
   "claude-opus-4-7-non-reasoning": ["anthropic/claude-opus-4.7", "direct"],
   "claude-opus-4-7": ["anthropic/claude-opus-4.7", "thinking"],
+  "claude-opus-4-8": ["anthropic/claude-opus-4.8", "thinking"],
   "claude-sonnet-4-6": ["anthropic/claude-sonnet-4.6", "direct"],
   "claude-sonnet-4-6-adaptive": ["anthropic/claude-sonnet-4.6", "thinking"],
 

@@ -1222,7 +1222,8 @@
       }
     ],
     "elo_direct": 1478.6688917777592,
-    "elo_thinking": 1482.3717299162454
+    "elo_thinking": 1482.3717299162454,
+    "token_use_thinking": 2241
   },
   {
     "id": "openai/gpt-5.4",
@@ -3789,7 +3790,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 76,
+        "tps": 90,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -4894,7 +4895,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 59,
+        "tps": 62,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -5672,7 +5673,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 71,
+        "tps": 63,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -10332,7 +10333,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 99,
+        "tps": 100,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
@@ -11734,7 +11735,7 @@
         "output_modalities": [
           "text"
         ],
-        "tps": 67,
+        "tps": 69,
         "ttfb": null,
         "reasoning_efforts": [
           "medium"
