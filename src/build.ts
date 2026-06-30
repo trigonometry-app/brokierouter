@@ -22,6 +22,7 @@ import {
   EndpointArraySchema,
   HackClubStatusSchema,
 } from "./types.ts";
+import { safeParse } from "valibot";
 import {
   fetchJSON,
   fetchValidated,
@@ -192,12 +193,18 @@ const providers = {
 
   hackclub: {
     async fetch() {
-      const status = await fetchValidated(
-        "https://ai.hackclub.com/up",
-        HackClubStatusSchema,
-      );
-      if (status.status !== "up") {
-        console.warn(`Hack Club status is ${status.status}; skipping`);
+      const res = await fetch("https://ai.hackclub.com/up");
+      const body: unknown = await res.json();
+      const parsed = safeParse(HackClubStatusSchema, body);
+      if (!parsed.success) {
+        console.warn("Hack Club /up returned unexpected shape; skipping");
+        return { data: [] };
+      }
+      const up = parsed.output;
+      if (up.balanceRemaining <= 0 || up.dailyKeyUsageRemaining <= 0) {
+        console.warn(
+          `Hack Club OpenRouter unavailable (balance=${up.balanceRemaining}, daily=${up.dailyKeyUsageRemaining}); skipping`,
+        );
         return { data: [] };
       }
       return fetchValidated(

@@ -152,7 +152,10 @@ export type EndpointData = InferOutput<typeof EndpointDataSchema>;
 // ─── wrapper schemas for API responses ───────────────────────────────────
 
 export const ORResponseSchema = object({ data: array(ORModelSchema) });
-export const HackClubStatusSchema = object({ status: string() });
+export const HackClubStatusSchema = object({
+  balanceRemaining: number(),
+  dailyKeyUsageRemaining: number(),
+});
 export const GHMResponseSchema = array(GHMModelSchema);
 export const GHCResponseSchema = object({ data: array(GHCModelSchema) });
 export const CrofResponseSchema = object({ data: array(CrofModelSchema) });
