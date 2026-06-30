@@ -47,8 +47,6 @@ export const GROQ_SKIP = new Set([
   "canopylabs/orpheus-v1-english",
 ]);
 
-export const CEREBRAS_SKIP = new Set(["zai-glm-4.7", "gpt-oss-120b"]);
-
 export const CEREBRAS_CONTEXT: Record<string, number> = {
   "gemma-4-31b": 30000,
   "gpt-oss-120b": 30000,
@@ -128,11 +126,9 @@ export const GROQ_ID_TO_OR: Record<string, string> = {
 };
 
 export const CEREBRAS_ID_TO_OR: Record<string, string> = {
-  "llama-3.3-70b": "meta-llama/llama-3.3-70b-instruct",
-  "llama3.1-8b": "meta-llama/llama-3.1-8b-instruct",
   "zai-glm-4.7": "z-ai/glm-4.7",
   "gpt-oss-120b": "openai/gpt-oss-120b",
-  "qwen-3-235b-a22b-instruct-2507": "qwen/qwen3-235b-a22b-2507",
+  "gemma-4-31b": "google/gemma-4-31b-it",
 };
 
 export const GOOGLE_NAME_TO_OR: Record<string, string> = {

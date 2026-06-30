@@ -37,7 +37,6 @@ import {
   CROF_VISION,
   GROQ_VISION,
   GROQ_SKIP,
-  CEREBRAS_SKIP,
   CEREBRAS_CONTEXT,
   GHM_SKIP,
   GHM_ID_TO_OR,
@@ -174,14 +173,16 @@ const providers = {
             ep.pricing.completion === "0" &&
             !m.architecture.output_modalities.includes("audio");
           const base = epFree ? "openrouter-free" : "openrouter";
-          out.get(targetId)!.providers.push(
-            endpointToProvider(
-              m,
-              ep,
-              base,
-              fastBase ? "fast tier" : undefined,
-            ),
-          );
+          out
+            .get(targetId)!
+            .providers.push(
+              endpointToProvider(
+                m,
+                ep,
+                base,
+                fastBase ? "fast tier" : undefined,
+              ),
+            );
         }
       }
 
@@ -474,9 +475,7 @@ const providers = {
     parse(raw: { data: CerebrasModel[] }): ParseResult {
       const providers = new Map<string, Provider[]>();
       const unmapped: string[] = [];
-      const skip = CEREBRAS_SKIP;
       for (const m of raw.data) {
-        if (skip.has(m.id)) continue;
         const orId = CEREBRAS_ID_TO_OR[m.id] ?? m.id;
         if (!CEREBRAS_ID_TO_OR[m.id]) unmapped.push(m.id);
         providers.set(orId, [
@@ -568,7 +567,11 @@ const merge = (
     models.set(id, {
       id,
       name,
-      providers: provs.map((p) => ({ ...p, tps: p.tps ?? null, ttfb: p.ttfb ?? null })),
+      providers: provs.map((p) => ({
+        ...p,
+        tps: p.tps ?? null,
+        ttfb: p.ttfb ?? null,
+      })),
       elo_direct: elos[id]?.elo_direct ?? null,
       elo_thinking: elos[id]?.elo_thinking ?? null,
       ...(TOKEN_USE_PROXIES[id]?.direct !== undefined
@@ -614,8 +617,7 @@ const merge = (
     if (
       model.providers.some(
         (p) =>
-          p.provider === provider.provider &&
-          p.model_id === provider.model_id,
+          p.provider === provider.provider && p.model_id === provider.model_id,
       )
     )
       return;
@@ -753,11 +755,6 @@ const providerResults = [
 const orModels = providers.openrouter.parse(orData, endpointData);
 const hcResult = providers.hackclub.parse(hcData, orModels);
 
-const models = merge(
-  orModels,
-  hcResult,
-  providerResults,
-  elos,
-);
+const models = merge(orModels, hcResult, providerResults, elos);
 writeFileSync("models.json", JSON.stringify(models, null, 2));
 console.log(`Built models.json with ${models.length} models`);
